@@ -14,3 +14,5 @@
 .game-map-inner .board{max-height:56vh}.game-map-inner[data-zoomed=true] .board{max-height:none}.mechanic-guide p,.shortcuts p,.records>.small{font-size:11px}.record-time,.record small{font-size:11px}@media(max-width:760px){.game-map-inner .board{max-height:51vh}.game-map-inner[data-zoomed=true] .board{max-height:none}}
 
 .revision-notice{padding:15px 20px;margin-bottom:20px;background:#3e294e;border-left:2px solid #e6b5fd}.revision-notice p{margin:0 0 10px;font-size:12px}.revision-notice button{font-size:12px;margin-right:10px}
+
+.game-controls{flex-wrap:wrap}.game-controls button{flex:1 1 180px}.game-controls button:first-child{border-color:#91c2dc;color:#c6e5ff}.game-controls button:nth-child(2){border-color:#a77584}.mechanic-guide b{line-height:1.8}

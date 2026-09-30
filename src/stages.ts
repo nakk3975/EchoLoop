@@ -1,3 +1,5 @@
+import {advancedPuzzles} from './advanced-stages.ts';
+import {advancedInputs} from './advanced-solutions.ts';
 import {type Stage,type Move} from './engine.ts';
 import {fromRows} from './stage-factory.ts';
 export {fromRows} from './stage-factory.ts';
@@ -24,3 +26,6 @@ referenceInputs.push(...campaignInputs);
 stages.splice(5,15,...compactPuzzles.map(p=>p.stage));
 referenceInputs.splice(5,15,...compactInputs);
 export function blankStage(width=13,height=9):Stage{return fromRows('local-'+crypto.randomUUID(),'이름 없는 실험','직접 만든 타임루프 퍼즐','발판과 문을 연결해 보세요.',Array.from({length:height},(_,y)=>Array.from({length:width},(_,x)=>!x||!y||x===width-1||y===height-1?'#':x===2&&y===Math.floor(height/2)?'S':x===width-3&&y===Math.floor(height/2)?'G':'.').join('')));}
+
+stages.push(...advancedPuzzles.map(p=>p.stage));
+referenceInputs.push(...advancedInputs);

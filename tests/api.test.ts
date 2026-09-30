@@ -13,8 +13,8 @@ test('API verifies real replay, rejects forgery, isolates unavailable DB, serves
  r=await fetch(base+'/api/verify',{method:'POST',body:'not JSON'});assert.equal(r.status,400);
  r=await fetch(base+'/api/backup',{method:'PUT',body:'{}'});assert.equal(r.status,503);
  r=await fetch(base+'/api/verify',{method:'POST',headers:{Origin:'https://untrusted.example'},body:'{}'});assert.equal(r.status,403);
- const finale=stages[49],fi=referenceInputs[49],fs=replay(finale,fi.at(-1)!,buildChain(finale,fi.slice(0,-1)));
+ const finale=stages[79],fi=referenceInputs[79],fs=replay(finale,fi.at(-1)!,buildChain(finale,fi.slice(0,-1)));
  r=await fetch(base+'/api/verify',{method:'POST',body:JSON.stringify({stage:finale,solution:solution(finale,fs)})});assert.equal(r.status,200);assert.equal((await r.json()).trust,'SERVER_REPLAY_VERIFIED');
- r=await fetch(base+'/api/catalog');assert.equal((await r.json()).stages.length,50);
+ r=await fetch(base+'/api/catalog');assert.equal((await r.json()).stages.length,80);
  }finally{child.kill();await once(child,'exit');}
 });

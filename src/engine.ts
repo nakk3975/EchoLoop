@@ -2,13 +2,13 @@ export const ENGINE = 'echoloop-core-1';
 export const LIMIT = 300;
 export type Cell = {x:number;y:number};
 export type Move = 'U'|'D'|'L'|'R'|'.';
-export type Plate = Cell & {id:string;kind?:'weight'|'echo'|'present'|'resonance'|'toggle';minActors?:2|3};
+export type Plate = Cell & {id:string;kind?:'weight'|'echo'|'present'|'resonance'|'toggle'|'charge'|'solo';minActors?:2|3;chargeTicks?:number};
 export type Door = Cell & {id:string;mode:'AND'|'OR';plateIds:string[];inverted?:boolean;pulse?:{period:number;openTicks:number;offset:number}};
 export type Portal = {id:string;a:Cell;b:Cell};
 export type Arrow = Cell & {direction:Exclude<Move,'.'>};
-export type Stage = {id:string;title:string;description:string;hint:string;schemaVersion:1;engineVersion:string;width:number;height:number;tickHz:10;loopTicks:300;maxGhosts:number;tiles:number[];spawn:Cell;goal:Cell;plates:Plate[];doors:Door[];portals?:Portal[];arrows?:Arrow[]};
+export type Stage = {id:string;title:string;description:string;hint:string;schemaVersion:1;engineVersion:string;width:number;height:number;tickHz:10;loopTicks:300;maxGhosts:number;tiles:number[];spawn:Cell;goal:Cell;plates:Plate[];doors:Door[];portals?:Portal[];arrows?:Arrow[];shards?:Cell[]};
 export type RecordLoop = {originalTicks:number;inputPrefix:Move[];cells:Cell[];checksum:string;parentChecksum:string};
-export type State = {tick:number;current:Cell;ghosts:RecordLoop[];inputPrefix:Move[];trajectory:Cell[];plates:Record<string,boolean>;doors:Record<string,boolean>;switches?:Record<string,boolean>;switchOccupied?:Record<string,boolean>;outcome:'RUNNING'|'WON'|'TIMEOUT'};
+export type State = {tick:number;current:Cell;ghosts:RecordLoop[];inputPrefix:Move[];trajectory:Cell[];plates:Record<string,boolean>;doors:Record<string,boolean>;charges?:Record<string,number>;collected?:number[];switches?:Record<string,boolean>;switchOccupied?:Record<string,boolean>;outcome:'RUNNING'|'WON'|'TIMEOUT'};
 export type Solution = {engineVersion:string;stageChecksum:string;committedLoops:Move[][];finalLoop:Move[]};
 export const equal = (a:Cell,b:Cell) => a.x===b.x&&a.y===b.y;
 export function hash(value:unknown):string {
@@ -19,7 +19,7 @@ export function hash(value:unknown):string {
 export function validateStage(value:unknown):string[] {
   const e:string[]=[];const m=value as Stage;
   if(!m||typeof m!=='object'||Array.isArray(m))return ['맵 JSON 객체가 필요합니다.'];
-  const keys=['id','title','description','hint','schemaVersion','engineVersion','width','height','tickHz','loopTicks','maxGhosts','tiles','spawn','goal','plates','doors','portals','arrows'];
+  const keys=['id','title','description','hint','schemaVersion','engineVersion','width','height','tickHz','loopTicks','maxGhosts','tiles','spawn','goal','plates','doors','portals','arrows','shards'];
   if(Object.keys(m).some(k=>!keys.includes(k)))e.push('지원하지 않는 맵 속성이 있습니다.');
   if(m.schemaVersion!==1||m.engineVersion!==ENGINE||m.tickHz!==10||m.loopTicks!==300)e.push('지원하지 않는 맵/엔진 버전 또는 시간 설정입니다.');
   if(!Number.isInteger(m.width)||m.width<8||m.width>32||!Number.isInteger(m.height)||m.height<6||m.height>24)return [...e,'맵 크기는 8×6~32×24여야 합니다.'];
@@ -29,13 +29,15 @@ export function validateStage(value:unknown):string[] {
   if(!Array.isArray(m.plates)||m.plates.length>16||!Array.isArray(m.doors)||m.doors.length>16)return [...e,'발판과 문은 각각 최대 16개입니다.'];
   if(m.portals!==undefined&&(!Array.isArray(m.portals)||m.portals.length>8)||m.arrows!==undefined&&(!Array.isArray(m.arrows)||m.arrows.length>32))return [...e,'포털은 최대 8쌍, 방향 통로는 최대 32개입니다.'];
   for(let y=0;y<m.height;y++)for(let x=0;x<m.width;x++)if((!x||!y||x===m.width-1||y===m.height-1)&&m.tiles[y*m.width+x]!==1)e.push(`(${x},${y}): 가장자리는 벽이어야 합니다.`);
+  if(m.shards!==undefined&&(!Array.isArray(m.shards)||m.shards.length>8))return [...e,'시간 조각은 최대 8개입니다.'];
   const occupied=new Set<string>(),ids=new Set<string>();
-  for(const [name,p] of [['출발',m.spawn],['출구',m.goal],...m.plates.map(p=>['발판',p]),...m.doors.map(d=>['문',d]),...(m.portals??[]).flatMap(p=>[['포털',p?.a],['포털',p?.b]]),...(m.arrows??[]).map(a=>['방향 통로',a])] as [string,Cell][]){
+  for(const [name,p] of [['출발',m.spawn],['출구',m.goal],...m.plates.map(p=>['발판',p]),...m.doors.map(d=>['문',d]),...(m.portals??[]).flatMap(p=>[['포털',p?.a],['포털',p?.b]]),...(m.arrows??[]).map(a=>['방향 통로',a]),...(m.shards??[]).map(a=>['시간 조각',a])] as [string,Cell][]){
     if(!p||!Number.isInteger(p.x)||!Number.isInteger(p.y)||p.x<1||p.y<1||p.x>=m.width-1||p.y>=m.height-1){e.push(`${name}: 내부 좌표를 확인하세요.`);continue;}
     const key=`${p.x},${p.y}`;if(occupied.has(key)||m.tiles[p.y*m.width+p.x])e.push(`${name} (${key}): 장치가 겹치거나 벽 위에 있습니다.`);occupied.add(key);
   }
   for(const p of [...m.plates,...m.doors]){if(!p||typeof p.id!=='string'||!/^[a-zA-Z0-9_-]{1,40}$/.test(p.id)||ids.has(p.id))e.push('장치 ID가 잘못되었거나 중복됩니다.');if(p)ids.add(p.id);}
-  for(const p of m.plates){if(p?.kind!==undefined&&!['weight','echo','present','resonance','toggle'].includes(p.kind))e.push('발판 종류가 잘못되었습니다.');if(p?.minActors!==undefined&&(p.kind!=='resonance'||![2,3].includes(p.minActors)))e.push('공명 발판은 2명 또는 3명으로 설정하세요.');}
+  for(const p of m.plates){if(p?.kind!==undefined&&!['weight','echo','present','resonance','toggle','charge','solo'].includes(p.kind))e.push('발판 종류가 잘못되었습니다.');if(p?.minActors!==undefined&&(p.kind!=='resonance'||![2,3].includes(p.minActors)))e.push('공명 발판은 2명 또는 3명으로 설정하세요.');}
+  for(const p of m.plates)if(p?.chargeTicks!==undefined&&(p.kind!=='charge'||!Number.isInteger(p.chargeTicks)||p.chargeTicks<2||p.chargeTicks>50))e.push('충전 발판은 2~50tick으로 설정하세요.');
   for(const d of m.doors)if(d?.inverted!==undefined&&typeof d.inverted!=='boolean')e.push('반전 문 설정은 참/거짓이어야 합니다.');
   for(const p of m.portals??[]){if(!p||typeof p.id!=='string'||!/^[a-zA-Z0-9_-]{1,40}$/.test(p.id)||ids.has(p.id))e.push('포털 ID가 잘못되었거나 중복됩니다.');if(p)ids.add(p.id);}
   for(const a of m.arrows??[])if(!a||!['U','D','L','R'].includes(a.direction))e.push('방향 통로의 방향이 잘못되었습니다.');
@@ -48,11 +50,12 @@ export function validateStage(value:unknown):string[] {
 function devices(m:Stage,current:Cell,echoes:Cell[],tick:number,previous?:State){
   const actors=[current,...echoes],switches:Record<string,boolean>={},switchOccupied:Record<string,boolean>={};
   for(const p of m.plates.filter(p=>p.kind==='toggle')){const occupied=actors.some(c=>equal(p,c));switchOccupied[p.id]=occupied;const was=previous?.switches?.[p.id]??false;switches[p.id]=occupied&&!previous?.switchOccupied?.[p.id]?!was:was;}
-  const plates=Object.fromEntries(m.plates.map(p=>[p.id,p.kind==='toggle'?switches[p.id]:p.kind==='resonance'?actors.filter(c=>equal(p,c)).length>=(p.minActors??2):p.kind==='echo'?echoes.some(c=>equal(p,c)):p.kind==='present'?equal(p,current):actors.some(c=>equal(p,c))]));
+  const charges=Object.fromEntries(m.plates.filter(p=>p.kind==='charge').map(p=>[p.id,actors.some(c=>equal(p,c))?Math.min(p.chargeTicks??10,(previous?.charges?.[p.id]??0)+1):0]));
+  const plates=Object.fromEntries(m.plates.map(p=>[p.id,p.kind==='charge'?charges[p.id]>=(p.chargeTicks??10):p.kind==='solo'?actors.filter(c=>equal(p,c)).length===1:p.kind==='toggle'?switches[p.id]:p.kind==='resonance'?actors.filter(c=>equal(p,c)).length>=(p.minActors??2):p.kind==='echo'?echoes.some(c=>equal(p,c)):p.kind==='present'?equal(p,current):actors.some(c=>equal(p,c))]));
   const doors=Object.fromEntries(m.doors.map(d=>{const signal=d.mode==='AND'?d.plateIds.every(id=>plates[id]):d.plateIds.some(id=>plates[id]);return [d.id,(d.inverted?!signal:signal)&&(!d.pulse||(tick+d.pulse.offset)%d.pulse.period<d.pulse.openTicks)];}));
-  return {plates,doors,...(Object.keys(switches).length?{switches,switchOccupied}:{})};
+  return {plates,doors,...(Object.keys(charges).length?{charges}:{}),...(Object.keys(switches).length?{switches,switchOccupied}:{})};
 }
-export function initial(m:Stage,ghosts:RecordLoop[]=[]):State {return {tick:0,current:{...m.spawn},ghosts,inputPrefix:[],trajectory:[{...m.spawn}],...devices(m,m.spawn,ghosts.map(g=>g.cells[0]),0),outcome:'RUNNING'};}
+export function initial(m:Stage,ghosts:RecordLoop[]=[]):State {return {tick:0,current:{...m.spawn},ghosts,inputPrefix:[],trajectory:[{...m.spawn}],...(m.shards?.length?{collected:[]}:{}),...devices(m,m.spawn,ghosts.map(g=>g.cells[0]),0),outcome:'RUNNING'};}
 export function step(m:Stage,s:State,input:Move):State {
   if(s.outcome!=='RUNNING')return s;
   if(!['U','D','L','R','.'].includes(input))throw new Error('잘못된 이동 입력');
@@ -63,7 +66,8 @@ export function step(m:Stage,s:State,input:Move):State {
   const valid=dest.x>=0&&dest.y>=0&&dest.x<m.width&&dest.y<m.height&&!m.tiles[dest.y*m.width+dest.x]&&(!door||s.doors[door.id])&&(!arrow||arrow.direction===input);
   let current=input==='.'||!valid?s.current:dest;const tick=s.tick+1;
   if(input!=='.'&&valid){const portal=m.portals?.find(p=>equal(p.a,dest)||equal(p.b,dest));if(portal)current=equal(portal.a,dest)?portal.b:portal.a;}
-  return {...s,tick,current,inputPrefix:[...s.inputPrefix,input],trajectory:[...s.trajectory,current],...devices(m,current,s.ghosts.map(g=>g.cells[tick]),tick,s),outcome:equal(current,m.goal)?'WON':tick===LIMIT?'TIMEOUT':'RUNNING'};
+  const collected=m.shards?.length?[...new Set([...(s.collected??[]),...m.shards.flatMap((p,i)=>equal(p,current)?[i]:[])])].sort((a,b)=>a-b):undefined;
+  return {...s,...(collected?{collected}:{}),tick,current,inputPrefix:[...s.inputPrefix,input],trajectory:[...s.trajectory,current],...devices(m,current,s.ghosts.map(g=>g.cells[tick]),tick,s),outcome:equal(current,m.goal)&&(!m.shards?.length||collected?.length===m.shards.length)?'WON':tick===LIMIT?'TIMEOUT':'RUNNING'};
 }
 export function commit(m:Stage,s:State):RecordLoop {
   if(s.tick<1)throw new Error('1tick 이상 이동하거나 기다린 후 기록할 수 있습니다.');
@@ -101,4 +105,11 @@ export function inputDirection(held:Move[],queued:Move|null):Move {
 export function frameTicks(delta:number,accumulator:number):{ticks:number;accumulator:number;pause:boolean}{
   if(delta>=500)return {ticks:0,accumulator:0,pause:true};
   const total=accumulator+Math.max(0,delta),ticks=Math.min(3,Math.floor(total/100));return {ticks,accumulator:total-ticks*100,pause:false};
+}
+
+// Replay is the source of truth: rewind also restores doors, switches, charge and collectibles.
+export function rewind(m:Stage,s:State):State {
+ if(s.tick>0)return replay(m,s.inputPrefix.slice(0,-1),s.ghosts);
+ const last=s.ghosts.at(-1);
+ return last?replay(m,last.inputPrefix,s.ghosts.slice(0,-1)):s;
 }
