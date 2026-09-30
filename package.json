@@ -1,0 +1,7 @@
+{
+  "name":"echoloop","version":"0.1.0","private":true,"type":"module",
+  "scripts":{"dev":"vite --host 0.0.0.0","build":"tsc --noEmit && vite build","start":"node --experimental-strip-types server/index.ts","test":"node --experimental-strip-types --test tests/*.test.ts","check":"npm test && npm run build"},
+  "dependencies":{"@neondatabase/serverless":"^1.0.2","react":"^19.1.1","react-dom":"^19.1.1"},
+  "devDependencies":{"@types/node":"^24.0.0","@types/react":"^19.1.0","@types/react-dom":"^19.1.0","@vitejs/plugin-react":"^4.7.0","typescript":"^5.9.2","vite":"^6.3.6"},
+  "engines":{"node":">=22.18.0"}
+}

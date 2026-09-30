@@ -1,0 +1,7 @@
+const DB='echoloop-v1';
+let pending=Promise.resolve();
+function open():Promise<IDBDatabase>{return new Promise((resolve,reject)=>{const r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore('data');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
+export async function read<T>(key:string):Promise<T|undefined>{const db=await open();return new Promise((resolve,reject)=>{const tx=db.transaction('data','readonly'),r=tx.objectStore('data').get(key);tx.oncomplete=()=>{resolve(r.result);db.close();};tx.onerror=()=>{reject(tx.error);db.close();};});}
+export function write(key:string,value:unknown):Promise<void>{const run=async()=>{const db=await open();return new Promise<void>((resolve,reject)=>{const tx=db.transaction('data','readwrite');tx.objectStore('data').put(value,key);tx.oncomplete=()=>{resolve();db.close();};tx.onerror=()=>{reject(tx.error);db.close();};});};const task=pending.then(run,run);pending=task.catch(()=>{});return task;}
+export function download(name:string,value:unknown){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+export async function parseFile(file:File,max=393216):Promise<unknown>{if(file.size>max)throw new Error('파일이 너무 큽니다. 최대 384KiB입니다.');return JSON.parse(await file.text());}

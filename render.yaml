@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: echoloop
+    runtime: node
+    region: singapore
+    plan: free
+    buildCommand: npm ci && npm run check
+    startCommand: npm start
+    healthCheckPath: /health/live
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 22.18.0
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
