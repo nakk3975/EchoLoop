@@ -2,6 +2,8 @@ import {type Stage,type Move} from './engine.ts';
 import {fromRows} from './stage-factory.ts';
 export {fromRows} from './stage-factory.ts';
 import {campaignStages,campaignInputs} from './campaign-data.ts';
+import {compactPuzzles} from './compact-stages.ts';
+import {compactInputs} from './compact-solutions.ts';
 export const stages:Stage[]=[
  fromRows('first-light','첫 번째 발자국','출구까지 걸어가세요. 시간은 첫 이동부터 흐릅니다.','방향키 또는 WASD로 이동하세요. 빛나는 균열 모양의 출구에 도착하면 됩니다.',['##########','#........#','#..###...#','#S.....G.#','#........#','#........#','##########'],0),
  fromRows('pressure','발판의 무게','발판을 밟으면 문이 열립니다. 다음 순간을 생각해 보세요.','발판 A를 밟은 다음 오른쪽으로 이동하세요. 문이 닫혀도 안에 있는 나는 안전하게 나갈 수 있습니다.',['##########','#...#....#','#...#....#','#S.Aa..G.#','#...#....#','#...#....#','##########'],0),
@@ -19,4 +21,6 @@ export const referenceInputs:Move[][][]=[
 ];
 stages.push(...campaignStages);
 referenceInputs.push(...campaignInputs);
+stages.splice(5,15,...compactPuzzles.map(p=>p.stage));
+referenceInputs.splice(5,15,...compactInputs);
 export function blankStage(width=13,height=9):Stage{return fromRows('local-'+crypto.randomUUID(),'이름 없는 실험','직접 만든 타임루프 퍼즐','발판과 문을 연결해 보세요.',Array.from({length:height},(_,y)=>Array.from({length:width},(_,x)=>!x||!y||x===width-1||y===height-1?'#':x===2&&y===Math.floor(height/2)?'S':x===width-3&&y===Math.floor(height/2)?'G':'.').join('')));}

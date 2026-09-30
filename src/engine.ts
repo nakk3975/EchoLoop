@@ -2,13 +2,13 @@ export const ENGINE = 'echoloop-core-1';
 export const LIMIT = 300;
 export type Cell = {x:number;y:number};
 export type Move = 'U'|'D'|'L'|'R'|'.';
-export type Plate = Cell & {id:string;kind?:'weight'|'echo'|'present'};
-export type Door = Cell & {id:string;mode:'AND'|'OR';plateIds:string[];pulse?:{period:number;openTicks:number;offset:number}};
+export type Plate = Cell & {id:string;kind?:'weight'|'echo'|'present'|'resonance'|'toggle';minActors?:2|3};
+export type Door = Cell & {id:string;mode:'AND'|'OR';plateIds:string[];inverted?:boolean;pulse?:{period:number;openTicks:number;offset:number}};
 export type Portal = {id:string;a:Cell;b:Cell};
 export type Arrow = Cell & {direction:Exclude<Move,'.'>};
 export type Stage = {id:string;title:string;description:string;hint:string;schemaVersion:1;engineVersion:string;width:number;height:number;tickHz:10;loopTicks:300;maxGhosts:number;tiles:number[];spawn:Cell;goal:Cell;plates:Plate[];doors:Door[];portals?:Portal[];arrows?:Arrow[]};
 export type RecordLoop = {originalTicks:number;inputPrefix:Move[];cells:Cell[];checksum:string;parentChecksum:string};
-export type State = {tick:number;current:Cell;ghosts:RecordLoop[];inputPrefix:Move[];trajectory:Cell[];plates:Record<string,boolean>;doors:Record<string,boolean>;outcome:'RUNNING'|'WON'|'TIMEOUT'};
+export type State = {tick:number;current:Cell;ghosts:RecordLoop[];inputPrefix:Move[];trajectory:Cell[];plates:Record<string,boolean>;doors:Record<string,boolean>;switches?:Record<string,boolean>;switchOccupied?:Record<string,boolean>;outcome:'RUNNING'|'WON'|'TIMEOUT'};
 export type Solution = {engineVersion:string;stageChecksum:string;committedLoops:Move[][];finalLoop:Move[]};
 export const equal = (a:Cell,b:Cell) => a.x===b.x&&a.y===b.y;
 export function hash(value:unknown):string {
@@ -35,7 +35,8 @@ export function validateStage(value:unknown):string[] {
     const key=`${p.x},${p.y}`;if(occupied.has(key)||m.tiles[p.y*m.width+p.x])e.push(`${name} (${key}): 장치가 겹치거나 벽 위에 있습니다.`);occupied.add(key);
   }
   for(const p of [...m.plates,...m.doors]){if(!p||typeof p.id!=='string'||!/^[a-zA-Z0-9_-]{1,40}$/.test(p.id)||ids.has(p.id))e.push('장치 ID가 잘못되었거나 중복됩니다.');if(p)ids.add(p.id);}
-  for(const p of m.plates)if(p?.kind!==undefined&&!['weight','echo','present'].includes(p.kind))e.push('발판 종류가 잘못되었습니다.');
+  for(const p of m.plates){if(p?.kind!==undefined&&!['weight','echo','present','resonance','toggle'].includes(p.kind))e.push('발판 종류가 잘못되었습니다.');if(p?.minActors!==undefined&&(p.kind!=='resonance'||![2,3].includes(p.minActors)))e.push('공명 발판은 2명 또는 3명으로 설정하세요.');}
+  for(const d of m.doors)if(d?.inverted!==undefined&&typeof d.inverted!=='boolean')e.push('반전 문 설정은 참/거짓이어야 합니다.');
   for(const p of m.portals??[]){if(!p||typeof p.id!=='string'||!/^[a-zA-Z0-9_-]{1,40}$/.test(p.id)||ids.has(p.id))e.push('포털 ID가 잘못되었거나 중복됩니다.');if(p)ids.add(p.id);}
   for(const a of m.arrows??[])if(!a||!['U','D','L','R'].includes(a.direction))e.push('방향 통로의 방향이 잘못되었습니다.');
   let links=0;
@@ -44,9 +45,12 @@ export function validateStage(value:unknown):string[] {
   for(const d of m.doors){const p=d?.pulse;if(p!==undefined&&(!p||!Number.isInteger(p.period)||p.period<4||p.period>100||!Number.isInteger(p.openTicks)||p.openTicks<1||p.openTicks>=p.period||!Number.isInteger(p.offset)||p.offset<0||p.offset>=p.period))e.push('주기 문은 4~100tick 주기와 유효한 열림 시간을 지정하세요.');}
   return [...new Set(e)];
 }
-function devices(m:Stage,current:Cell,echoes:Cell[],tick:number){
-  const plates=Object.fromEntries(m.plates.map(p=>[p.id,p.kind==='echo'?echoes.some(c=>equal(p,c)):p.kind==='present'?equal(p,current):[current,...echoes].some(c=>equal(p,c))]));
-  const doors=Object.fromEntries(m.doors.map(d=>[d.id,(d.mode==='AND'?d.plateIds.every(id=>plates[id]):d.plateIds.some(id=>plates[id]))&&(!d.pulse||(tick+d.pulse.offset)%d.pulse.period<d.pulse.openTicks)]));return {plates,doors};
+function devices(m:Stage,current:Cell,echoes:Cell[],tick:number,previous?:State){
+  const actors=[current,...echoes],switches:Record<string,boolean>={},switchOccupied:Record<string,boolean>={};
+  for(const p of m.plates.filter(p=>p.kind==='toggle')){const occupied=actors.some(c=>equal(p,c));switchOccupied[p.id]=occupied;const was=previous?.switches?.[p.id]??false;switches[p.id]=occupied&&!previous?.switchOccupied?.[p.id]?!was:was;}
+  const plates=Object.fromEntries(m.plates.map(p=>[p.id,p.kind==='toggle'?switches[p.id]:p.kind==='resonance'?actors.filter(c=>equal(p,c)).length>=(p.minActors??2):p.kind==='echo'?echoes.some(c=>equal(p,c)):p.kind==='present'?equal(p,current):actors.some(c=>equal(p,c))]));
+  const doors=Object.fromEntries(m.doors.map(d=>{const signal=d.mode==='AND'?d.plateIds.every(id=>plates[id]):d.plateIds.some(id=>plates[id]);return [d.id,(d.inverted?!signal:signal)&&(!d.pulse||(tick+d.pulse.offset)%d.pulse.period<d.pulse.openTicks)];}));
+  return {plates,doors,...(Object.keys(switches).length?{switches,switchOccupied}:{})};
 }
 export function initial(m:Stage,ghosts:RecordLoop[]=[]):State {return {tick:0,current:{...m.spawn},ghosts,inputPrefix:[],trajectory:[{...m.spawn}],...devices(m,m.spawn,ghosts.map(g=>g.cells[0]),0),outcome:'RUNNING'};}
 export function step(m:Stage,s:State,input:Move):State {
@@ -59,7 +63,7 @@ export function step(m:Stage,s:State,input:Move):State {
   const valid=dest.x>=0&&dest.y>=0&&dest.x<m.width&&dest.y<m.height&&!m.tiles[dest.y*m.width+dest.x]&&(!door||s.doors[door.id])&&(!arrow||arrow.direction===input);
   let current=input==='.'||!valid?s.current:dest;const tick=s.tick+1;
   if(input!=='.'&&valid){const portal=m.portals?.find(p=>equal(p.a,dest)||equal(p.b,dest));if(portal)current=equal(portal.a,dest)?portal.b:portal.a;}
-  return {...s,tick,current,inputPrefix:[...s.inputPrefix,input],trajectory:[...s.trajectory,current],...devices(m,current,s.ghosts.map(g=>g.cells[tick]),tick),outcome:equal(current,m.goal)?'WON':tick===LIMIT?'TIMEOUT':'RUNNING'};
+  return {...s,tick,current,inputPrefix:[...s.inputPrefix,input],trajectory:[...s.trajectory,current],...devices(m,current,s.ghosts.map(g=>g.cells[tick]),tick,s),outcome:equal(current,m.goal)?'WON':tick===LIMIT?'TIMEOUT':'RUNNING'};
 }
 export function commit(m:Stage,s:State):RecordLoop {
   if(s.tick<1)throw new Error('1tick 이상 이동하거나 기다린 후 기록할 수 있습니다.');

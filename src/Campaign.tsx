@@ -2,8 +2,8 @@ import {useState} from 'react';
 import {stages} from './stages.ts';
 import {Board} from './Board.tsx';
 import type {Stage} from './engine.ts';
-export const chapterNames=['첫 번째 균열','잔상의 숲','망각의 성소','실체의 경계','박동하는 시간','공간의 접힘','역행 금지','인과의 교차','붕괴 직전','마지막 역설'];
-export const chapterDescriptions=['다섯 번의 작은 실험으로 시간을 다루는 법을 배웁니다.','멀어진 발판과 갈라진 길. 과거에게 하나씩 역할을 맡기세요.','현재는 아무리 밟아도 열리지 않습니다. 과거의 흔적만 남겨야 합니다.','잔상에게 맡길 수 없는 일. 이번에는 직접 문을 열어야 합니다.','발판만으로는 부족합니다. 시간의 박동에 맞춰 지나가세요.','멀리 떨어진 두 장소가 연결됩니다. 기록도 같은 공간을 건넙니다.','어느 쪽에서 들어오는지가 중요합니다. 돌아올 길까지 생각하세요.','세 개의 기록, 서로 다른 발판, 박동 문이 한 번에 얽힙니다.','포털 너머의 방향과 문이 열리는 순간을 함께 계산하세요.','모든 장치가 만납니다. 3명의 과거와 가장 깊은 미궁을 통과하세요.'];
+export const chapterNames=['첫 번째 균열','짧은 역설','겹치는 인과','작은 방의 비밀','박동하는 시간','공간의 접힘','역행 금지','인과의 교차','붕괴 직전','마지막 역설'];
+export const chapterDescriptions=['다섯 번의 작은 실험으로 시간을 다루는 법을 배웁니다.','공명, 기억 스위치, 반전 문. 짧은 길 안에서 서로 다른 규칙을 만납니다.','두 명이 남거나 세 명이 합류하거나. 같은 자리도 다른 답이 됩니다.','포털과 박동, 합류와 이별. 넓이 대신 행동의 순서로 푸는 작은 방입니다.','발판만으로는 부족합니다. 시간의 박동에 맞춰 지나가세요.','멀리 떨어진 두 장소가 연결됩니다. 기록도 같은 공간을 건넙니다.','어느 쪽에서 들어오는지가 중요합니다. 돌아올 길까지 생각하세요.','세 개의 기록, 서로 다른 발판, 박동 문이 한 번에 얽힙니다.','포털 너머의 방향과 문이 열리는 순간을 함께 계산하세요.','모든 장치가 만납니다. 3명의 과거와 가장 깊은 미궁을 통과하세요.'];
 export function Campaign({completed,onPlay}:{completed:string[];onPlay:(m:Stage)=>void}){
  const next=stages.findIndex(s=>!completed.includes(s.id));const [chapter,setChapter]=useState(Math.floor(Math.max(0,next)/5));
  const difficulty=chapter===0?'튜토리얼':chapter<3?'초급':chapter<6?'중급':chapter<9?'고급':'최상급';
