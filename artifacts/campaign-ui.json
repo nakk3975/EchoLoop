@@ -1,0 +1,793 @@
+{
+  "kind": "production-bundle DOM integration",
+  "levels": 80,
+  "results": [
+    {
+      "level": 1,
+      "id": "first-light",
+      "status": "passed",
+      "loops": [
+        6
+      ]
+    },
+    {
+      "level": 2,
+      "id": "pressure",
+      "status": "passed",
+      "loops": [
+        6
+      ]
+    },
+    {
+      "level": 3,
+      "id": "first-echo",
+      "status": "passed",
+      "loops": [
+        3,
+        7
+      ]
+    },
+    {
+      "level": 4,
+      "id": "two-doors",
+      "status": "passed",
+      "loops": [
+        3,
+        8,
+        11
+      ]
+    },
+    {
+      "level": 5,
+      "id": "together",
+      "status": "passed",
+      "loops": [
+        3,
+        3,
+        8
+      ]
+    },
+    {
+      "level": 6,
+      "id": "fracture-06",
+      "status": "passed",
+      "loops": [
+        2,
+        6
+      ]
+    },
+    {
+      "level": 7,
+      "id": "fracture-07",
+      "status": "passed",
+      "loops": [
+        10
+      ]
+    },
+    {
+      "level": 8,
+      "id": "fracture-08",
+      "status": "passed",
+      "loops": [
+        7,
+        9
+      ]
+    },
+    {
+      "level": 9,
+      "id": "fracture-09",
+      "status": "passed",
+      "loops": [
+        10,
+        11
+      ]
+    },
+    {
+      "level": 10,
+      "id": "fracture-10",
+      "status": "passed",
+      "loops": [
+        2,
+        6
+      ]
+    },
+    {
+      "level": 11,
+      "id": "fracture-11",
+      "status": "passed",
+      "loops": [
+        3,
+        3,
+        7
+      ]
+    },
+    {
+      "level": 12,
+      "id": "fracture-12",
+      "status": "passed",
+      "loops": [
+        2,
+        2,
+        6
+      ]
+    },
+    {
+      "level": 13,
+      "id": "fracture-13",
+      "status": "passed",
+      "loops": [
+        9,
+        15
+      ]
+    },
+    {
+      "level": 14,
+      "id": "fracture-14",
+      "status": "passed",
+      "loops": [
+        9,
+        11
+      ]
+    },
+    {
+      "level": 15,
+      "id": "fracture-15",
+      "status": "passed",
+      "loops": [
+        2,
+        11
+      ]
+    },
+    {
+      "level": 16,
+      "id": "fracture-16",
+      "status": "passed",
+      "loops": [
+        5
+      ]
+    },
+    {
+      "level": 17,
+      "id": "fracture-17",
+      "status": "passed",
+      "loops": [
+        4,
+        8
+      ]
+    },
+    {
+      "level": 18,
+      "id": "fracture-18",
+      "status": "passed",
+      "loops": [
+        7,
+        9
+      ]
+    },
+    {
+      "level": 19,
+      "id": "fracture-19",
+      "status": "passed",
+      "loops": [
+        3,
+        7,
+        9
+      ]
+    },
+    {
+      "level": 20,
+      "id": "fracture-20",
+      "status": "passed",
+      "loops": [
+        2,
+        14,
+        15
+      ]
+    },
+    {
+      "level": 21,
+      "id": "fracture-21",
+      "status": "passed",
+      "loops": [
+        18,
+        32
+      ]
+    },
+    {
+      "level": 22,
+      "id": "fracture-22",
+      "status": "passed",
+      "loops": [
+        24,
+        38
+      ]
+    },
+    {
+      "level": 23,
+      "id": "fracture-23",
+      "status": "passed",
+      "loops": [
+        17,
+        29,
+        41
+      ]
+    },
+    {
+      "level": 24,
+      "id": "fracture-24",
+      "status": "passed",
+      "loops": [
+        27,
+        51,
+        65
+      ]
+    },
+    {
+      "level": 25,
+      "id": "fracture-25",
+      "status": "passed",
+      "loops": [
+        13,
+        43,
+        65,
+        90
+      ]
+    },
+    {
+      "level": 26,
+      "id": "fracture-26",
+      "status": "passed",
+      "loops": [
+        26,
+        50
+      ]
+    },
+    {
+      "level": 27,
+      "id": "fracture-27",
+      "status": "passed",
+      "loops": [
+        28,
+        40
+      ]
+    },
+    {
+      "level": 28,
+      "id": "fracture-28",
+      "status": "passed",
+      "loops": [
+        19,
+        41,
+        53
+      ]
+    },
+    {
+      "level": 29,
+      "id": "fracture-29",
+      "status": "passed",
+      "loops": [
+        25,
+        48,
+        60
+      ]
+    },
+    {
+      "level": 30,
+      "id": "fracture-30",
+      "status": "passed",
+      "loops": [
+        22,
+        37,
+        53,
+        69
+      ]
+    },
+    {
+      "level": 31,
+      "id": "fracture-31",
+      "status": "passed",
+      "loops": [
+        24,
+        40
+      ]
+    },
+    {
+      "level": 32,
+      "id": "fracture-32",
+      "status": "passed",
+      "loops": [
+        25,
+        41
+      ]
+    },
+    {
+      "level": 33,
+      "id": "fracture-33",
+      "status": "passed",
+      "loops": [
+        34,
+        54,
+        70
+      ]
+    },
+    {
+      "level": 34,
+      "id": "fracture-34",
+      "status": "passed",
+      "loops": [
+        25,
+        53,
+        73
+      ]
+    },
+    {
+      "level": 35,
+      "id": "fracture-35",
+      "status": "passed",
+      "loops": [
+        32,
+        56,
+        78,
+        106
+      ]
+    },
+    {
+      "level": 36,
+      "id": "fracture-36",
+      "status": "passed",
+      "loops": [
+        30,
+        60,
+        82,
+        106
+      ]
+    },
+    {
+      "level": 37,
+      "id": "fracture-37",
+      "status": "passed",
+      "loops": [
+        25,
+        56,
+        82,
+        99
+      ]
+    },
+    {
+      "level": 38,
+      "id": "fracture-38",
+      "status": "passed",
+      "loops": [
+        30,
+        53,
+        75,
+        100
+      ]
+    },
+    {
+      "level": 39,
+      "id": "fracture-39",
+      "status": "passed",
+      "loops": [
+        28,
+        53,
+        86,
+        117
+      ]
+    },
+    {
+      "level": 40,
+      "id": "fracture-40",
+      "status": "passed",
+      "loops": [
+        30,
+        48,
+        78,
+        94
+      ]
+    },
+    {
+      "level": 41,
+      "id": "fracture-41",
+      "status": "passed",
+      "loops": [
+        29,
+        62,
+        97,
+        128
+      ]
+    },
+    {
+      "level": 42,
+      "id": "fracture-42",
+      "status": "passed",
+      "loops": [
+        29,
+        66,
+        85,
+        99
+      ]
+    },
+    {
+      "level": 43,
+      "id": "fracture-43",
+      "status": "passed",
+      "loops": [
+        35,
+        55,
+        91,
+        114
+      ]
+    },
+    {
+      "level": 44,
+      "id": "fracture-44",
+      "status": "passed",
+      "loops": [
+        26,
+        55,
+        89,
+        115
+      ]
+    },
+    {
+      "level": 45,
+      "id": "fracture-45",
+      "status": "passed",
+      "loops": [
+        20,
+        54,
+        82,
+        108
+      ]
+    },
+    {
+      "level": 46,
+      "id": "fracture-46",
+      "status": "passed",
+      "loops": [
+        33,
+        87,
+        133,
+        154
+      ]
+    },
+    {
+      "level": 47,
+      "id": "fracture-47",
+      "status": "passed",
+      "loops": [
+        39,
+        80,
+        111,
+        149
+      ]
+    },
+    {
+      "level": 48,
+      "id": "fracture-48",
+      "status": "passed",
+      "loops": [
+        31,
+        90,
+        139,
+        198
+      ]
+    },
+    {
+      "level": 49,
+      "id": "fracture-49",
+      "status": "passed",
+      "loops": [
+        38,
+        87,
+        148,
+        205
+      ]
+    },
+    {
+      "level": 50,
+      "id": "fracture-50",
+      "status": "passed",
+      "loops": [
+        67,
+        112,
+        160,
+        222
+      ]
+    },
+    {
+      "level": 51,
+      "id": "fracture-51",
+      "status": "passed",
+      "loops": [
+        3,
+        16
+      ]
+    },
+    {
+      "level": 52,
+      "id": "fracture-52",
+      "status": "passed",
+      "loops": [
+        3,
+        31
+      ]
+    },
+    {
+      "level": 53,
+      "id": "fracture-53",
+      "status": "passed",
+      "loops": [
+        2,
+        8
+      ]
+    },
+    {
+      "level": 54,
+      "id": "fracture-54",
+      "status": "passed",
+      "loops": [
+        2,
+        13
+      ]
+    },
+    {
+      "level": 55,
+      "id": "fracture-55",
+      "status": "passed",
+      "loops": [
+        3,
+        19,
+        22
+      ]
+    },
+    {
+      "level": 56,
+      "id": "fracture-56",
+      "status": "passed",
+      "loops": [
+        3,
+        20
+      ]
+    },
+    {
+      "level": 57,
+      "id": "fracture-57",
+      "status": "passed",
+      "loops": [
+        3,
+        24
+      ]
+    },
+    {
+      "level": 58,
+      "id": "fracture-58",
+      "status": "passed",
+      "loops": [
+        4,
+        42
+      ]
+    },
+    {
+      "level": 59,
+      "id": "fracture-59",
+      "status": "passed",
+      "loops": [
+        2,
+        20
+      ]
+    },
+    {
+      "level": 60,
+      "id": "fracture-60",
+      "status": "passed",
+      "loops": [
+        3,
+        24,
+        34
+      ]
+    },
+    {
+      "level": 61,
+      "id": "fracture-61",
+      "status": "passed",
+      "loops": [
+        2,
+        12
+      ]
+    },
+    {
+      "level": 62,
+      "id": "fracture-62",
+      "status": "passed",
+      "loops": [
+        3,
+        30
+      ]
+    },
+    {
+      "level": 63,
+      "id": "fracture-63",
+      "status": "passed",
+      "loops": [
+        3,
+        32
+      ]
+    },
+    {
+      "level": 64,
+      "id": "fracture-64",
+      "status": "passed",
+      "loops": [
+        3,
+        26,
+        34
+      ]
+    },
+    {
+      "level": 65,
+      "id": "fracture-65",
+      "status": "passed",
+      "loops": [
+        2,
+        32
+      ]
+    },
+    {
+      "level": 66,
+      "id": "fracture-66",
+      "status": "passed",
+      "loops": [
+        3,
+        24,
+        34
+      ]
+    },
+    {
+      "level": 67,
+      "id": "fracture-67",
+      "status": "passed",
+      "loops": [
+        4,
+        27,
+        43
+      ]
+    },
+    {
+      "level": 68,
+      "id": "fracture-68",
+      "status": "passed",
+      "loops": [
+        3,
+        33,
+        47
+      ]
+    },
+    {
+      "level": 69,
+      "id": "fracture-69",
+      "status": "passed",
+      "loops": [
+        3,
+        26,
+        42
+      ]
+    },
+    {
+      "level": 70,
+      "id": "fracture-70",
+      "status": "passed",
+      "loops": [
+        3,
+        30,
+        30,
+        44
+      ]
+    },
+    {
+      "level": 71,
+      "id": "fracture-71",
+      "status": "passed",
+      "loops": [
+        3,
+        26,
+        48
+      ]
+    },
+    {
+      "level": 72,
+      "id": "fracture-72",
+      "status": "passed",
+      "loops": [
+        2,
+        24
+      ]
+    },
+    {
+      "level": 73,
+      "id": "fracture-73",
+      "status": "passed",
+      "loops": [
+        3,
+        38,
+        38,
+        54
+      ]
+    },
+    {
+      "level": 74,
+      "id": "fracture-74",
+      "status": "passed",
+      "loops": [
+        4,
+        31,
+        53
+      ]
+    },
+    {
+      "level": 75,
+      "id": "fracture-75",
+      "status": "passed",
+      "loops": [
+        4,
+        52,
+        52,
+        68
+      ]
+    },
+    {
+      "level": 76,
+      "id": "fracture-76",
+      "status": "passed",
+      "loops": [
+        3,
+        34,
+        56
+      ]
+    },
+    {
+      "level": 77,
+      "id": "fracture-77",
+      "status": "passed",
+      "loops": [
+        4,
+        39,
+        39,
+        55
+      ]
+    },
+    {
+      "level": 78,
+      "id": "fracture-78",
+      "status": "passed",
+      "loops": [
+        4,
+        43,
+        65
+      ]
+    },
+    {
+      "level": 79,
+      "id": "fracture-79",
+      "status": "passed",
+      "loops": [
+        3,
+        40,
+        40,
+        62
+      ]
+    },
+    {
+      "level": 80,
+      "id": "fracture-80",
+      "status": "passed",
+      "loops": [
+        4,
+        61,
+        61,
+        83
+      ]
+    }
+  ]
+}
