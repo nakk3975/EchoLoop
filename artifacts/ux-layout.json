@@ -11,10 +11,10 @@
           "rect": {
             "x": 23,
             "y": 184,
-            "width": 68.359375,
+            "width": 81,
             "height": 44,
             "top": 184,
-            "right": 91.359375,
+            "right": 104,
             "bottom": 228,
             "left": 23
           }
@@ -22,27 +22,27 @@
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 126.046875,
+            "x": 112,
             "y": 184,
-            "width": 59.921875,
+            "width": 81,
             "height": 44,
             "top": 184,
-            "right": 185.96875,
+            "right": 193,
             "bottom": 228,
-            "left": 126.046875
+            "left": 112
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 220.640625,
+            "x": 201,
             "y": 184,
-            "width": 61.359375,
+            "width": 81,
             "height": 44,
             "top": 184,
             "right": 282,
             "bottom": 228,
-            "left": 220.640625
+            "left": 201
           }
         },
         {
@@ -150,7 +150,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 229.5,
             "y": 506.40625,
@@ -183,7 +183,29 @@
         "bottom": 568,
         "left": 0
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "pausedBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
     },
     {
       "viewport": "320x568",
@@ -195,10 +217,10 @@
           "rect": {
             "x": 23,
             "y": 213,
-            "width": 68.359375,
+            "width": 81,
             "height": 44,
             "top": 213,
-            "right": 91.359375,
+            "right": 104,
             "bottom": 257,
             "left": 23
           }
@@ -206,27 +228,27 @@
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 126.046875,
+            "x": 112,
             "y": 213,
-            "width": 59.921875,
+            "width": 81,
             "height": 44,
             "top": 213,
-            "right": 185.96875,
+            "right": 193,
             "bottom": 257,
-            "left": 126.046875
+            "left": 112
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 220.640625,
+            "x": 201,
             "y": 213,
-            "width": 61.359375,
+            "width": 81,
             "height": 44,
             "top": 213,
             "right": 282,
             "bottom": 257,
-            "left": 220.640625
+            "left": 201
           }
         },
         {
@@ -334,7 +356,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 229.5,
             "y": 506.40625,
@@ -367,7 +389,29 @@
         "bottom": 568,
         "left": 0
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "pausedBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
     },
     {
       "viewport": "390x680",
@@ -379,10 +423,10 @@
           "rect": {
             "x": 23,
             "y": 184,
-            "width": 68.359375,
+            "width": 104.328125,
             "height": 44,
             "top": 184,
-            "right": 91.359375,
+            "right": 127.328125,
             "bottom": 228,
             "left": 23
           }
@@ -390,27 +434,27 @@
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 161.046875,
+            "x": 135.328125,
             "y": 184,
-            "width": 59.921875,
+            "width": 104.328125,
             "height": 44,
             "top": 184,
-            "right": 220.96875,
+            "right": 239.65625,
             "bottom": 228,
-            "left": 161.046875
+            "left": 135.328125
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 290.640625,
+            "x": 247.65625,
             "y": 184,
-            "width": 61.359375,
+            "width": 104.34375,
             "height": 44,
             "top": 184,
             "right": 352,
             "bottom": 228,
-            "left": 290.640625
+            "left": 247.65625
           }
         },
         {
@@ -518,7 +562,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 273.5,
             "y": 612.8125,
@@ -551,7 +595,29 @@
         "bottom": 680,
         "left": 0
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 28,
+        "y": 405.6875,
+        "width": 319,
+        "height": 62,
+        "top": 405.6875,
+        "right": 347,
+        "bottom": 467.6875,
+        "left": 28
+      },
+      "pausedBanner": {
+        "x": 28,
+        "y": 405.6875,
+        "width": 319,
+        "height": 62,
+        "top": 405.6875,
+        "right": 347,
+        "bottom": 467.6875,
+        "left": 28
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
     },
     {
       "viewport": "390x680",
@@ -563,10 +629,10 @@
           "rect": {
             "x": 23,
             "y": 184,
-            "width": 68.359375,
+            "width": 104.328125,
             "height": 44,
             "top": 184,
-            "right": 91.359375,
+            "right": 127.328125,
             "bottom": 228,
             "left": 23
           }
@@ -574,27 +640,27 @@
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 161.046875,
+            "x": 135.328125,
             "y": 184,
-            "width": 59.921875,
+            "width": 104.328125,
             "height": 44,
             "top": 184,
-            "right": 220.96875,
+            "right": 239.65625,
             "bottom": 228,
-            "left": 161.046875
+            "left": 135.328125
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 290.640625,
+            "x": 247.65625,
             "y": 184,
-            "width": 61.359375,
+            "width": 104.34375,
             "height": 44,
             "top": 184,
             "right": 352,
             "bottom": 228,
-            "left": 290.640625
+            "left": 247.65625
           }
         },
         {
@@ -702,7 +768,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 273.5,
             "y": 612.8125,
@@ -735,7 +801,29 @@
         "bottom": 680,
         "left": 0
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 28,
+        "y": 413.8125,
+        "width": 319,
+        "height": 62,
+        "top": 413.8125,
+        "right": 347,
+        "bottom": 475.8125,
+        "left": 28
+      },
+      "pausedBanner": {
+        "x": 28,
+        "y": 413.8125,
+        "width": 319,
+        "height": 62,
+        "top": 413.8125,
+        "right": 347,
+        "bottom": 475.8125,
+        "left": 28
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
     },
     {
       "viewport": "740x390",
@@ -746,39 +834,39 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 21,
-            "y": 144,
-            "width": 62.359375,
+            "y": 186,
+            "width": 127.65625,
             "height": 44,
-            "top": 144,
-            "right": 83.359375,
-            "bottom": 188,
+            "top": 186,
+            "right": 148.65625,
+            "bottom": 230,
             "left": 21
           }
         },
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 197.046875,
-            "y": 144,
-            "width": 53.921875,
+            "x": 156.65625,
+            "y": 186,
+            "width": 127.671875,
             "height": 44,
-            "top": 144,
-            "right": 250.96875,
-            "bottom": 188,
-            "left": 197.046875
+            "top": 186,
+            "right": 284.328125,
+            "bottom": 230,
+            "left": 156.65625
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 364.640625,
-            "y": 144,
-            "width": 55.359375,
+            "x": 292.328125,
+            "y": 186,
+            "width": 127.65625,
             "height": 44,
-            "top": 144,
-            "right": 420,
-            "bottom": 188,
-            "left": 364.640625
+            "top": 186,
+            "right": 419.984375,
+            "bottom": 230,
+            "left": 292.328125
           }
         },
         {
@@ -886,7 +974,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 588.5,
             "y": 294,
@@ -901,10 +989,10 @@
       ],
       "map": {
         "x": 16,
-        "y": 200,
+        "y": 242,
         "width": 409,
-        "height": 178,
-        "top": 200,
+        "height": 136,
+        "top": 242,
         "right": 425,
         "bottom": 378,
         "left": 16
@@ -919,7 +1007,29 @@
         "bottom": 390,
         "left": 445
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 26,
+        "y": 308,
+        "width": 389,
+        "height": 62,
+        "top": 308,
+        "right": 415,
+        "bottom": 370,
+        "left": 26
+      },
+      "pausedBanner": {
+        "x": 26,
+        "y": 308,
+        "width": 389,
+        "height": 62,
+        "top": 308,
+        "right": 415,
+        "bottom": 370,
+        "left": 26
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
     },
     {
       "viewport": "740x390",
@@ -930,39 +1040,39 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 21,
-            "y": 144,
-            "width": 62.359375,
+            "y": 186,
+            "width": 127.65625,
             "height": 44,
-            "top": 144,
-            "right": 83.359375,
-            "bottom": 188,
+            "top": 186,
+            "right": 148.65625,
+            "bottom": 230,
             "left": 21
           }
         },
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 197.046875,
-            "y": 144,
-            "width": 53.921875,
+            "x": 156.65625,
+            "y": 186,
+            "width": 127.671875,
             "height": 44,
-            "top": 144,
-            "right": 250.96875,
-            "bottom": 188,
-            "left": 197.046875
+            "top": 186,
+            "right": 284.328125,
+            "bottom": 230,
+            "left": 156.65625
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 364.640625,
-            "y": 144,
-            "width": 55.359375,
+            "x": 292.328125,
+            "y": 186,
+            "width": 127.65625,
             "height": 44,
-            "top": 144,
-            "right": 420,
-            "bottom": 188,
-            "left": 364.640625
+            "top": 186,
+            "right": 419.984375,
+            "bottom": 230,
+            "left": 292.328125
           }
         },
         {
@@ -1070,7 +1180,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 588.5,
             "y": 294,
@@ -1085,10 +1195,10 @@
       ],
       "map": {
         "x": 16,
-        "y": 200,
+        "y": 242,
         "width": 409,
-        "height": 178,
-        "top": 200,
+        "height": 136,
+        "top": 242,
         "right": 425,
         "bottom": 378,
         "left": 16
@@ -1103,7 +1213,29 @@
         "bottom": 390,
         "left": 445
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 26,
+        "y": 308,
+        "width": 389,
+        "height": 62,
+        "top": 308,
+        "right": 415,
+        "bottom": 370,
+        "left": 26
+      },
+      "pausedBanner": {
+        "x": 26,
+        "y": 308,
+        "width": 389,
+        "height": 62,
+        "top": 308,
+        "right": 415,
+        "bottom": 370,
+        "left": 26
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
     },
     {
       "viewport": "320x568",
@@ -1115,10 +1247,10 @@
           "rect": {
             "x": 23,
             "y": 188,
-            "width": 68.359375,
+            "width": 81,
             "height": 44,
             "top": 188,
-            "right": 91.359375,
+            "right": 104,
             "bottom": 232,
             "left": 23
           }
@@ -1126,27 +1258,27 @@
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 126.046875,
+            "x": 112,
             "y": 188,
-            "width": 59.921875,
+            "width": 81,
             "height": 44,
             "top": 188,
-            "right": 185.96875,
+            "right": 193,
             "bottom": 232,
-            "left": 126.046875
+            "left": 112
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 220.640625,
+            "x": 201,
             "y": 188,
-            "width": 61.359375,
+            "width": 81,
             "height": 44,
             "top": 188,
             "right": 282,
             "bottom": 232,
-            "left": 220.640625
+            "left": 201
           }
         },
         {
@@ -1254,7 +1386,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 229.5,
             "y": 506.40625,
@@ -1287,7 +1419,29 @@
         "bottom": 568,
         "left": 0
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "pausedBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
     },
     {
       "viewport": "320x568",
@@ -1299,10 +1453,10 @@
           "rect": {
             "x": 23,
             "y": 217,
-            "width": 68.359375,
+            "width": 81,
             "height": 44,
             "top": 217,
-            "right": 91.359375,
+            "right": 104,
             "bottom": 261,
             "left": 23
           }
@@ -1310,27 +1464,27 @@
         {
           "label": "플레이 설정",
           "rect": {
-            "x": 126.046875,
+            "x": 112,
             "y": 217,
-            "width": 59.921875,
+            "width": 81,
             "height": 44,
             "top": 217,
-            "right": 185.96875,
+            "right": 193,
             "bottom": 261,
-            "left": 126.046875
+            "left": 112
           }
         },
         {
           "label": "지도 확대",
           "rect": {
-            "x": 220.640625,
+            "x": 201,
             "y": 217,
-            "width": 61.359375,
+            "width": 81,
             "height": 44,
             "top": 217,
             "right": 282,
             "bottom": 261,
-            "left": 220.640625
+            "left": 201
           }
         },
         {
@@ -1438,7 +1592,7 @@
           }
         },
         {
-          "label": "↻ 이번 반복 재시작 R",
+          "label": "↻ 반복 재시작 R",
           "rect": {
             "x": 229.5,
             "y": 506.40625,
@@ -1471,7 +1625,645 @@
         "bottom": 568,
         "left": 0
       },
-      "zoomPlayerVisible": true
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "pausedBanner": {
+        "x": 28,
+        "y": 303.8125,
+        "width": 249,
+        "height": 62,
+        "top": 303.8125,
+        "right": 277,
+        "bottom": 365.8125,
+        "left": 28
+      },
+      "centeredBanner": true,
+      "equalToolbar": true
+    },
+    {
+      "viewport": "980x800",
+      "stage": "first-echo",
+      "large": false,
+      "targets": [
+        {
+          "label": "플레이 도움말",
+          "rect": {
+            "x": 429.359375,
+            "y": 390.21875,
+            "width": 70.359375,
+            "height": 44,
+            "top": 390.21875,
+            "right": 499.71875,
+            "bottom": 434.21875,
+            "left": 429.359375
+          }
+        },
+        {
+          "label": "플레이 설정",
+          "rect": {
+            "x": 505.71875,
+            "y": 390.21875,
+            "width": 61.921875,
+            "height": 44,
+            "top": 390.21875,
+            "right": 567.640625,
+            "bottom": 434.21875,
+            "left": 505.71875
+          }
+        },
+        {
+          "label": "지도 확대",
+          "rect": {
+            "x": 573.640625,
+            "y": 390.21875,
+            "width": 63.359375,
+            "height": 44,
+            "top": 390.21875,
+            "right": 637,
+            "bottom": 434.21875,
+            "left": 573.640625
+          }
+        },
+        {
+          "label": "한 수 되돌리기",
+          "rect": {
+            "x": 34.015625,
+            "y": 623,
+            "width": 193.984375,
+            "height": 46,
+            "top": 623,
+            "right": 228,
+            "bottom": 669,
+            "left": 34.015625
+          }
+        },
+        {
+          "label": "⟲ 레벨 처음부터",
+          "rect": {
+            "x": 238,
+            "y": 623,
+            "width": 193.984375,
+            "height": 46,
+            "top": 623,
+            "right": 431.984375,
+            "bottom": 669,
+            "left": 238
+          }
+        },
+        {
+          "label": "↶ 기록 확정 Enter",
+          "rect": {
+            "x": 441.984375,
+            "y": 623,
+            "width": 193.984375,
+            "height": 46,
+            "top": 623,
+            "right": 635.96875,
+            "bottom": 669,
+            "left": 441.984375
+          }
+        },
+        {
+          "label": "▷ 계속 Space",
+          "rect": {
+            "x": 136.015625,
+            "y": 679,
+            "width": 193.984375,
+            "height": 46,
+            "top": 679,
+            "right": 330,
+            "bottom": 725,
+            "left": 136.015625
+          }
+        },
+        {
+          "label": "↻ 반복 재시작 R",
+          "rect": {
+            "x": 340,
+            "y": 679,
+            "width": 193.984375,
+            "height": 46,
+            "top": 679,
+            "right": 533.984375,
+            "bottom": 725,
+            "left": 340
+          }
+        }
+      ],
+      "map": {
+        "x": 28,
+        "y": 446.21875,
+        "width": 614,
+        "height": 107.78125,
+        "top": 446.21875,
+        "right": 642,
+        "bottom": 554,
+        "left": 28
+      },
+      "dock": {
+        "x": 28,
+        "y": 608,
+        "width": 614,
+        "height": 117,
+        "top": 608,
+        "right": 642,
+        "bottom": 725,
+        "left": 28
+      },
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 203.8984375,
+        "y": 476,
+        "width": 262.203125,
+        "height": 66,
+        "top": 476,
+        "right": 466.1015625,
+        "bottom": 542,
+        "left": 203.8984375
+      },
+      "pausedBanner": {
+        "x": 195.65625,
+        "y": 476,
+        "width": 278.6875,
+        "height": 66,
+        "top": 476,
+        "right": 474.34375,
+        "bottom": 542,
+        "left": 195.65625
+      },
+      "centeredBanner": true,
+      "equalToolbar": false
+    },
+    {
+      "viewport": "980x800",
+      "stage": "fracture-50",
+      "large": false,
+      "targets": [
+        {
+          "label": "플레이 도움말",
+          "rect": {
+            "x": 429.359375,
+            "y": 390.21875,
+            "width": 70.359375,
+            "height": 44,
+            "top": 390.21875,
+            "right": 499.71875,
+            "bottom": 434.21875,
+            "left": 429.359375
+          }
+        },
+        {
+          "label": "플레이 설정",
+          "rect": {
+            "x": 505.71875,
+            "y": 390.21875,
+            "width": 61.921875,
+            "height": 44,
+            "top": 390.21875,
+            "right": 567.640625,
+            "bottom": 434.21875,
+            "left": 505.71875
+          }
+        },
+        {
+          "label": "지도 확대",
+          "rect": {
+            "x": 573.640625,
+            "y": 390.21875,
+            "width": 63.359375,
+            "height": 44,
+            "top": 390.21875,
+            "right": 637,
+            "bottom": 434.21875,
+            "left": 573.640625
+          }
+        },
+        {
+          "label": "한 수 되돌리기",
+          "rect": {
+            "x": 34.015625,
+            "y": 623,
+            "width": 193.984375,
+            "height": 46,
+            "top": 623,
+            "right": 228,
+            "bottom": 669,
+            "left": 34.015625
+          }
+        },
+        {
+          "label": "⟲ 레벨 처음부터",
+          "rect": {
+            "x": 238,
+            "y": 623,
+            "width": 193.984375,
+            "height": 46,
+            "top": 623,
+            "right": 431.984375,
+            "bottom": 669,
+            "left": 238
+          }
+        },
+        {
+          "label": "↶ 기록 확정 Enter",
+          "rect": {
+            "x": 441.984375,
+            "y": 623,
+            "width": 193.984375,
+            "height": 46,
+            "top": 623,
+            "right": 635.96875,
+            "bottom": 669,
+            "left": 441.984375
+          }
+        },
+        {
+          "label": "▷ 계속 Space",
+          "rect": {
+            "x": 136.015625,
+            "y": 679,
+            "width": 193.984375,
+            "height": 46,
+            "top": 679,
+            "right": 330,
+            "bottom": 725,
+            "left": 136.015625
+          }
+        },
+        {
+          "label": "↻ 반복 재시작 R",
+          "rect": {
+            "x": 340,
+            "y": 679,
+            "width": 193.984375,
+            "height": 46,
+            "top": 679,
+            "right": 533.984375,
+            "bottom": 725,
+            "left": 340
+          }
+        }
+      ],
+      "map": {
+        "x": 28,
+        "y": 446.21875,
+        "width": 614,
+        "height": 107.78125,
+        "top": 446.21875,
+        "right": 642,
+        "bottom": 554,
+        "left": 28
+      },
+      "dock": {
+        "x": 28,
+        "y": 608,
+        "width": 614,
+        "height": 117,
+        "top": 608,
+        "right": 642,
+        "bottom": 725,
+        "left": 28
+      },
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 203.8984375,
+        "y": 476,
+        "width": 262.203125,
+        "height": 66,
+        "top": 476,
+        "right": 466.1015625,
+        "bottom": 542,
+        "left": 203.8984375
+      },
+      "pausedBanner": {
+        "x": 195.65625,
+        "y": 476,
+        "width": 278.6875,
+        "height": 66,
+        "top": 476,
+        "right": 474.34375,
+        "bottom": 542,
+        "left": 195.65625
+      },
+      "centeredBanner": true,
+      "equalToolbar": false
+    },
+    {
+      "viewport": "1366x900",
+      "stage": "first-echo",
+      "large": false,
+      "targets": [
+        {
+          "label": "플레이 도움말",
+          "rect": {
+            "x": 779.359375,
+            "y": 400.21875,
+            "width": 70.359375,
+            "height": 44,
+            "top": 400.21875,
+            "right": 849.71875,
+            "bottom": 444.21875,
+            "left": 779.359375
+          }
+        },
+        {
+          "label": "플레이 설정",
+          "rect": {
+            "x": 855.71875,
+            "y": 400.21875,
+            "width": 61.921875,
+            "height": 44,
+            "top": 400.21875,
+            "right": 917.640625,
+            "bottom": 444.21875,
+            "left": 855.71875
+          }
+        },
+        {
+          "label": "지도 확대",
+          "rect": {
+            "x": 923.640625,
+            "y": 400.21875,
+            "width": 63.359375,
+            "height": 44,
+            "top": 400.21875,
+            "right": 987,
+            "bottom": 444.21875,
+            "left": 923.640625
+          }
+        },
+        {
+          "label": "한 수 되돌리기",
+          "rect": {
+            "x": 50.03125,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 229.21875,
+            "bottom": 825,
+            "left": 50.03125
+          }
+        },
+        {
+          "label": "⟲ 레벨 처음부터",
+          "rect": {
+            "x": 239.21875,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 418.40625,
+            "bottom": 825,
+            "left": 239.21875
+          }
+        },
+        {
+          "label": "↶ 기록 확정 Enter",
+          "rect": {
+            "x": 428.40625,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 607.59375,
+            "bottom": 825,
+            "left": 428.40625
+          }
+        },
+        {
+          "label": "▷ 계속 Space",
+          "rect": {
+            "x": 617.59375,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 796.78125,
+            "bottom": 825,
+            "left": 617.59375
+          }
+        },
+        {
+          "label": "↻ 반복 재시작 R",
+          "rect": {
+            "x": 806.78125,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 985.96875,
+            "bottom": 825,
+            "left": 806.78125
+          }
+        }
+      ],
+      "map": {
+        "x": 44,
+        "y": 456.21875,
+        "width": 948,
+        "height": 253.78125,
+        "top": 456.21875,
+        "right": 992,
+        "bottom": 710,
+        "left": 44
+      },
+      "dock": {
+        "x": 44,
+        "y": 764,
+        "width": 948,
+        "height": 61,
+        "top": 764,
+        "right": 992,
+        "bottom": 825,
+        "left": 44
+      },
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 386.8984375,
+        "y": 632,
+        "width": 262.203125,
+        "height": 66,
+        "top": 632,
+        "right": 649.1015625,
+        "bottom": 698,
+        "left": 386.8984375
+      },
+      "pausedBanner": {
+        "x": 378.65625,
+        "y": 632,
+        "width": 278.6875,
+        "height": 66,
+        "top": 632,
+        "right": 657.34375,
+        "bottom": 698,
+        "left": 378.65625
+      },
+      "centeredBanner": true,
+      "equalToolbar": false
+    },
+    {
+      "viewport": "1366x900",
+      "stage": "fracture-50",
+      "large": false,
+      "targets": [
+        {
+          "label": "플레이 도움말",
+          "rect": {
+            "x": 779.359375,
+            "y": 400.21875,
+            "width": 70.359375,
+            "height": 44,
+            "top": 400.21875,
+            "right": 849.71875,
+            "bottom": 444.21875,
+            "left": 779.359375
+          }
+        },
+        {
+          "label": "플레이 설정",
+          "rect": {
+            "x": 855.71875,
+            "y": 400.21875,
+            "width": 61.921875,
+            "height": 44,
+            "top": 400.21875,
+            "right": 917.640625,
+            "bottom": 444.21875,
+            "left": 855.71875
+          }
+        },
+        {
+          "label": "지도 확대",
+          "rect": {
+            "x": 923.640625,
+            "y": 400.21875,
+            "width": 63.359375,
+            "height": 44,
+            "top": 400.21875,
+            "right": 987,
+            "bottom": 444.21875,
+            "left": 923.640625
+          }
+        },
+        {
+          "label": "한 수 되돌리기",
+          "rect": {
+            "x": 50.03125,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 229.21875,
+            "bottom": 825,
+            "left": 50.03125
+          }
+        },
+        {
+          "label": "⟲ 레벨 처음부터",
+          "rect": {
+            "x": 239.21875,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 418.40625,
+            "bottom": 825,
+            "left": 239.21875
+          }
+        },
+        {
+          "label": "↶ 기록 확정 Enter",
+          "rect": {
+            "x": 428.40625,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 607.59375,
+            "bottom": 825,
+            "left": 428.40625
+          }
+        },
+        {
+          "label": "▷ 계속 Space",
+          "rect": {
+            "x": 617.59375,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 796.78125,
+            "bottom": 825,
+            "left": 617.59375
+          }
+        },
+        {
+          "label": "↻ 반복 재시작 R",
+          "rect": {
+            "x": 806.78125,
+            "y": 779,
+            "width": 179.1875,
+            "height": 46,
+            "top": 779,
+            "right": 985.96875,
+            "bottom": 825,
+            "left": 806.78125
+          }
+        }
+      ],
+      "map": {
+        "x": 44,
+        "y": 456.21875,
+        "width": 948,
+        "height": 253.78125,
+        "top": 456.21875,
+        "right": 992,
+        "bottom": 710,
+        "left": 44
+      },
+      "dock": {
+        "x": 44,
+        "y": 764,
+        "width": 948,
+        "height": 61,
+        "top": 764,
+        "right": 992,
+        "bottom": 825,
+        "left": 44
+      },
+      "zoomPlayerVisible": true,
+      "initialBanner": {
+        "x": 386.8984375,
+        "y": 632,
+        "width": 262.203125,
+        "height": 66,
+        "top": 632,
+        "right": 649.1015625,
+        "bottom": 698,
+        "left": 386.8984375
+      },
+      "pausedBanner": {
+        "x": 378.65625,
+        "y": 632,
+        "width": 278.6875,
+        "height": 66,
+        "top": 632,
+        "right": 657.34375,
+        "bottom": 698,
+        "left": 378.65625
+      },
+      "centeredBanner": true,
+      "equalToolbar": false
     }
   ],
   "errors": []
