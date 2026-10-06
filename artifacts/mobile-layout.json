@@ -1,0 +1,440 @@
+[
+  {
+    "viewport": "320x568",
+    "dock": {
+      "buttons": [
+        {
+          "label": "↑",
+          "rect": {
+            "bottom": 453.40625,
+            "height": 48,
+            "left": 58,
+            "right": 102,
+            "top": 405.40625,
+            "width": 44,
+            "x": 58,
+            "y": 405.40625
+          }
+        },
+        {
+          "label": "←",
+          "rect": {
+            "bottom": 505.40625,
+            "height": 48,
+            "left": 10,
+            "right": 54,
+            "top": 457.40625,
+            "width": 44,
+            "x": 10,
+            "y": 457.40625
+          }
+        },
+        {
+          "label": "↓",
+          "rect": {
+            "bottom": 505.40625,
+            "height": 48,
+            "left": 58,
+            "right": 102,
+            "top": 457.40625,
+            "width": 44,
+            "x": 58,
+            "y": 457.40625
+          }
+        },
+        {
+          "label": "→",
+          "rect": {
+            "bottom": 505.40625,
+            "height": 48,
+            "left": 106,
+            "right": 150,
+            "top": 457.40625,
+            "width": 44,
+            "x": 106,
+            "y": 457.40625
+          }
+        },
+        {
+          "label": "↶ 한 수 되돌리기 Z",
+          "rect": {
+            "bottom": 500.40625,
+            "height": 49.59375,
+            "left": 158,
+            "right": 223.5,
+            "top": 450.8125,
+            "width": 65.5,
+            "x": 158,
+            "y": 450.8125
+          }
+        },
+        {
+          "label": "⟲ 레벨 처음부터",
+          "rect": {
+            "bottom": 500.40625,
+            "height": 49.59375,
+            "left": 229.5,
+            "right": 295,
+            "top": 450.8125,
+            "width": 65.5,
+            "x": 229.5,
+            "y": 450.8125
+          }
+        },
+        {
+          "label": "↶ 기록 확정 Enter",
+          "rect": {
+            "bottom": 444.8125,
+            "height": 46,
+            "left": 158,
+            "right": 295,
+            "top": 398.8125,
+            "width": 137,
+            "x": 158,
+            "y": 398.8125
+          }
+        },
+        {
+          "label": "▷ 계속 Space",
+          "rect": {
+            "bottom": 556,
+            "height": 49.59375,
+            "left": 158,
+            "right": 223.5,
+            "top": 506.40625,
+            "width": 65.5,
+            "x": 158,
+            "y": 506.40625
+          }
+        },
+        {
+          "label": "↻ 이번 반복 재시작 R",
+          "rect": {
+            "bottom": 556,
+            "height": 49.59375,
+            "left": 229.5,
+            "right": 295,
+            "top": 506.40625,
+            "width": 65.5,
+            "x": 229.5,
+            "y": 506.40625
+          }
+        }
+      ],
+      "rect": {
+        "bottom": 568,
+        "height": 182.1875,
+        "left": 0,
+        "right": 305,
+        "top": 385.8125,
+        "width": 305,
+        "x": 0,
+        "y": 385.8125
+      }
+    },
+    "map": {
+      "bottom": 364,
+      "height": 148,
+      "left": 18,
+      "right": 287,
+      "top": 216,
+      "width": 269,
+      "x": 18,
+      "y": 216
+    },
+    "touchTargetsPassed": true,
+    "mapClearOfDock": true
+  },
+  {
+    "viewport": "390x680",
+    "dock": {
+      "buttons": [
+        {
+          "label": "↑",
+          "rect": {
+            "bottom": 559.8125,
+            "height": 48,
+            "left": 64,
+            "right": 112,
+            "top": 511.8125,
+            "width": 48,
+            "x": 64,
+            "y": 511.8125
+          }
+        },
+        {
+          "label": "←",
+          "rect": {
+            "bottom": 611.8125,
+            "height": 48,
+            "left": 12,
+            "right": 60,
+            "top": 563.8125,
+            "width": 48,
+            "x": 12,
+            "y": 563.8125
+          }
+        },
+        {
+          "label": "↓",
+          "rect": {
+            "bottom": 611.8125,
+            "height": 48,
+            "left": 64,
+            "right": 112,
+            "top": 563.8125,
+            "width": 48,
+            "x": 64,
+            "y": 563.8125
+          }
+        },
+        {
+          "label": "→",
+          "rect": {
+            "bottom": 611.8125,
+            "height": 48,
+            "left": 116,
+            "right": 164,
+            "top": 563.8125,
+            "width": 48,
+            "x": 116,
+            "y": 563.8125
+          }
+        },
+        {
+          "label": "↶ 한 수 되돌리기 Z",
+          "rect": {
+            "bottom": 606.8125,
+            "height": 55.1875,
+            "left": 178,
+            "right": 267.5,
+            "top": 551.625,
+            "width": 89.5,
+            "x": 178,
+            "y": 551.625
+          }
+        },
+        {
+          "label": "⟲ 레벨 처음부터",
+          "rect": {
+            "bottom": 606.8125,
+            "height": 55.1875,
+            "left": 273.5,
+            "right": 363,
+            "top": 551.625,
+            "width": 89.5,
+            "x": 273.5,
+            "y": 551.625
+          }
+        },
+        {
+          "label": "↶ 기록 확정 Enter",
+          "rect": {
+            "bottom": 545.625,
+            "height": 46,
+            "left": 178,
+            "right": 363,
+            "top": 499.625,
+            "width": 185,
+            "x": 178,
+            "y": 499.625
+          }
+        },
+        {
+          "label": "▷ 계속 Space",
+          "rect": {
+            "bottom": 668,
+            "height": 55.1875,
+            "left": 178,
+            "right": 267.5,
+            "top": 612.8125,
+            "width": 89.5,
+            "x": 178,
+            "y": 612.8125
+          }
+        },
+        {
+          "label": "↻ 이번 반복 재시작 R",
+          "rect": {
+            "bottom": 668,
+            "height": 55.1875,
+            "left": 273.5,
+            "right": 363,
+            "top": 612.8125,
+            "width": 89.5,
+            "x": 273.5,
+            "y": 612.8125
+          }
+        }
+      ],
+      "rect": {
+        "bottom": 680,
+        "height": 193.375,
+        "left": 0,
+        "right": 375,
+        "top": 486.625,
+        "width": 375,
+        "x": 0,
+        "y": 486.625
+      }
+    },
+    "map": {
+      "bottom": 455.6875,
+      "height": 239.6875,
+      "left": 18,
+      "right": 357,
+      "top": 216,
+      "width": 339,
+      "x": 18,
+      "y": 216
+    },
+    "touchTargetsPassed": true,
+    "mapClearOfDock": true
+  },
+  {
+    "viewport": "740x390",
+    "dock": {
+      "buttons": [
+        {
+          "label": "↑",
+          "rect": {
+            "bottom": 93.40625,
+            "height": 48,
+            "left": 561.5,
+            "right": 609.5,
+            "top": 45.40625,
+            "width": 48,
+            "x": 561.5,
+            "y": 45.40625
+          }
+        },
+        {
+          "label": "←",
+          "rect": {
+            "bottom": 145.40625,
+            "height": 48,
+            "left": 509.5,
+            "right": 557.5,
+            "top": 97.40625,
+            "width": 48,
+            "x": 509.5,
+            "y": 97.40625
+          }
+        },
+        {
+          "label": "↓",
+          "rect": {
+            "bottom": 145.40625,
+            "height": 48,
+            "left": 561.5,
+            "right": 609.5,
+            "top": 97.40625,
+            "width": 48,
+            "x": 561.5,
+            "y": 97.40625
+          }
+        },
+        {
+          "label": "→",
+          "rect": {
+            "bottom": 145.40625,
+            "height": 48,
+            "left": 613.5,
+            "right": 661.5,
+            "top": 97.40625,
+            "width": 48,
+            "x": 613.5,
+            "y": 97.40625
+          }
+        },
+        {
+          "label": "↶ 한 수 되돌리기 Z",
+          "rect": {
+            "bottom": 283.40625,
+            "height": 46,
+            "left": 458,
+            "right": 582.5,
+            "top": 237.40625,
+            "width": 124.5,
+            "x": 458,
+            "y": 237.40625
+          }
+        },
+        {
+          "label": "⟲ 레벨 처음부터",
+          "rect": {
+            "bottom": 283.40625,
+            "height": 46,
+            "left": 588.5,
+            "right": 713,
+            "top": 237.40625,
+            "width": 124.5,
+            "x": 588.5,
+            "y": 237.40625
+          }
+        },
+        {
+          "label": "↶ 기록 확정 Enter",
+          "rect": {
+            "bottom": 231.40625,
+            "height": 46,
+            "left": 458,
+            "right": 713,
+            "top": 185.40625,
+            "width": 255,
+            "x": 458,
+            "y": 185.40625
+          }
+        },
+        {
+          "label": "▷ 계속 Space",
+          "rect": {
+            "bottom": 344.59375,
+            "height": 55.1875,
+            "left": 458,
+            "right": 582.5,
+            "top": 289.40625,
+            "width": 124.5,
+            "x": 458,
+            "y": 289.40625
+          }
+        },
+        {
+          "label": "↻ 이번 반복 재시작 R",
+          "rect": {
+            "bottom": 344.59375,
+            "height": 55.1875,
+            "left": 588.5,
+            "right": 713,
+            "top": 289.40625,
+            "width": 124.5,
+            "x": 588.5,
+            "y": 289.40625
+          }
+        }
+      ],
+      "rect": {
+        "bottom": 390,
+        "height": 390,
+        "left": 445,
+        "right": 725,
+        "top": 0,
+        "width": 280,
+        "x": 445,
+        "y": 0
+      }
+    },
+    "map": {
+      "bottom": 388.890625,
+      "height": 206.890625,
+      "left": 16,
+      "right": 425,
+      "top": 182,
+      "width": 409,
+      "x": 16,
+      "y": 182
+    },
+    "touchTargetsPassed": true,
+    "mapClearOfDock": true
+  }
+]

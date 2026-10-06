@@ -22,3 +22,53 @@
 @media(max-width:1100px){.play-layout{grid-template-columns:minmax(0,1fr) 270px}.constellation{gap:14px}.entry{gap:24px}.time-duet{min-width:240px;gap:18px}}
 @media(max-width:760px){.entry{display:block;padding:8px 0 24px}.entry h1{font-size:28px}.entry p{font-size:16px}.time-duet{margin-top:28px;justify-content:flex-start;gap:24px}.time-duet .traveler-portrait{width:60px;height:60px}.time-duet p{font-size:14px}.play-layout{grid-template-columns:1fr}.campaign-heading{flex-wrap:wrap;gap:12px}.chapter-intro p{font-size:14px}.chapter-orbit button{min-width:100px}.level-shard strong{font-size:15px}.shard-detail{font-size:14px}.play-title p{font-size:15px}.game-stats{gap:20px}.game-stats b{font-size:26px}.game-stats .live-label{font-size:12px}.legend{font-size:14px;gap:14px}.game-controls button{font-size:14px;flex-basis:145px}.control-note,.mechanic-guide p{font-size:14px}.pause-banner{max-width:95%;bottom:8px}.pause-banner span,.pause-banner button{font-size:14px}.play-side{display:flex}.header{gap:12px;flex-wrap:wrap}.header nav{order:3;width:100%;justify-content:space-between;gap:14px}.header nav button{font-size:14px}.settings-button{margin-left:auto}.chapter-intro{flex-wrap:wrap}.chapter-intro>div:not(.chapter-switch){flex:1;min-width:190px}.constellation{gap:18px 12px}.level-shard,.level-shard:nth-child(even){padding:14px}.pill{font-size:12px}}
 @media(max-width:400px){.entry h1{font-size:25px}.game-stats{gap:16px}.game-stats b{font-size:24px}.time-duet{gap:16px}.shard-number small{font-size:12px}.level-shard strong{font-size:14px}.shard-detail{font-size:12px}.legend{gap:12px}.game-controls button{flex-basis:140px}}
+
+/* Keep the same actions within reach on phones, landscape screens and tablets. */
+.touch-note{font-size:12px;line-height:1.5;color:#c0a5d1;text-align:center}
+.direction-pad{display:grid;grid-template-columns:repeat(3,48px);grid-template-rows:repeat(2,48px);gap:4px}
+.direction-pad button{min-width:0;min-height:48px;padding:0;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.direction-U{grid-area:1/2}.direction-L{grid-area:2/1}.direction-D{grid-area:2/2}.direction-R{grid-area:2/3}
+.direction-pad button.is-pressed{background:#e5c5fa;color:#311b42;border-color:#ffe1a3;box-shadow:0 0 0 2px #ffe1a355}
+@media(max-width:760px),(any-pointer:coarse){
+ .header[data-view=play] nav{display:none}
+ .header[data-view=play]{padding-block:12px}
+ .play{padding-bottom:calc(210px + env(safe-area-inset-bottom,0px))}
+ .play-layout{grid-template-columns:1fr}
+ .play-inputs{position:fixed;bottom:0;left:0;right:0;z-index:10;display:grid;grid-template-columns:152px minmax(0,330px);justify-content:center;align-items:center;gap:14px;padding:12px max(12px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:#21172ff7;border-top:1px solid #9b72b6;box-shadow:0 -8px 24px #09051177}
+ .touch-controls{display:flex;flex-direction:column;align-items:center;gap:8px;margin:0}
+ .game-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:0;border:0}
+ .game-controls button{font-size:14px;min-height:46px;min-width:0;padding:7px 6px;line-height:1.4;touch-action:manipulation}
+ .game-controls button.primary{grid-column:1/-1;grid-row:1}
+ .game-controls kbd{display:none}
+ .toast{bottom:calc(215px + env(safe-area-inset-bottom,0px));font-size:14px}
+ .game-focus .board{touch-action:auto}
+ .game-stats{gap:16px;padding-block:10px}
+ .game-stats b{font-size:24px}
+ .legend{flex-wrap:wrap;margin-block:12px;gap:10px 14px}
+ .pause-banner{white-space:normal;min-width:min(310px,95%)}
+ .pause-banner span{font-size:13px}.pause-banner button{min-height:44px;flex-shrink:0}
+}
+@media(max-width:360px){
+ .play-inputs{grid-template-columns:140px minmax(0,1fr);gap:8px;padding-inline:10px}
+ .direction-pad{grid-template-columns:repeat(3,44px);grid-template-rows:repeat(2,48px)}
+ .game-controls button{font-size:12px}
+ .touch-note{font-size:12px}
+}
+@media(max-width:760px) and (min-height:501px) and (max-height:700px){
+ .header[data-view=play]{display:none}
+ .play{padding-top:10px}.play-title{margin-bottom:10px}.play-title h1{font-size:20px}.play-title p{display:none}.play-title .back{margin-bottom:8px}
+ .game-stats{padding:6px 0;gap:12px}.game-stats span{font-size:12px}.game-stats b{font-size:20px}.game-stats .live-label{display:none}
+ .time-axis{font-size:12px;padding-block:6px}.map-instruments{padding-top:6px;font-size:12px}.map-instruments button{font-size:12px}
+ .game-focus{margin-top:8px}.game-viewport{max-height:calc(100dvh - 420px)}
+ .game-map-inner[data-zoomed=false] .board{max-height:calc(100dvh - 420px)}
+}
+@media(min-width:600px) and (max-width:760px) and (max-height:500px),(min-width:600px) and (any-pointer:coarse) and (max-height:500px){
+ .header[data-view=play]{display:none}
+ .play{padding:10px calc(300px + env(safe-area-inset-right,0px)) 24px 16px}
+ .play-title{margin-bottom:8px}.play-title h1{font-size:20px;margin:0}.play-title p{display:none}.play-title .back{margin-bottom:6px}
+ .game-stats{padding:6px 0;gap:14px}.game-stats span{font-size:12px}.game-stats b{font-size:20px}
+ .time-axis,.legend{display:none}.map-instruments{padding-top:6px}
+ .game-viewport{max-height:calc(100dvh - 170px)}
+ .play-inputs{left:auto;top:0;width:280px;grid-template-columns:1fr;align-content:center;gap:14px;overflow-y:auto;border-top:0;border-left:1px solid #9b72b6}
+ .toast{left:16px;transform:none;max-width:calc(100vw - 320px);bottom:18px}
+}
