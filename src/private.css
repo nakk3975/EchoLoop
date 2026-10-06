@@ -72,3 +72,22 @@
  .play-inputs{left:auto;top:0;width:280px;grid-template-columns:1fr;align-content:center;gap:14px;overflow-y:auto;border-top:0;border-left:1px solid #9b72b6}
  .toast{left:16px;transform:none;max-width:calc(100vw - 320px);bottom:18px}
 }
+
+.resume-summary{display:flex;flex-direction:column;gap:6px;margin-top:16px;border-left:2px solid #e3c597;padding-left:12px;font-size:14px;line-height:1.6;color:#bfa9d3}
+.resume-summary b{color:#ffe1a3;font-weight:500}
+.level-shard.active-save{box-shadow:0 0 0 2px #e3c597,0 10px 30px #0003}.active-save .shard-number small{color:#ffe1a3}
+.map-tools{display:flex;align-items:center;gap:6px}.map-instruments .map-tools button{min-height:44px;min-width:44px;padding:6px 9px;font-size:14px;border:1px solid #79569355;background:#291c35}
+.chapter-switch button{min-width:44px;min-height:44px}
+@media(max-width:760px),(any-pointer:coarse){
+ .desktop-word{display:none}.game-controls button{gap:3px;word-break:keep-all;overflow-wrap:anywhere}
+ .map-instruments>span{display:none}.map-tools{justify-content:space-between;width:100%}
+ .map-instruments .map-tools button{padding:5px 8px}
+}
+@media(max-width:760px) and (min-height:501px) and (max-height:700px){
+ .game-viewport,.game-map-inner[data-zoomed=false] .board{max-height:calc(100dvh - 440px)}
+}
+@media(max-width:760px) and (max-height:500px){.map-instruments .map-tools button{padding-inline:5px}}
+@media(max-width:760px),(any-pointer:coarse){
+ .game-viewport{max-height:min(54vh,var(--play-available-height,54vh))}
+ .game-map-inner[data-zoomed=false] .board{max-height:calc(var(--play-available-height,54vh) - 8px)}
+}

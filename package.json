@@ -8,9 +8,10 @@
     "build": "tsc --noEmit && vite build",
     "start": "node --experimental-strip-types server/index.ts",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "check": "npm test && npm run build && node --experimental-strip-types scripts/check-input-ui.mjs",
+    "check": "npm test && npm run build && node --experimental-strip-types scripts/check-input-ui.mjs && node --experimental-strip-types scripts/check-ux-ui.mjs",
     "test:campaign-ui": "npm run build && node --experimental-strip-types scripts/check-campaign-ui.mjs",
-    "test:input-ui": "npm run build && node --experimental-strip-types scripts/check-input-ui.mjs"
+    "test:input-ui": "npm run build && node --experimental-strip-types scripts/check-input-ui.mjs",
+    "test:ux-ui": "npm run build && node --experimental-strip-types scripts/check-ux-ui.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",
