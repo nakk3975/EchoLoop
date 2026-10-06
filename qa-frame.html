@@ -1,0 +1,17 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><div id="root"></div><script type="module">
+// The harness changes only its isolated test database and controls the rendering clock.
+const stage=new URLSearchParams(location.search).get('stage');
+const nativeOpen=indexedDB.open.bind(indexedDB);
+indexedDB.open=(name,version)=>nativeOpen(name==='echoloop-v1'?'echoloop-browser-qa-v1':name,version);
+history.replaceState(null,'','/play/'+stage);
+let clock=0,id=0;const callbacks=new Map();
+performance.now=()=>clock;
+requestAnimationFrame=callback=>{callbacks.set(++id,callback);return id};
+cancelAnimationFrame=id=>callbacks.delete(id);
+window.qaFrame=(ms=100)=>{clock+=ms;const list=[...callbacks.values()];callbacks.clear();for(const callback of list)callback(clock)};
+window.confirm=()=>true;
+const html=await fetch('/dist/index.html').then(r=>r.text());
+for(const match of html.matchAll(/href="([^"]+\.css)"/g)){const link=document.createElement('link');link.rel='stylesheet';link.href='/dist'+match[1];document.head.append(link)}
+const script=html.match(/src="([^"]+\.js)"/)[1];
+await import('/dist'+script);
+</script></body></html>

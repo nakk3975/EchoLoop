@@ -1,0 +1,24 @@
+/* A suspended violet timeline with gold present and spectral memories. */
+.entry{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:8px 0 30px;border-bottom:1px solid #79569355}
+.entry h1{font-size:clamp(26px,3vw,40px);line-height:1.4;letter-spacing:-1.5px;margin:14px 0}
+.entry p{font-size:16px;line-height:1.85;margin:0 0 20px}
+.entry .intro-actions{display:flex;flex-wrap:wrap;gap:12px}
+.time-duet{display:flex;align-items:center;justify-content:center;gap:30px;min-width:280px}
+.time-duet>div{text-align:center}.time-duet .traveler-portrait{width:84px;height:84px}
+.time-duet span{display:block;font-size:16px;color:#e5c5fa}.time-duet>div:last-child span{color:#ffe1a3}
+.time-duet p{font-size:14px;line-height:1.65;margin:10px 0 0}.time-duet .duet-seam{font-size:40px;color:#86639e}
+.campaign{padding-top:0}.campaign:before{display:none}.campaign-heading{padding-top:28px}
+.eyebrow,.intro-kicker,.completion,.chapter-orbit small,.shard-detail,.campaign-note,.game-stats span,.time-axis,.map-instruments,.map-instruments button,.legend,.control-note,.records>.small,.empty-records b,.empty-records p,.present-identity p,.record-time,.record small,.mechanic-guide p,.mechanic-guide b,.shortcuts p,.save-state button,.save-tools,.save-tools span,.tiny-label,.home-bottom p,.record b,.pause-banner span,.pause-banner button{font-size:14px}
+.chapter-intro p,.hint p,.level-shard strong,.present-identity h3{font-size:16px;line-height:1.65}
+.shard-number small{font-size:12px}.present-identity .eyebrow,.game-stats .live-label{font-size:12px}
+.chapter-orbit button{min-width:114px}.chapter-orbit small{white-space:normal;line-height:1.5}
+.game-controls button{font-size:14px;min-height:46px}.game-controls kbd{font-size:12px}
+.game-controls{gap:10px}.game-controls button{flex:1 1 190px}
+.game-stats{gap:30px;flex-wrap:wrap}.play-side .shortcuts p{gap:14px}
+.touch-controls button{min-width:54px;min-height:50px;font-size:20px}
+.modal{max-height:90dvh;overflow:auto}.modal button{font-size:16px;min-height:48px}
+.modal.result>.primary{width:100%;margin-bottom:14px}.modal .modal-actions{flex-wrap:wrap;gap:12px}
+.game-focus .board{touch-action:none}.save-state span{font-size:14px;line-height:1.6}
+@media(max-width:1100px){.play-layout{grid-template-columns:minmax(0,1fr) 270px}.constellation{gap:14px}.entry{gap:24px}.time-duet{min-width:240px;gap:18px}}
+@media(max-width:760px){.entry{display:block;padding:8px 0 24px}.entry h1{font-size:28px}.entry p{font-size:16px}.time-duet{margin-top:28px;justify-content:flex-start;gap:24px}.time-duet .traveler-portrait{width:60px;height:60px}.time-duet p{font-size:14px}.play-layout{grid-template-columns:1fr}.campaign-heading{flex-wrap:wrap;gap:12px}.chapter-intro p{font-size:14px}.chapter-orbit button{min-width:100px}.level-shard strong{font-size:15px}.shard-detail{font-size:14px}.play-title p{font-size:15px}.game-stats{gap:20px}.game-stats b{font-size:26px}.game-stats .live-label{font-size:12px}.legend{font-size:14px;gap:14px}.game-controls button{font-size:14px;flex-basis:145px}.control-note,.mechanic-guide p{font-size:14px}.pause-banner{max-width:95%;bottom:8px}.pause-banner span,.pause-banner button{font-size:14px}.play-side{display:flex}.header{gap:12px;flex-wrap:wrap}.header nav{order:3;width:100%;justify-content:space-between;gap:14px}.header nav button{font-size:14px}.settings-button{margin-left:auto}.chapter-intro{flex-wrap:wrap}.chapter-intro>div:not(.chapter-switch){flex:1;min-width:190px}.constellation{gap:18px 12px}.level-shard,.level-shard:nth-child(even){padding:14px}.pill{font-size:12px}}
+@media(max-width:400px){.entry h1{font-size:25px}.game-stats{gap:16px}.game-stats b{font-size:24px}.time-duet{gap:16px}.shard-number small{font-size:12px}.level-shard strong{font-size:14px}.shard-detail{font-size:12px}.legend{gap:12px}.game-controls button{flex-basis:140px}}
