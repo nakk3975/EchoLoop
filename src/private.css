@@ -102,8 +102,6 @@
 .game-controls{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch}
 .game-controls button{flex:0 1 calc((100% - 40px)/5);min-width:0;word-break:keep-all;overflow-wrap:anywhere}
 .desktop-word{flex-shrink:0;white-space:nowrap}
-.game-viewport{max-height:min(59vh,var(--play-available-height,59vh))}
-.game-map-inner[data-zoomed=false] .board{max-height:calc(var(--play-available-height,59vh) - 8px)}
 @media(min-width:761px) and (max-width:1050px){.game-controls button{flex-basis:calc((100% - 20px)/3)}}
 @media(max-width:760px),(any-pointer:coarse){
  .pause-banner{width:calc(100% - 20px);max-width:420px;padding:8px 12px;gap:10px}

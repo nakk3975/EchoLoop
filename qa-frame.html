@@ -11,7 +11,9 @@ cancelAnimationFrame=id=>callbacks.delete(id);
 window.qaFrame=(ms=100)=>{clock+=ms;const list=[...callbacks.values()];callbacks.clear();for(const callback of list)callback(clock)};
 window.confirm=()=>true;
 const html=await fetch('/dist/index.html').then(r=>r.text());
-for(const match of html.matchAll(/href="([^"]+\.css)"/g)){const link=document.createElement('link');link.rel='stylesheet';link.href='/dist'+match[1];document.head.append(link)}
+const styles=[];
+for(const match of html.matchAll(/href="([^"]+\.css)"/g)){const link=document.createElement('link');link.rel='stylesheet';link.href='/dist'+match[1];styles.push(new Promise((resolve,reject)=>{link.onload=resolve;link.onerror=reject}));document.head.append(link)}
+await Promise.all(styles);
 const script=html.match(/src="([^"]+\.js)"/)[1];
 await import('/dist'+script);
 </script></body></html>
