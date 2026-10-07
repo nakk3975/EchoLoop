@@ -10,12 +10,12 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 23,
-            "y": 184,
+            "y": 208,
             "width": 81,
             "height": 44,
-            "top": 184,
+            "top": 208,
             "right": 104,
-            "bottom": 228,
+            "bottom": 252,
             "left": 23
           }
         },
@@ -23,12 +23,12 @@
           "label": "플레이 설정",
           "rect": {
             "x": 112,
-            "y": 184,
+            "y": 208,
             "width": 81,
             "height": 44,
-            "top": 184,
+            "top": 208,
             "right": 193,
-            "bottom": 228,
+            "bottom": 252,
             "left": 112
           }
         },
@@ -36,12 +36,12 @@
           "label": "지도 확대",
           "rect": {
             "x": 201,
-            "y": 184,
+            "y": 208,
             "width": 81,
             "height": 44,
-            "top": 184,
+            "top": 208,
             "right": 282,
-            "bottom": 228,
+            "bottom": 252,
             "left": 201
           }
         },
@@ -165,27 +165,27 @@
       ],
       "map": {
         "x": 18,
-        "y": 236,
+        "y": 260,
         "width": 269,
-        "height": 137.8125,
-        "top": 236,
+        "height": 113.8125,
+        "top": 260,
         "right": 287,
         "bottom": 373.8125,
         "left": 18
       },
       "board": {
         "x": 22,
-        "y": 240,
+        "y": 264,
         "width": 261,
-        "height": 129.8125,
-        "top": 240,
+        "height": 105.8125,
+        "top": 264,
         "right": 283,
         "bottom": 369.8125,
         "left": 22
       },
       "renderedMap": {
-        "width": 185.44642857142856,
-        "height": 129.8125
+        "width": 139.73214285714283,
+        "height": 97.8125
       },
       "fixedDock": true,
       "dock": {
@@ -231,12 +231,12 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 23,
-            "y": 213,
+            "y": 237,
             "width": 81,
             "height": 44,
-            "top": 213,
+            "top": 237,
             "right": 104,
-            "bottom": 257,
+            "bottom": 281,
             "left": 23
           }
         },
@@ -244,12 +244,12 @@
           "label": "플레이 설정",
           "rect": {
             "x": 112,
-            "y": 213,
+            "y": 237,
             "width": 81,
             "height": 44,
-            "top": 213,
+            "top": 237,
             "right": 193,
-            "bottom": 257,
+            "bottom": 281,
             "left": 112
           }
         },
@@ -257,12 +257,12 @@
           "label": "지도 확대",
           "rect": {
             "x": 201,
-            "y": 213,
+            "y": 237,
             "width": 81,
             "height": 44,
-            "top": 213,
+            "top": 237,
             "right": 282,
-            "bottom": 257,
+            "bottom": 281,
             "left": 201
           }
         },
@@ -386,27 +386,27 @@
       ],
       "map": {
         "x": 18,
-        "y": 265,
+        "y": 289,
         "width": 269,
-        "height": 108.8125,
-        "top": 265,
+        "height": 84.8125,
+        "top": 289,
         "right": 287,
         "bottom": 373.8125,
         "left": 18
       },
       "board": {
         "x": 22,
-        "y": 269,
+        "y": 293,
         "width": 261,
-        "height": 100.8125,
-        "top": 269,
+        "height": 76.8125,
+        "top": 293,
         "right": 283,
         "bottom": 369.8125,
         "left": 22
       },
       "renderedMap": {
-        "width": 109.5788043478261,
-        "height": 100.8125
+        "width": 83.49184782608695,
+        "height": 76.8125
       },
       "fixedDock": true,
       "dock": {
@@ -894,12 +894,12 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 21,
-            "y": 186,
+            "y": 182,
             "width": 127.65625,
             "height": 44,
-            "top": 186,
+            "top": 182,
             "right": 148.65625,
-            "bottom": 230,
+            "bottom": 226,
             "left": 21
           }
         },
@@ -907,12 +907,12 @@
           "label": "플레이 설정",
           "rect": {
             "x": 156.65625,
-            "y": 186,
+            "y": 182,
             "width": 127.671875,
             "height": 44,
-            "top": 186,
+            "top": 182,
             "right": 284.328125,
-            "bottom": 230,
+            "bottom": 226,
             "left": 156.65625
           }
         },
@@ -920,12 +920,12 @@
           "label": "지도 확대",
           "rect": {
             "x": 292.328125,
-            "y": 186,
+            "y": 182,
             "width": 127.65625,
             "height": 44,
-            "top": 186,
+            "top": 182,
             "right": 419.984375,
-            "bottom": 230,
+            "bottom": 226,
             "left": 292.328125
           }
         },
@@ -1049,27 +1049,27 @@
       ],
       "map": {
         "x": 16,
-        "y": 242,
+        "y": 238,
         "width": 409,
-        "height": 136,
-        "top": 242,
+        "height": 140,
+        "top": 238,
         "right": 425,
         "bottom": 378,
         "left": 16
       },
       "board": {
         "x": 20,
-        "y": 246,
+        "y": 242,
         "width": 401,
-        "height": 128,
-        "top": 246,
+        "height": 132,
+        "top": 242,
         "right": 421,
         "bottom": 374,
         "left": 20
       },
       "renderedMap": {
-        "width": 182.85714285714283,
-        "height": 128
+        "width": 188.57142857142856,
+        "height": 132
       },
       "fixedDock": true,
       "dock": {
@@ -1115,12 +1115,12 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 21,
-            "y": 186,
+            "y": 182,
             "width": 127.65625,
             "height": 44,
-            "top": 186,
+            "top": 182,
             "right": 148.65625,
-            "bottom": 230,
+            "bottom": 226,
             "left": 21
           }
         },
@@ -1128,12 +1128,12 @@
           "label": "플레이 설정",
           "rect": {
             "x": 156.65625,
-            "y": 186,
+            "y": 182,
             "width": 127.671875,
             "height": 44,
-            "top": 186,
+            "top": 182,
             "right": 284.328125,
-            "bottom": 230,
+            "bottom": 226,
             "left": 156.65625
           }
         },
@@ -1141,12 +1141,12 @@
           "label": "지도 확대",
           "rect": {
             "x": 292.328125,
-            "y": 186,
+            "y": 182,
             "width": 127.65625,
             "height": 44,
-            "top": 186,
+            "top": 182,
             "right": 419.984375,
-            "bottom": 230,
+            "bottom": 226,
             "left": 292.328125
           }
         },
@@ -1270,27 +1270,27 @@
       ],
       "map": {
         "x": 16,
-        "y": 242,
+        "y": 238,
         "width": 409,
-        "height": 136,
-        "top": 242,
+        "height": 140,
+        "top": 238,
         "right": 425,
         "bottom": 378,
         "left": 16
       },
       "board": {
         "x": 20,
-        "y": 246,
+        "y": 242,
         "width": 401,
-        "height": 128,
-        "top": 246,
+        "height": 132,
+        "top": 242,
         "right": 421,
         "bottom": 374,
         "left": 20
       },
       "renderedMap": {
-        "width": 139.1304347826087,
-        "height": 128
+        "width": 143.47826086956522,
+        "height": 132
       },
       "fixedDock": true,
       "dock": {
@@ -1336,12 +1336,12 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 23,
-            "y": 188,
+            "y": 212,
             "width": 81,
             "height": 44,
-            "top": 188,
+            "top": 212,
             "right": 104,
-            "bottom": 232,
+            "bottom": 256,
             "left": 23
           }
         },
@@ -1349,12 +1349,12 @@
           "label": "플레이 설정",
           "rect": {
             "x": 112,
-            "y": 188,
+            "y": 212,
             "width": 81,
             "height": 44,
-            "top": 188,
+            "top": 212,
             "right": 193,
-            "bottom": 232,
+            "bottom": 256,
             "left": 112
           }
         },
@@ -1362,12 +1362,12 @@
           "label": "지도 확대",
           "rect": {
             "x": 201,
-            "y": 188,
+            "y": 212,
             "width": 81,
             "height": 44,
-            "top": 188,
+            "top": 212,
             "right": 282,
-            "bottom": 232,
+            "bottom": 256,
             "left": 201
           }
         },
@@ -1491,27 +1491,27 @@
       ],
       "map": {
         "x": 18,
-        "y": 240,
+        "y": 264,
         "width": 269,
-        "height": 133.8125,
-        "top": 240,
+        "height": 109.8125,
+        "top": 264,
         "right": 287,
         "bottom": 373.8125,
         "left": 18
       },
       "board": {
         "x": 22,
-        "y": 244,
+        "y": 268,
         "width": 261,
-        "height": 125.8125,
-        "top": 244,
+        "height": 101.8125,
+        "top": 268,
         "right": 283,
         "bottom": 369.8125,
         "left": 22
       },
       "renderedMap": {
-        "width": 179.73214285714286,
-        "height": 125.8125
+        "width": 134.01785714285717,
+        "height": 93.8125
       },
       "fixedDock": true,
       "dock": {
@@ -1557,12 +1557,12 @@
           "label": "플레이 도움말",
           "rect": {
             "x": 23,
-            "y": 217,
+            "y": 241,
             "width": 81,
             "height": 44,
-            "top": 217,
+            "top": 241,
             "right": 104,
-            "bottom": 261,
+            "bottom": 285,
             "left": 23
           }
         },
@@ -1570,12 +1570,12 @@
           "label": "플레이 설정",
           "rect": {
             "x": 112,
-            "y": 217,
+            "y": 241,
             "width": 81,
             "height": 44,
-            "top": 217,
+            "top": 241,
             "right": 193,
-            "bottom": 261,
+            "bottom": 285,
             "left": 112
           }
         },
@@ -1583,12 +1583,12 @@
           "label": "지도 확대",
           "rect": {
             "x": 201,
-            "y": 217,
+            "y": 241,
             "width": 81,
             "height": 44,
-            "top": 217,
+            "top": 241,
             "right": 282,
-            "bottom": 261,
+            "bottom": 285,
             "left": 201
           }
         },
@@ -1712,27 +1712,27 @@
       ],
       "map": {
         "x": 18,
-        "y": 269,
+        "y": 293,
         "width": 269,
-        "height": 104.8125,
-        "top": 269,
+        "height": 80.8125,
+        "top": 293,
         "right": 287,
         "bottom": 373.8125,
         "left": 18
       },
       "board": {
         "x": 22,
-        "y": 273,
+        "y": 297,
         "width": 261,
-        "height": 96.8125,
-        "top": 273,
+        "height": 72.8125,
+        "top": 297,
         "right": 283,
         "bottom": 369.8125,
         "left": 22
       },
       "renderedMap": {
-        "width": 105.23097826086956,
-        "height": 96.8125
+        "width": 79.14402173913044,
+        "height": 72.8125
       },
       "fixedDock": true,
       "dock": {

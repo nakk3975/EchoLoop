@@ -4,7 +4,7 @@ import {IDBFactory} from 'fake-indexeddb';
 import {readFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
 import {stages} from '../src/stages.ts';
-import {initial,step,saveState} from '../src/engine.ts';
+import {initial,step,replay,saveState} from '../src/engine.ts';
 const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
 const bundle=readFileSync(new URL('../dist'+html.match(/src="([^"]+\.js)"/)[1],import.meta.url),'utf8');
 let dom,w,clock,callbacks,id,db,model;const errors=[];
@@ -36,5 +36,8 @@ try{
  await mount('/',{completed:stages.slice(0,55).map(s=>s.id)});assert.equal(query('.chapter-index').textContent,'12');assert(!query('.resume-summary'));await click('첫 번째 균열',query('.chapter-orbit'));assert.equal(query('.chapter-index').textContent,'01');console.log('PASS asynchronously loaded completions select the next chapter; manual chapter selection works');
  await mount('/',{save:{invalid:true}});assert(!query('.resume-summary'));assert(![...w.document.querySelectorAll('.intro-actions button')].some(b=>b.textContent==='이어하기'));console.log('PASS invalid save has no misleading continue action');
  let won=initial(stages[0]);for(let i=0;i<6;i++)won=step(stages[0],won,'R');await mount('/',{save:saveState(stages[0],won),completed:[stages[0].id]});assert(!query('.resume-summary'));assert(!query('.active-save'));assert.match(query('.intro-actions').textContent,/다음 미완료 실험/);console.log('PASS completed save offers the next experiment instead of continuing a result');
+ const nearLimit=replay(stages[0],['U','D','U','D','U','D','U','D','R']);await mount('/play/first-light',{save:saveState(stages[0],nearLimit)});assert.equal(current().movesLeft,1);await tap('ArrowRight');assert.equal(current().outcome,'OUT_OF_MOVES');assert.match(query('.result').textContent,/이동 횟수를 모두 사용했습니다/);assert.equal(current().movesLeft,0);assert(![...query('.result').querySelectorAll('button')].some(b=>b.textContent.includes('기록 확정')));assert.equal(w.document.activeElement,query('.result button'));
+ await key('z',{},query('.result'));assert.equal(current().outcome,'RUNNING');assert.equal(current().movesLeft,1);assert(!query('.result'));await key('r');assert.equal(current().movesLeft,10);await key('z');assert.equal(current().movesLeft,1);await key('r');await tap('ArrowRight');assert.equal(current().movesLeft,9);console.log('PASS move exhaustion focuses Undo; Z refunds a move, R refunds the current loop, reset recovery restores the counter');
+ await mount('/play/first-light');for(const k of ['ArrowUp','ArrowDown','ArrowUp','ArrowDown',...Array(6).fill('ArrowRight')])await tap(k);assert.equal(current().outcome,'WON');assert.equal(current().movesLeft,0);assert.match(query('.result').textContent,/이동 10 \/ 10회/);await key('Enter',{},query('.result'));assert.equal(current().stageId,'pressure');assert.equal(current().movesLeft,10);console.log('PASS two out-and-back mistakes win on the last move; result Enter starts the next level with a fresh budget');
  assert.deepEqual(errors,[]);
 }finally{dom?.window.close();}

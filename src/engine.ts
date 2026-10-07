@@ -6,11 +6,14 @@ export type Plate = Cell & {id:string;kind?:'weight'|'echo'|'present'|'resonance
 export type Door = Cell & {id:string;mode:'AND'|'OR';plateIds:string[];inverted?:boolean;pulse?:{period:number;openTicks:number;offset:number}};
 export type Portal = {id:string;a:Cell;b:Cell};
 export type Arrow = Cell & {direction:Exclude<Move,'.'>};
-export type Stage = {id:string;title:string;description:string;hint:string;schemaVersion:1;engineVersion:string;width:number;height:number;tickHz:10;loopTicks:300;maxGhosts:number;tiles:number[];spawn:Cell;goal:Cell;plates:Plate[];doors:Door[];portals?:Portal[];arrows?:Arrow[];shards?:Cell[]};
+export type Stage = {id:string;title:string;description:string;hint:string;schemaVersion:1;engineVersion:string;width:number;height:number;tickHz:10;loopTicks:300;maxGhosts:number;tiles:number[];spawn:Cell;goal:Cell;plates:Plate[];doors:Door[];portals?:Portal[];arrows?:Arrow[];shards?:Cell[];moveLimit?:number};
 export type RecordLoop = {originalTicks:number;inputPrefix:Move[];cells:Cell[];checksum:string;parentChecksum:string};
-export type State = {tick:number;current:Cell;ghosts:RecordLoop[];inputPrefix:Move[];trajectory:Cell[];plates:Record<string,boolean>;doors:Record<string,boolean>;charges?:Record<string,number>;collected?:number[];switches?:Record<string,boolean>;switchOccupied?:Record<string,boolean>;outcome:'RUNNING'|'WON'|'TIMEOUT'};
+export type State = {tick:number;current:Cell;ghosts:RecordLoop[];inputPrefix:Move[];trajectory:Cell[];plates:Record<string,boolean>;doors:Record<string,boolean>;charges?:Record<string,number>;collected?:number[];switches?:Record<string,boolean>;switchOccupied?:Record<string,boolean>;movesUsed?:number;outcome:'RUNNING'|'WON'|'TIMEOUT'|'OUT_OF_MOVES'};
 export type Solution = {engineVersion:string;stageChecksum:string;committedLoops:Move[][];finalLoop:Move[]};
 export const equal = (a:Cell,b:Cell) => a.x===b.x&&a.y===b.y;
+export const movementCount = (cells:Cell[]) => cells.slice(1).reduce((sum,c,i)=>sum+Number(!equal(c,cells[i])),0);
+export const recordedMoves = (ghosts:RecordLoop[]) => ghosts.reduce((sum,g)=>sum+movementCount(g.cells.slice(0,g.originalTicks+1)),0);
+export const remainingMoves = (m:Stage,s:State) => m.moveLimit===undefined?null:Math.max(0,m.moveLimit-(s.movesUsed??0));
 export function hash(value:unknown):string {
   const canonical=(v:any):any=>Array.isArray(v)?v.map(canonical):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])])):v;
   const s=JSON.stringify(canonical(value)); let h=2166136261;
@@ -19,12 +22,13 @@ export function hash(value:unknown):string {
 export function validateStage(value:unknown):string[] {
   const e:string[]=[];const m=value as Stage;
   if(!m||typeof m!=='object'||Array.isArray(m))return ['맵 JSON 객체가 필요합니다.'];
-  const keys=['id','title','description','hint','schemaVersion','engineVersion','width','height','tickHz','loopTicks','maxGhosts','tiles','spawn','goal','plates','doors','portals','arrows','shards'];
+  const keys=['id','title','description','hint','schemaVersion','engineVersion','width','height','tickHz','loopTicks','maxGhosts','tiles','spawn','goal','plates','doors','portals','arrows','shards','moveLimit'];
   if(Object.keys(m).some(k=>!keys.includes(k)))e.push('지원하지 않는 맵 속성이 있습니다.');
   if(m.schemaVersion!==1||m.engineVersion!==ENGINE||m.tickHz!==10||m.loopTicks!==300)e.push('지원하지 않는 맵/엔진 버전 또는 시간 설정입니다.');
   if(!Number.isInteger(m.width)||m.width<8||m.width>32||!Number.isInteger(m.height)||m.height<6||m.height>24)return [...e,'맵 크기는 8×6~32×24여야 합니다.'];
   for(const [k,max] of [['id',100],['title',80],['description',1000],['hint',1000]] as const)if(typeof m[k]!=='string'||m[k].length>max||(k==='title'&&!m[k].trim()))e.push(`${k}: 문자열 길이를 확인하세요.`);
   if(!Number.isInteger(m.maxGhosts)||m.maxGhosts<0||m.maxGhosts>3)e.push('과거 기록은 0~3개만 허용됩니다.');
+  if(m.moveLimit!==undefined&&(!Number.isInteger(m.moveLimit)||m.moveLimit<1||m.moveLimit>1200))e.push('이동 한도는 1~1200회여야 합니다.');
   if(!Array.isArray(m.tiles)||m.tiles.length!==m.width*m.height||m.tiles.some(t=>t!==0&&t!==1))return [...e,'타일 배열이 올바르지 않습니다.'];
   if(!Array.isArray(m.plates)||m.plates.length>16||!Array.isArray(m.doors)||m.doors.length>16)return [...e,'발판과 문은 각각 최대 16개입니다.'];
   if(m.portals!==undefined&&(!Array.isArray(m.portals)||m.portals.length>8)||m.arrows!==undefined&&(!Array.isArray(m.arrows)||m.arrows.length>32))return [...e,'포털은 최대 8쌍, 방향 통로는 최대 32개입니다.'];
@@ -55,7 +59,7 @@ function devices(m:Stage,current:Cell,echoes:Cell[],tick:number,previous?:State)
   const doors=Object.fromEntries(m.doors.map(d=>{const signal=d.mode==='AND'?d.plateIds.every(id=>plates[id]):d.plateIds.some(id=>plates[id]);return [d.id,(d.inverted?!signal:signal)&&(!d.pulse||(tick+d.pulse.offset)%d.pulse.period<d.pulse.openTicks)];}));
   return {plates,doors,...(Object.keys(charges).length?{charges}:{}),...(Object.keys(switches).length?{switches,switchOccupied}:{})};
 }
-export function initial(m:Stage,ghosts:RecordLoop[]=[]):State {return {tick:0,current:{...m.spawn},ghosts,inputPrefix:[],trajectory:[{...m.spawn}],...(m.shards?.length?{collected:[]}:{}),...devices(m,m.spawn,ghosts.map(g=>g.cells[0]),0),outcome:'RUNNING'};}
+export function initial(m:Stage,ghosts:RecordLoop[]=[]):State {const movesUsed=m.moveLimit===undefined?undefined:recordedMoves(ghosts);return {tick:0,current:{...m.spawn},ghosts,inputPrefix:[],trajectory:[{...m.spawn}],...(movesUsed===undefined?{}:{movesUsed}),...(m.shards?.length?{collected:[]}:{}),...devices(m,m.spawn,ghosts.map(g=>g.cells[0]),0),outcome:movesUsed!==undefined&&movesUsed>=m.moveLimit!?'OUT_OF_MOVES':'RUNNING'};}
 export function step(m:Stage,s:State,input:Move):State {
   if(s.outcome!=='RUNNING')return s;
   if(!['U','D','L','R','.'].includes(input))throw new Error('잘못된 이동 입력');
@@ -66,13 +70,15 @@ export function step(m:Stage,s:State,input:Move):State {
   const valid=dest.x>=0&&dest.y>=0&&dest.x<m.width&&dest.y<m.height&&!m.tiles[dest.y*m.width+dest.x]&&(!door||s.doors[door.id])&&(!arrow||arrow.direction===input);
   let current=input==='.'||!valid?s.current:dest;const tick=s.tick+1;
   if(input!=='.'&&valid){const portal=m.portals?.find(p=>equal(p.a,dest)||equal(p.b,dest));if(portal)current=equal(portal.a,dest)?portal.b:portal.a;}
+  const movesUsed=m.moveLimit===undefined?undefined:(s.movesUsed??0)+Number(!equal(current,s.current));
   const collected=m.shards?.length?[...new Set([...(s.collected??[]),...m.shards.flatMap((p,i)=>equal(p,current)?[i]:[])])].sort((a,b)=>a-b):undefined;
-  return {...s,...(collected?{collected}:{}),tick,current,inputPrefix:[...s.inputPrefix,input],trajectory:[...s.trajectory,current],...devices(m,current,s.ghosts.map(g=>g.cells[tick]),tick,s),outcome:equal(current,m.goal)&&(!m.shards?.length||collected?.length===m.shards.length)?'WON':tick===LIMIT?'TIMEOUT':'RUNNING'};
+  return {...s,...(movesUsed===undefined?{}:{movesUsed}),...(collected?{collected}:{}),tick,current,inputPrefix:[...s.inputPrefix,input],trajectory:[...s.trajectory,current],...devices(m,current,s.ghosts.map(g=>g.cells[tick]),tick,s),outcome:equal(current,m.goal)&&(!m.shards?.length||collected?.length===m.shards.length)?'WON':movesUsed!==undefined&&movesUsed>=m.moveLimit!?'OUT_OF_MOVES':tick===LIMIT?'TIMEOUT':'RUNNING'};
 }
 export function commit(m:Stage,s:State):RecordLoop {
   if(s.tick<1)throw new Error('1tick 이상 이동하거나 기다린 후 기록할 수 있습니다.');
   if(s.ghosts.length>=m.maxGhosts)throw new Error('과거 기록 한도에 도달했습니다. 기록을 삭제하거나 다시 시도하세요.');
   if(s.outcome==='WON')throw new Error('완료된 반복은 과거 기록으로 확정할 수 없습니다.');
+  if(s.outcome==='OUT_OF_MOVES')throw new Error('이동 횟수를 모두 사용했습니다. 되돌리거나 다시 시작하세요.');
   const cells=[...s.trajectory,...Array.from({length:LIMIT-s.tick},()=>({...s.current}))];
   const parentChecksum=s.ghosts.at(-1)?.checksum??hash(m);
   const record={originalTicks:s.tick,inputPrefix:s.inputPrefix,cells,parentChecksum};return {...record,checksum:hash(record)};

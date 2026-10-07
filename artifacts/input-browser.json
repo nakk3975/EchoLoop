@@ -1,0 +1,30 @@
+{
+  "kind": "Chromium production bundle blocked-input and move-budget journeys",
+  "checks": [
+    {
+      "mode": "keyboard",
+      "closedDoorHeld": true,
+      "openedWithoutDrift": true,
+      "freshTapOneMove": true,
+      "remaining": 7
+    },
+    {
+      "mode": "touch",
+      "closedDoorHeld": true,
+      "openedWithoutDrift": true,
+      "freshTapOneMove": true,
+      "remaining": 7
+    },
+    {
+      "moveExhaustion": true,
+      "undo": true,
+      "restart": true,
+      "restartRecovery": true
+    },
+    {
+      "twoMistakesWin": true,
+      "lastMoveWins": true
+    }
+  ],
+  "errors": []
+}

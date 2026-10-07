@@ -1,11 +1,12 @@
 import {advancedPuzzles} from './advanced-stages.ts';
 import {advancedInputs} from './advanced-solutions.ts';
-import {type Stage,type Move} from './engine.ts';
+import {type Stage,type Move,restoreState,hash,replay,buildChain} from './engine.ts';
 import {fromRows} from './stage-factory.ts';
 export {fromRows} from './stage-factory.ts';
 import {campaignStages,campaignInputs} from './campaign-data.ts';
 import {compactPuzzles} from './compact-stages.ts';
 import {compactInputs} from './compact-solutions.ts';
+import campaignMoveLimits from './campaign-move-limits.json' with {type:'json'};
 export const stages:Stage[]=[
  fromRows('first-light','첫 번째 발자국','출구까지 걸어가세요. 시간은 첫 이동부터 흐릅니다.','방향키 또는 WASD로 이동하세요. 빛나는 균열 모양의 출구에 도착하면 됩니다.',['##########','#........#','#..###...#','#S.....G.#','#........#','#........#','##########'],0),
  fromRows('pressure','발판의 무게','발판을 밟으면 문이 열립니다. 다음 순간을 생각해 보세요.','발판 A를 밟은 다음 오른쪽으로 이동하세요. 문이 닫혀도 안에 있는 나는 안전하게 나갈 수 있습니다.',['##########','#...#....#','#...#....#','#S.Aa..G.#','#...#....#','#...#....#','##########'],0),
@@ -29,3 +30,19 @@ export function blankStage(width=13,height=9):Stage{return fromRows('local-'+cry
 
 stages.push(...advancedPuzzles.map(p=>p.stage));
 referenceInputs.push(...advancedInputs);
+// Verified solution movement plus four spare steps; waiting and blocked input are free.
+for(const stage of stages)stage.moveLimit=(campaignMoveLimits as Record<string,number>)[stage.id];
+
+// Validate old saves first, then preserve their exact replay under the new movement rule.
+// A changed puzzle or a save already over budget remains available with its old rules.
+export function restoreCampaignProgress(value:unknown){
+ const restored=restoreState(value),current=stages.find(m=>m.id===restored.stage.id);
+ if(restored.stage.moveLimit!==undefined||!current?.moveLimit)return restored;
+ const {moveLimit,...previous}=current;
+ if(hash(previous)!==hash(restored.stage))return restored;
+ try{
+  const ghosts=buildChain(current,restored.state.ghosts.map(g=>g.inputPrefix));
+  const state=replay(current,restored.state.inputPrefix,ghosts);
+  return state.outcome==='OUT_OF_MOVES'?restored:{stage:current,state};
+ }catch{return restored;}
+}

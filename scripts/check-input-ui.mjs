@@ -3,11 +3,13 @@ import {JSDOM,VirtualConsole} from 'jsdom';
 import {IDBFactory} from 'fake-indexeddb';
 import {readFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
+import {stages} from '../src/stages.ts';
+import {replay,buildChain,saveState} from '../src/engine.ts';
 const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
 const bundle=readFileSync(new URL('../dist'+html.match(/src="([^"]+\.js)"/)[1],import.meta.url),'utf8');
 let dom,w,clock,callbacks,id;const errors=[];
 const flush=async()=>{for(let i=0;i<4;i++)await new Promise(r=>setTimeout(r,2));};
-async function mount(){clock=0;callbacks=new Map();id=0;const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));dom=new JSDOM('<div id="root"></div>',{url:'http://localhost/play/first-light',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc});w=dom.window;w.indexedDB=new IDBFactory();w.structuredClone=structuredClone;w.scrollTo=()=>{};w.matchMedia=()=>({matches:false});w.confirm=()=>true;w.performance.now=()=>clock;w.requestAnimationFrame=cb=>{callbacks.set(++id,cb);return id;};w.cancelAnimationFrame=i=>callbacks.delete(i);w.eval(bundle);for(let i=0;i<40&&!area();i++)await flush();assert(area());await frame(0);}
+async function mount(stageId='first-light',saved){clock=0;callbacks=new Map();id=0;const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));dom=new JSDOM('<div id="root"></div>',{url:'http://localhost/play/'+stageId,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc});w=dom.window;w.indexedDB=new IDBFactory();if(saved)await new Promise((resolve,reject)=>{const r=w.indexedDB.open('echoloop-v1',1);r.onupgradeneeded=()=>r.result.createObjectStore('data');r.onsuccess=()=>{const db=r.result,t=db.transaction('data','readwrite');t.objectStore('data').put(saved,'save');t.oncomplete=()=>{db.close();resolve()};t.onerror=()=>reject(t.error)};});w.structuredClone=structuredClone;w.scrollTo=()=>{};w.matchMedia=()=>({matches:false});w.confirm=()=>true;w.performance.now=()=>clock;w.requestAnimationFrame=cb=>{callbacks.set(++id,cb);return id;};w.cancelAnimationFrame=i=>callbacks.delete(i);w.eval(bundle);for(let i=0;i<40&&!area();i++)await flush();assert(area());await frame(0);}
 function area(){return w.document.querySelector('[role=application]');}
 function position(){return w.document.querySelector('.player').getAttribute('transform');}
 function keyboard(type,key='ArrowRight',repeat=false){area().dispatchEvent(new w.KeyboardEvent(type,{key,repeat,bubbles:true,cancelable:true}));}
@@ -39,5 +41,25 @@ try{
  }
  await mount();pointer('pointerdown','오른쪽',1);pointer('pointerdown','왼쪽',2);await advance(100);const opposite=position();pointer('pointerup','왼쪽',2);await advance(300);assert.notEqual(position(),opposite,'releasing second finger preserves first');pointer('pointerup','오른쪽',1);const released=position();await advance(200);assert.equal(position(),released);dom.window.close();console.log('PASS multiple pointers: independent release');
  await mount();const start=position();w.document.querySelector('.direction-pad button[aria-label="오른쪽"]').click();await advance(200);assert.notEqual(position(),start);const tap=position();await advance(200);assert.equal(position(),tap);dom.window.close();console.log('PASS keyboard/assistive button activation: one cell');
+ for(const mode of ['keyboard','touch']){
+  const m=stages[2],ghosts=buildChain(m,[[...Array(20).fill('.'),'U','U','R']]),saved=saveState(m,replay(m,['R','R'],ghosts));
+  await mount(m.id,saved);const before=position(),remaining=w.document.querySelector('.moves-stat b').textContent;
+  if(mode==='keyboard')keyboard('keydown');else pointer('pointerdown');await frame(100);
+  assert.equal(position(),before,'closed door blocks first attempt');
+  for(let i=0;i<25;i++){if(mode==='keyboard')keyboard('keydown','ArrowRight',true);await frame(100);}
+  assert(w.document.querySelector('path[fill="#8163a422"]'),'ghost opens the door');
+  assert.equal(position(),before,'opening door must not release held blocked input');
+  assert.equal(w.document.querySelector('.moves-stat b').textContent,remaining,'blocked input and waiting are free');
+  if(mode==='keyboard'){keyboard('keyup');keyboard('keydown');keyboard('keyup');}else{pointer('pointerup');pointer('pointerdown');pointer('pointerup');}
+  await frame(100);assert.notEqual(position(),before,'fresh press enters open door');const one=position();await frame(300);assert.equal(position(),one,'fresh tap only moves one cell');
+  dom.window.close();console.log(`PASS ${mode}: held blocked input stays stopped when the door opens; fresh tap moves once`);
+ }
+ for(const mode of ['keyboard','touch']){
+  await mount();if(mode==='keyboard')keyboard('keydown','ArrowLeft');else pointer('pointerdown','왼쪽');await frame(100);
+  const wall=position();if(mode==='keyboard')keyboard('keydown','ArrowRight');else pointer('pointerdown','오른쪽',2);await frame(100);
+  if(mode==='keyboard')keyboard('keyup','ArrowRight');else pointer('pointerup','오른쪽',2);await frame(300);
+  assert.notEqual(position(),wall);assert.equal(position(),'translate(120,168)','old blocked direction cannot resume after another direction is released');
+  dom.window.close();console.log(`PASS ${mode}: blocked wall direction cannot resume after another input`);
+ }
  assert.deepEqual(errors,[]);
 }finally{dom?.window.close();}
