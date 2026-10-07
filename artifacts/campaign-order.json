@@ -1,0 +1,806 @@
+{
+  "levels": 100,
+  "criteria": "Actor roles, state changes, timing and mechanic combinations; original five tutorials first.",
+  "results": [
+    {
+      "level": 1,
+      "id": "first-light",
+      "title": "첫 번째 발자국",
+      "difficulty": "튜토리얼",
+      "rank": 1,
+      "moveLimit": 10
+    },
+    {
+      "level": 2,
+      "id": "pressure",
+      "title": "발판의 무게",
+      "difficulty": "튜토리얼",
+      "rank": 2,
+      "moveLimit": 10
+    },
+    {
+      "level": 3,
+      "id": "first-echo",
+      "title": "기다리는 나",
+      "difficulty": "튜토리얼",
+      "rank": 3,
+      "moveLimit": 13
+    },
+    {
+      "level": 4,
+      "id": "two-doors",
+      "title": "두 개의 문, 세 명의 나",
+      "difficulty": "튜토리얼",
+      "rank": 4,
+      "moveLimit": 23
+    },
+    {
+      "level": 5,
+      "id": "together",
+      "title": "같은 순간에",
+      "difficulty": "튜토리얼",
+      "rank": 5,
+      "moveLimit": 18
+    },
+    {
+      "level": 6,
+      "id": "fracture-07",
+      "title": "발판은 기억한다",
+      "difficulty": "초급",
+      "rank": 9,
+      "moveLimit": 14
+    },
+    {
+      "level": 7,
+      "id": "fracture-06",
+      "title": "나와 나의 악수",
+      "difficulty": "초급",
+      "rank": 10,
+      "moveLimit": 12
+    },
+    {
+      "level": 8,
+      "id": "crate-01",
+      "title": "남겨 둔 무게",
+      "difficulty": "초급",
+      "rank": 12,
+      "moveLimit": 12
+    },
+    {
+      "level": 9,
+      "id": "crumble-01",
+      "title": "돌아갈 수 없는 발자국",
+      "difficulty": "초급",
+      "rank": 15,
+      "moveLimit": 14
+    },
+    {
+      "level": 10,
+      "id": "fracture-16",
+      "title": "접힌 방의 스위치",
+      "difficulty": "초급",
+      "rank": 16,
+      "moveLimit": 9
+    },
+    {
+      "level": 11,
+      "id": "reverse-01",
+      "title": "끝에서 시작하는 나",
+      "difficulty": "초급",
+      "rank": 18,
+      "moveLimit": 13
+    },
+    {
+      "level": 12,
+      "id": "fracture-56",
+      "title": "돌아와야 할 이유",
+      "difficulty": "초급",
+      "rank": 20,
+      "moveLimit": 27
+    },
+    {
+      "level": 13,
+      "id": "crate-02",
+      "title": "두 개의 짐",
+      "difficulty": "초급",
+      "rank": 22,
+      "moveLimit": 15
+    },
+    {
+      "level": 14,
+      "id": "fracture-53",
+      "title": "혼자는 충분하다",
+      "difficulty": "초급",
+      "rank": 23,
+      "moveLimit": 14
+    },
+    {
+      "level": 15,
+      "id": "fracture-08",
+      "title": "떠나야 열리는 문",
+      "difficulty": "초급",
+      "rank": 24,
+      "moveLimit": 16
+    },
+    {
+      "level": 16,
+      "id": "crumble-02",
+      "title": "무너져도 남는 길",
+      "difficulty": "중급",
+      "rank": 25,
+      "moveLimit": 14
+    },
+    {
+      "level": 17,
+      "id": "fracture-10",
+      "title": "잠깐의 동행",
+      "difficulty": "중급",
+      "rank": 26,
+      "moveLimit": 12
+    },
+    {
+      "level": 18,
+      "id": "fracture-09",
+      "title": "미래에 누르는 스위치",
+      "difficulty": "중급",
+      "rank": 27,
+      "moveLimit": 20
+    },
+    {
+      "level": 19,
+      "id": "fracture-57",
+      "title": "기억은 가져갈 수 없다",
+      "difficulty": "중급",
+      "rank": 28,
+      "moveLimit": 29
+    },
+    {
+      "level": 20,
+      "id": "jump-01",
+      "title": "끊긴 다리의 저편",
+      "difficulty": "중급",
+      "rank": 28,
+      "moveLimit": 19
+    },
+    {
+      "level": 21,
+      "id": "fracture-17",
+      "title": "저편에 남긴 목소리",
+      "difficulty": "중급",
+      "rank": 29,
+      "moveLimit": 14
+    },
+    {
+      "level": 22,
+      "id": "fracture-13",
+      "title": "문 뒤의 스위치",
+      "difficulty": "중급",
+      "rank": 30,
+      "moveLimit": 23
+    },
+    {
+      "level": 23,
+      "id": "stasis-01",
+      "title": "한 사람의 시간만",
+      "difficulty": "중급",
+      "rank": 30,
+      "moveLimit": 14
+    },
+    {
+      "level": 24,
+      "id": "fracture-51",
+      "title": "기다림의 밀도",
+      "difficulty": "중급",
+      "rank": 31,
+      "moveLimit": 21
+    },
+    {
+      "level": 25,
+      "id": "fracture-15",
+      "title": "박자 맞춰 합류",
+      "difficulty": "중급",
+      "rank": 32,
+      "moveLimit": 16
+    },
+    {
+      "level": 26,
+      "id": "crate-03",
+      "title": "상자와 과거의 분업",
+      "difficulty": "중급",
+      "rank": 32,
+      "moveLimit": 15
+    },
+    {
+      "level": 27,
+      "id": "fracture-26",
+      "title": "같은 출발, 다른 도착",
+      "difficulty": "중급",
+      "rank": 33,
+      "moveLimit": 14
+    },
+    {
+      "level": 28,
+      "id": "fracture-58",
+      "title": "접힌 곳의 조각",
+      "difficulty": "중급",
+      "rank": 33,
+      "moveLimit": 26
+    },
+    {
+      "level": 29,
+      "id": "fracture-11",
+      "title": "나 없이 둘이",
+      "difficulty": "중급",
+      "rank": 34,
+      "moveLimit": 16
+    },
+    {
+      "level": 30,
+      "id": "crumble-03",
+      "title": "한 번뿐인 순환",
+      "difficulty": "중급",
+      "rank": 34,
+      "moveLimit": 18
+    },
+    {
+      "level": 31,
+      "id": "fracture-31",
+      "title": "돌아갈 수 없는 선",
+      "difficulty": "중급",
+      "rank": 35,
+      "moveLimit": 62
+    },
+    {
+      "level": 32,
+      "id": "fracture-54",
+      "title": "겹치면 사라지는 빛",
+      "difficulty": "중급",
+      "rank": 35,
+      "moveLimit": 18
+    },
+    {
+      "level": 33,
+      "id": "fracture-14",
+      "title": "길을 켜고 기다려",
+      "difficulty": "중급",
+      "rank": 36,
+      "moveLimit": 24
+    },
+    {
+      "level": 34,
+      "id": "confluence-01",
+      "title": "상자 뒤로 끊기는 다리",
+      "difficulty": "중급",
+      "rank": 36,
+      "moveLimit": 18
+    },
+    {
+      "level": 35,
+      "id": "fracture-52",
+      "title": "충전된 순간에",
+      "difficulty": "중급",
+      "rank": 37,
+      "moveLimit": 21
+    },
+    {
+      "level": 36,
+      "id": "fracture-18",
+      "title": "열림과 닫힘 사이",
+      "difficulty": "중급",
+      "rank": 38,
+      "moveLimit": 16
+    },
+    {
+      "level": 37,
+      "id": "reverse-02",
+      "title": "거꾸로 놓인 순서",
+      "difficulty": "중급",
+      "rank": 38,
+      "moveLimit": 19
+    },
+    {
+      "level": 38,
+      "id": "fracture-21",
+      "title": "두 박동의 릴레이",
+      "difficulty": "중급",
+      "rank": 39,
+      "moveLimit": 17
+    },
+    {
+      "level": 39,
+      "id": "fracture-59",
+      "title": "혼자 남는 수집가",
+      "difficulty": "중급",
+      "rank": 39,
+      "moveLimit": 26
+    },
+    {
+      "level": 40,
+      "id": "fracture-12",
+      "title": "셋이 겹치는 순간",
+      "difficulty": "중급",
+      "rank": 40,
+      "moveLimit": 14
+    },
+    {
+      "level": 41,
+      "id": "fracture-55",
+      "title": "충전과 합류",
+      "difficulty": "중급",
+      "rank": 41,
+      "moveLimit": 32
+    },
+    {
+      "level": 42,
+      "id": "fracture-19",
+      "title": "한 명은 떠나야 한다",
+      "difficulty": "중급",
+      "rank": 42,
+      "moveLimit": 19
+    },
+    {
+      "level": 43,
+      "id": "jump-03",
+      "title": "사라지기 전의 착지",
+      "difficulty": "중급",
+      "rank": 42,
+      "moveLimit": 19
+    },
+    {
+      "level": 44,
+      "id": "fracture-32",
+      "title": "화살표의 의미",
+      "difficulty": "중급",
+      "rank": 43,
+      "moveLimit": 59
+    },
+    {
+      "level": 45,
+      "id": "jump-02",
+      "title": "두 번째 나를 골라",
+      "difficulty": "중급",
+      "rank": 44,
+      "moveLimit": 21
+    },
+    {
+      "level": 46,
+      "id": "fracture-22",
+      "title": "떠나는 순간의 문",
+      "difficulty": "중급",
+      "rank": 45,
+      "moveLimit": 15
+    },
+    {
+      "level": 47,
+      "id": "fracture-60",
+      "title": "출구를 지나서",
+      "difficulty": "중급",
+      "rank": 45,
+      "moveLimit": 45
+    },
+    {
+      "level": 48,
+      "id": "stasis-03",
+      "title": "붙잡은 역행",
+      "difficulty": "중급",
+      "rank": 46,
+      "moveLimit": 13
+    },
+    {
+      "level": 49,
+      "id": "fracture-23",
+      "title": "지금만 잡을 수 있는 박자",
+      "difficulty": "중급",
+      "rank": 47,
+      "moveLimit": 15
+    },
+    {
+      "level": 50,
+      "id": "reverse-03",
+      "title": "역행하는 두 목소리",
+      "difficulty": "중급",
+      "rank": 48,
+      "moveLimit": 20
+    },
+    {
+      "level": 51,
+      "id": "fracture-61",
+      "title": "꺼짐의 박자",
+      "difficulty": "중급",
+      "rank": 49,
+      "moveLimit": 18
+    },
+    {
+      "level": 52,
+      "id": "stasis-02",
+      "title": "서로 다른 시계",
+      "difficulty": "고급",
+      "rank": 50,
+      "moveLimit": 17
+    },
+    {
+      "level": 53,
+      "id": "fracture-33",
+      "title": "과거의 일방통행",
+      "difficulty": "고급",
+      "rank": 51,
+      "moveLimit": 116
+    },
+    {
+      "level": 54,
+      "id": "fracture-20",
+      "title": "작은 방의 큰 역설",
+      "difficulty": "고급",
+      "rank": 52,
+      "moveLimit": 27
+    },
+    {
+      "level": 55,
+      "id": "fracture-62",
+      "title": "충전된 메아리",
+      "difficulty": "고급",
+      "rank": 53,
+      "moveLimit": 27
+    },
+    {
+      "level": 56,
+      "id": "fracture-24",
+      "title": "둘이 열고 하나가 떠나고",
+      "difficulty": "고급",
+      "rank": 55,
+      "moveLimit": 20
+    },
+    {
+      "level": 57,
+      "id": "fracture-36",
+      "title": "순서를 묻는 문",
+      "difficulty": "고급",
+      "rank": 56,
+      "moveLimit": 164
+    },
+    {
+      "level": 58,
+      "id": "fracture-27",
+      "title": "포털은 돌아오는 길",
+      "difficulty": "고급",
+      "rank": 57,
+      "moveLimit": 27
+    },
+    {
+      "level": 59,
+      "id": "confluence-02",
+      "title": "무게와 멈춘 역행",
+      "difficulty": "고급",
+      "rank": 58,
+      "moveLimit": 15
+    },
+    {
+      "level": 60,
+      "id": "fracture-63",
+      "title": "스위치를 켜는 순서",
+      "difficulty": "고급",
+      "rank": 59,
+      "moveLimit": 33
+    },
+    {
+      "level": 61,
+      "id": "fracture-34",
+      "title": "우회하는 현재",
+      "difficulty": "고급",
+      "rank": 60,
+      "moveLimit": 127
+    },
+    {
+      "level": 62,
+      "id": "fracture-66",
+      "title": "세 번째 임무",
+      "difficulty": "고급",
+      "rank": 60,
+      "moveLimit": 45
+    },
+    {
+      "level": 63,
+      "id": "fracture-64",
+      "title": "둘만의 박동",
+      "difficulty": "고급",
+      "rank": 61,
+      "moveLimit": 43
+    },
+    {
+      "level": 64,
+      "id": "fracture-37",
+      "title": "불완전한 합주",
+      "difficulty": "고급",
+      "rank": 62,
+      "moveLimit": 186
+    },
+    {
+      "level": 65,
+      "id": "fracture-41",
+      "title": "낯선 출발점",
+      "difficulty": "고급",
+      "rank": 63,
+      "moveLimit": 193
+    },
+    {
+      "level": 66,
+      "id": "fracture-28",
+      "title": "저편으로 옮겨 가는 신호",
+      "difficulty": "고급",
+      "rank": 64,
+      "moveLimit": 25
+    },
+    {
+      "level": 67,
+      "id": "fracture-35",
+      "title": "방향의 미궁",
+      "difficulty": "고급",
+      "rank": 65,
+      "moveLimit": 194
+    },
+    {
+      "level": 68,
+      "id": "fracture-65",
+      "title": "외로운 문지기",
+      "difficulty": "고급",
+      "rank": 65,
+      "moveLimit": 30
+    },
+    {
+      "level": 69,
+      "id": "fracture-67",
+      "title": "접힌 협력",
+      "difficulty": "고급",
+      "rank": 66,
+      "moveLimit": 40
+    },
+    {
+      "level": 70,
+      "id": "confluence-03",
+      "title": "이어받는 정지 신호",
+      "difficulty": "고급",
+      "rank": 66,
+      "moveLimit": 21
+    },
+    {
+      "level": 71,
+      "id": "fracture-29",
+      "title": "접힌 곳의 합류",
+      "difficulty": "고급",
+      "rank": 67,
+      "moveLimit": 25
+    },
+    {
+      "level": 72,
+      "id": "fracture-38",
+      "title": "지금과 그때 사이",
+      "difficulty": "고급",
+      "rank": 68,
+      "moveLimit": 191
+    },
+    {
+      "level": 73,
+      "id": "fracture-25",
+      "title": "박동의 지휘자",
+      "difficulty": "고급",
+      "rank": 69,
+      "moveLimit": 25
+    },
+    {
+      "level": 74,
+      "id": "fracture-42",
+      "title": "어긋난 좌표",
+      "difficulty": "고급",
+      "rank": 70,
+      "moveLimit": 161
+    },
+    {
+      "level": 75,
+      "id": "fracture-68",
+      "title": "완충과 맥박",
+      "difficulty": "고급",
+      "rank": 71,
+      "moveLimit": 49
+    },
+    {
+      "level": 76,
+      "id": "fracture-71",
+      "title": "두 번 켜는 문",
+      "difficulty": "고급",
+      "rank": 72,
+      "moveLimit": 57
+    },
+    {
+      "level": 77,
+      "id": "fracture-39",
+      "title": "역할의 교차점",
+      "difficulty": "고급",
+      "rank": 73,
+      "moveLimit": 168
+    },
+    {
+      "level": 78,
+      "id": "confluence-04",
+      "title": "무너진 인과를 건너",
+      "difficulty": "고급",
+      "rank": 74,
+      "moveLimit": 23
+    },
+    {
+      "level": 79,
+      "id": "fracture-69",
+      "title": "되돌아오는 수집",
+      "difficulty": "최상급",
+      "rank": 75,
+      "moveLimit": 51
+    },
+    {
+      "level": 80,
+      "id": "fracture-43",
+      "title": "틈새의 박동",
+      "difficulty": "최상급",
+      "rank": 76,
+      "moveLimit": 211
+    },
+    {
+      "level": 81,
+      "id": "fracture-72",
+      "title": "홀로 남는 박자",
+      "difficulty": "최상급",
+      "rank": 77,
+      "moveLimit": 30
+    },
+    {
+      "level": 82,
+      "id": "fracture-40",
+      "title": "인과의 고리",
+      "difficulty": "최상급",
+      "rank": 78,
+      "moveLimit": 198
+    },
+    {
+      "level": 83,
+      "id": "fracture-70",
+      "title": "문 앞의 세 사람",
+      "difficulty": "최상급",
+      "rank": 79,
+      "moveLimit": 61
+    },
+    {
+      "level": 84,
+      "id": "fracture-30",
+      "title": "공간의 매듭",
+      "difficulty": "최상급",
+      "rank": 81,
+      "moveLimit": 32
+    },
+    {
+      "level": 85,
+      "id": "fracture-46",
+      "title": "세 명의 열쇠",
+      "difficulty": "최상급",
+      "rank": 82,
+      "moveLimit": 193
+    },
+    {
+      "level": 86,
+      "id": "fracture-44",
+      "title": "기억이 닿는 곳",
+      "difficulty": "최상급",
+      "rank": 83,
+      "moveLimit": 157
+    },
+    {
+      "level": 87,
+      "id": "fracture-73",
+      "title": "꺼지지 않게 이어가기",
+      "difficulty": "최상급",
+      "rank": 84,
+      "moveLimit": 63
+    },
+    {
+      "level": 88,
+      "id": "fracture-76",
+      "title": "마지막 방의 조건",
+      "difficulty": "최상급",
+      "rank": 85,
+      "moveLimit": 57
+    },
+    {
+      "level": 89,
+      "id": "fracture-45",
+      "title": "균열을 봉합하라",
+      "difficulty": "최상급",
+      "rank": 87,
+      "moveLimit": 165
+    },
+    {
+      "level": 90,
+      "id": "fracture-47",
+      "title": "시간의 반대편",
+      "difficulty": "최상급",
+      "rank": 88,
+      "moveLimit": 217
+    },
+    {
+      "level": 91,
+      "id": "fracture-74",
+      "title": "갈라진 수집 경로",
+      "difficulty": "최상급",
+      "rank": 89,
+      "moveLimit": 46
+    },
+    {
+      "level": 92,
+      "id": "fracture-77",
+      "title": "모든 나의 도착",
+      "difficulty": "최상급",
+      "rank": 90,
+      "moveLimit": 46
+    },
+    {
+      "level": 93,
+      "id": "fracture-48",
+      "title": "불가능한 동행",
+      "difficulty": "최상급",
+      "rank": 92,
+      "moveLimit": 236
+    },
+    {
+      "level": 94,
+      "id": "fracture-75",
+      "title": "세 기록의 약속",
+      "difficulty": "최상급",
+      "rank": 93,
+      "moveLimit": 46
+    },
+    {
+      "level": 95,
+      "id": "fracture-78",
+      "title": "빛을 모으고 지우고",
+      "difficulty": "최상급",
+      "rank": 94,
+      "moveLimit": 46
+    },
+    {
+      "level": 96,
+      "id": "fracture-49",
+      "title": "끝나지 않는 궤도",
+      "difficulty": "최상급",
+      "rank": 96,
+      "moveLimit": 244
+    },
+    {
+      "level": 97,
+      "id": "fracture-79",
+      "title": "네 명의 한순간",
+      "difficulty": "최상급",
+      "rank": 97,
+      "moveLimit": 69
+    },
+    {
+      "level": 98,
+      "id": "fracture-50",
+      "title": "마지막의 나는 처음의 나",
+      "difficulty": "최상급",
+      "rank": 98,
+      "moveLimit": 277
+    },
+    {
+      "level": 99,
+      "id": "fracture-80",
+      "title": "시간을 완성하는 순서",
+      "difficulty": "최상급",
+      "rank": 99,
+      "moveLimit": 52
+    },
+    {
+      "level": 100,
+      "id": "confluence-05",
+      "title": "다섯 시간의 결절",
+      "difficulty": "최상급",
+      "rank": 100,
+      "moveLimit": 23
+    }
+  ]
+}

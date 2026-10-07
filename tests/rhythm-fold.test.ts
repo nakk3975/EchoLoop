@@ -1,11 +1,14 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {writeFileSync} from 'node:fs';
-import {stages,referenceInputs,restoreCampaignProgress} from '../src/stages.ts';
+import {stages as orderedStages,referenceInputs as orderedInputs,restoreCampaignProgress} from '../src/stages.ts';
 import {rhythmFoldPuzzles} from '../src/rhythm-fold-stages.ts';
 import {campaignStages,campaignInputs} from '../src/campaign-data.ts';
 import {buildChain,replay,initial,step,recordedMoves,movementCount,remainingMoves,validateStage,equal,hash,saveState,type Move} from '../src/engine.ts';
 import {puzzleRoute} from '../scripts/puzzle-route.ts';
+
+const stages=Array.from({length:80},(_,i)=>orderedStages.find(m=>m.id===(i<5?['first-light','pressure','first-echo','two-doors','together'][i]:`fracture-${String(i+1).padStart(2,'0')}`))!);
+const referenceInputs=stages.map(m=>orderedInputs[orderedStages.indexOf(m)]);
 
 test('chapters 5 and 6 are ten compact, distinct cooperative puzzles with spare moves',()=>{
  const results=[];
@@ -18,7 +21,7 @@ test('chapters 5 and 6 are ten compact, distinct cooperative puzzles with spare 
   for(const [l,loop] of loops.entries()){
    let s=initial(m,ghosts.slice(0,l));for(const move of loop){const next=step(m,s,move);if(move!=='.')assert(!equal(next.current,s.current),`${m.id} blocked ${move}`);s=next;}
   }
-  results.push({level:i+1,id:m.id,title:m.title,idea:rhythmFoldPuzzles[i-20].idea,before:{width:old.width,height:old.height,finalTicks:campaignInputs[i-5].at(-1)!.length},after:{width:m.width,height:m.height,loopTicks:loops.map(l=>l.length),moves:state.movesUsed,limit:m.moveLimit,remainingMoves:4}});
+  results.push({level:orderedStages.indexOf(m)+1,id:m.id,title:m.title,idea:rhythmFoldPuzzles[i-20].idea,before:{width:old.width,height:old.height,finalTicks:campaignInputs[i-5].at(-1)!.length},after:{width:m.width,height:m.height,loopTicks:loops.map(l=>l.length),moves:state.movesUsed,limit:m.moveLimit,remainingMoves:4}});
  }
  writeFileSync(new URL('../artifacts/chapter-redesign.json',import.meta.url),JSON.stringify({levels:10,results},null,2)+'\n');
 });

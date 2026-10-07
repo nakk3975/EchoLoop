@@ -1,5 +1,5 @@
 {
-  "levels": 80,
+  "levels": 100,
   "spareMoves": 4,
   "results": [
     {
@@ -64,18 +64,6 @@
     },
     {
       "level": 6,
-      "id": "fracture-06",
-      "referenceMoves": 8,
-      "limit": 12,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 5,
-        "direction": "U"
-      }
-    },
-    {
-      "level": 7,
       "id": "fracture-07",
       "referenceMoves": 10,
       "limit": 14,
@@ -87,103 +75,43 @@
       }
     },
     {
-      "level": 8,
-      "id": "fracture-08",
-      "referenceMoves": 12,
-      "limit": 16,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 8,
-        "direction": "L"
-      }
-    },
-    {
-      "level": 9,
-      "id": "fracture-09",
-      "referenceMoves": 16,
-      "limit": 20,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 10,
-        "direction": "L"
-      }
-    },
-    {
-      "level": 10,
-      "id": "fracture-10",
+      "level": 7,
+      "id": "fracture-06",
       "referenceMoves": 8,
       "limit": 12,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
         "tick": 5,
-        "direction": "L"
-      }
-    },
-    {
-      "level": 11,
-      "id": "fracture-11",
-      "referenceMoves": 12,
-      "limit": 16,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 6,
         "direction": "U"
       }
     },
     {
-      "level": 12,
-      "id": "fracture-12",
+      "level": 8,
+      "id": "crate-01",
+      "referenceMoves": 8,
+      "limit": 12,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 7,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 9,
+      "id": "crumble-01",
       "referenceMoves": 10,
       "limit": 14,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 5,
-        "direction": "U"
-      }
-    },
-    {
-      "level": 13,
-      "id": "fracture-13",
-      "referenceMoves": 19,
-      "limit": 23,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 14,
+        "tick": 9,
         "direction": "L"
       }
     },
     {
-      "level": 14,
-      "id": "fracture-14",
-      "referenceMoves": 20,
-      "limit": 24,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 10,
-        "direction": "L"
-      }
-    },
-    {
-      "level": 15,
-      "id": "fracture-15",
-      "referenceMoves": 12,
-      "limit": 16,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 10,
-        "direction": "U"
-      }
-    },
-    {
-      "level": 16,
+      "level": 10,
       "id": "fracture-16",
       "referenceMoves": 5,
       "limit": 9,
@@ -195,7 +123,127 @@
       }
     },
     {
+      "level": 11,
+      "id": "reverse-01",
+      "referenceMoves": 9,
+      "limit": 13,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 5,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 12,
+      "id": "fracture-56",
+      "referenceMoves": 23,
+      "limit": 27,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 19,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 13,
+      "id": "crate-02",
+      "referenceMoves": 11,
+      "limit": 15,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 10,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 14,
+      "id": "fracture-53",
+      "referenceMoves": 10,
+      "limit": 14,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 7,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 15,
+      "id": "fracture-08",
+      "referenceMoves": 12,
+      "limit": 16,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 8,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 16,
+      "id": "crumble-02",
+      "referenceMoves": 10,
+      "limit": 14,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 6,
+        "direction": "U"
+      }
+    },
+    {
       "level": 17,
+      "id": "fracture-10",
+      "referenceMoves": 8,
+      "limit": 12,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 5,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 18,
+      "id": "fracture-09",
+      "referenceMoves": 16,
+      "limit": 20,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 10,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 19,
+      "id": "fracture-57",
+      "referenceMoves": 25,
+      "limit": 29,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 23,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 20,
+      "id": "jump-01",
+      "referenceMoves": 15,
+      "limit": 19,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 9,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 21,
       "id": "fracture-17",
       "referenceMoves": 10,
       "limit": 14,
@@ -207,34 +255,10 @@
       }
     },
     {
-      "level": 18,
-      "id": "fracture-18",
-      "referenceMoves": 12,
-      "limit": 16,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 8,
-        "direction": "L"
-      }
-    },
-    {
-      "level": 19,
-      "id": "fracture-19",
-      "referenceMoves": 15,
-      "limit": 19,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 8,
-        "direction": "L"
-      }
-    },
-    {
-      "level": 20,
-      "id": "fracture-20",
-      "referenceMoves": 23,
-      "limit": 27,
+      "level": 22,
+      "id": "fracture-13",
+      "referenceMoves": 19,
+      "limit": 23,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
@@ -243,67 +267,55 @@
       }
     },
     {
-      "level": 21,
-      "id": "fracture-21",
-      "referenceMoves": 13,
-      "limit": 17,
+      "level": 23,
+      "id": "stasis-01",
+      "referenceMoves": 10,
+      "limit": 14,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 26,
+        "tick": 21,
         "direction": "U"
       }
     },
     {
-      "level": 22,
-      "id": "fracture-22",
-      "referenceMoves": 11,
-      "limit": 15,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 32,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 23,
-      "id": "fracture-23",
-      "referenceMoves": 11,
-      "limit": 15,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 18,
-        "direction": "D"
-      }
-    },
-    {
       "level": 24,
-      "id": "fracture-24",
-      "referenceMoves": 16,
-      "limit": 20,
+      "id": "fracture-51",
+      "referenceMoves": 17,
+      "limit": 21,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 32,
+        "tick": 15,
         "direction": "U"
       }
     },
     {
       "level": 25,
-      "id": "fracture-25",
-      "referenceMoves": 21,
-      "limit": 25,
+      "id": "fracture-15",
+      "referenceMoves": 12,
+      "limit": 16,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 32,
-        "direction": "D"
+        "tick": 10,
+        "direction": "U"
       }
     },
     {
       "level": 26,
+      "id": "crate-03",
+      "referenceMoves": 11,
+      "limit": 15,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 7,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 27,
       "id": "fracture-26",
       "referenceMoves": 10,
       "limit": 14,
@@ -315,51 +327,39 @@
       }
     },
     {
-      "level": 27,
-      "id": "fracture-27",
-      "referenceMoves": 23,
-      "limit": 27,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 23,
-        "direction": "U"
-      }
-    },
-    {
       "level": 28,
-      "id": "fracture-28",
-      "referenceMoves": 21,
-      "limit": 25,
+      "id": "fracture-58",
+      "referenceMoves": 22,
+      "limit": 26,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 31,
-        "direction": "U"
+        "tick": 41,
+        "direction": "D"
       }
     },
     {
       "level": 29,
-      "id": "fracture-29",
-      "referenceMoves": 21,
-      "limit": 25,
+      "id": "fracture-11",
+      "referenceMoves": 12,
+      "limit": 16,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 13,
+        "tick": 6,
         "direction": "U"
       }
     },
     {
       "level": 30,
-      "id": "fracture-30",
-      "referenceMoves": 28,
-      "limit": 32,
+      "id": "crumble-03",
+      "referenceMoves": 14,
+      "limit": 18,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 39,
-        "direction": "D"
+        "tick": 13,
+        "direction": "L"
       }
     },
     {
@@ -376,270 +376,6 @@
     },
     {
       "level": 32,
-      "id": "fracture-32",
-      "referenceMoves": 55,
-      "limit": 59,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 40,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 33,
-      "id": "fracture-33",
-      "referenceMoves": 112,
-      "limit": 116,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 69,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 34,
-      "id": "fracture-34",
-      "referenceMoves": 123,
-      "limit": 127,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 72,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 35,
-      "id": "fracture-35",
-      "referenceMoves": 190,
-      "limit": 194,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 105,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 36,
-      "id": "fracture-36",
-      "referenceMoves": 160,
-      "limit": 164,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 105,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 37,
-      "id": "fracture-37",
-      "referenceMoves": 182,
-      "limit": 186,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 98,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 38,
-      "id": "fracture-38",
-      "referenceMoves": 187,
-      "limit": 191,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 99,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 39,
-      "id": "fracture-39",
-      "referenceMoves": 164,
-      "limit": 168,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 116,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 40,
-      "id": "fracture-40",
-      "referenceMoves": 194,
-      "limit": 198,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 93,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 41,
-      "id": "fracture-41",
-      "referenceMoves": 189,
-      "limit": 193,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 127,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 42,
-      "id": "fracture-42",
-      "referenceMoves": 157,
-      "limit": 161,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 98,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 43,
-      "id": "fracture-43",
-      "referenceMoves": 207,
-      "limit": 211,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 113,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 44,
-      "id": "fracture-44",
-      "referenceMoves": 153,
-      "limit": 157,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 114,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 45,
-      "id": "fracture-45",
-      "referenceMoves": 161,
-      "limit": 165,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 107,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 46,
-      "id": "fracture-46",
-      "referenceMoves": 189,
-      "limit": 193,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 153,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 47,
-      "id": "fracture-47",
-      "referenceMoves": 213,
-      "limit": 217,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 148,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 48,
-      "id": "fracture-48",
-      "referenceMoves": 232,
-      "limit": 236,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 197,
-        "direction": "L"
-      }
-    },
-    {
-      "level": 49,
-      "id": "fracture-49",
-      "referenceMoves": 240,
-      "limit": 244,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 204,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 50,
-      "id": "fracture-50",
-      "referenceMoves": 273,
-      "limit": 277,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 221,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 51,
-      "id": "fracture-51",
-      "referenceMoves": 17,
-      "limit": 21,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 15,
-        "direction": "U"
-      }
-    },
-    {
-      "level": 52,
-      "id": "fracture-52",
-      "referenceMoves": 17,
-      "limit": 21,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 30,
-        "direction": "U"
-      }
-    },
-    {
-      "level": 53,
-      "id": "fracture-53",
-      "referenceMoves": 10,
-      "limit": 14,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 7,
-        "direction": "U"
-      }
-    },
-    {
-      "level": 54,
       "id": "fracture-54",
       "referenceMoves": 14,
       "limit": 18,
@@ -651,55 +387,79 @@
       }
     },
     {
-      "level": 55,
-      "id": "fracture-55",
-      "referenceMoves": 28,
-      "limit": 32,
+      "level": 33,
+      "id": "fracture-14",
+      "referenceMoves": 20,
+      "limit": 24,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 21,
+        "tick": 10,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 34,
+      "id": "confluence-01",
+      "referenceMoves": 14,
+      "limit": 18,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 13,
         "direction": "U"
       }
     },
     {
-      "level": 56,
-      "id": "fracture-56",
-      "referenceMoves": 23,
-      "limit": 27,
+      "level": 35,
+      "id": "fracture-52",
+      "referenceMoves": 17,
+      "limit": 21,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 19,
+        "tick": 30,
         "direction": "U"
       }
     },
     {
-      "level": 57,
-      "id": "fracture-57",
-      "referenceMoves": 25,
-      "limit": 29,
+      "level": 36,
+      "id": "fracture-18",
+      "referenceMoves": 12,
+      "limit": 16,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 23,
+        "tick": 8,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 37,
+      "id": "reverse-02",
+      "referenceMoves": 15,
+      "limit": 19,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 24,
         "direction": "D"
       }
     },
     {
-      "level": 58,
-      "id": "fracture-58",
-      "referenceMoves": 22,
-      "limit": 26,
+      "level": 38,
+      "id": "fracture-21",
+      "referenceMoves": 13,
+      "limit": 17,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 41,
-        "direction": "D"
+        "tick": 26,
+        "direction": "U"
       }
     },
     {
-      "level": 59,
+      "level": 39,
       "id": "fracture-59",
       "referenceMoves": 22,
       "limit": 26,
@@ -711,7 +471,91 @@
       }
     },
     {
-      "level": 60,
+      "level": 40,
+      "id": "fracture-12",
+      "referenceMoves": 10,
+      "limit": 14,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 5,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 41,
+      "id": "fracture-55",
+      "referenceMoves": 28,
+      "limit": 32,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 21,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 42,
+      "id": "fracture-19",
+      "referenceMoves": 15,
+      "limit": 19,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 8,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 43,
+      "id": "jump-03",
+      "referenceMoves": 15,
+      "limit": 19,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 9,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 44,
+      "id": "fracture-32",
+      "referenceMoves": 55,
+      "limit": 59,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 40,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 45,
+      "id": "jump-02",
+      "referenceMoves": 17,
+      "limit": 21,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 9,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 46,
+      "id": "fracture-22",
+      "referenceMoves": 11,
+      "limit": 15,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 32,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 47,
       "id": "fracture-60",
       "referenceMoves": 41,
       "limit": 45,
@@ -723,7 +567,43 @@
       }
     },
     {
-      "level": 61,
+      "level": 48,
+      "id": "stasis-03",
+      "referenceMoves": 9,
+      "limit": 13,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 21,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 49,
+      "id": "fracture-23",
+      "referenceMoves": 11,
+      "limit": 15,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 18,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 50,
+      "id": "reverse-03",
+      "referenceMoves": 16,
+      "limit": 20,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 9,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 51,
       "id": "fracture-61",
       "referenceMoves": 14,
       "limit": 18,
@@ -735,7 +615,43 @@
       }
     },
     {
-      "level": 62,
+      "level": 52,
+      "id": "stasis-02",
+      "referenceMoves": 13,
+      "limit": 17,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 51,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 53,
+      "id": "fracture-33",
+      "referenceMoves": 112,
+      "limit": 116,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 69,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 54,
+      "id": "fracture-20",
+      "referenceMoves": 23,
+      "limit": 27,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 14,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 55,
       "id": "fracture-62",
       "referenceMoves": 23,
       "limit": 27,
@@ -747,7 +663,55 @@
       }
     },
     {
-      "level": 63,
+      "level": 56,
+      "id": "fracture-24",
+      "referenceMoves": 16,
+      "limit": 20,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 32,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 57,
+      "id": "fracture-36",
+      "referenceMoves": 160,
+      "limit": 164,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 105,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 58,
+      "id": "fracture-27",
+      "referenceMoves": 23,
+      "limit": 27,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 23,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 59,
+      "id": "confluence-02",
+      "referenceMoves": 11,
+      "limit": 15,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 31,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 60,
       "id": "fracture-63",
       "referenceMoves": 29,
       "limit": 33,
@@ -759,31 +723,19 @@
       }
     },
     {
-      "level": 64,
-      "id": "fracture-64",
-      "referenceMoves": 39,
-      "limit": 43,
+      "level": 61,
+      "id": "fracture-34",
+      "referenceMoves": 123,
+      "limit": 127,
       "twoMistakes": "WON",
       "thirdMistake": "OUT_OF_MOVES",
       "detour": {
-        "tick": 33,
+        "tick": 72,
         "direction": "D"
       }
     },
     {
-      "level": 65,
-      "id": "fracture-65",
-      "referenceMoves": 26,
-      "limit": 30,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 31,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 66,
+      "level": 62,
       "id": "fracture-66",
       "referenceMoves": 41,
       "limit": 45,
@@ -795,7 +747,79 @@
       }
     },
     {
+      "level": 63,
+      "id": "fracture-64",
+      "referenceMoves": 39,
+      "limit": 43,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 33,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 64,
+      "id": "fracture-37",
+      "referenceMoves": 182,
+      "limit": 186,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 98,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 65,
+      "id": "fracture-41",
+      "referenceMoves": 189,
+      "limit": 193,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 127,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 66,
+      "id": "fracture-28",
+      "referenceMoves": 21,
+      "limit": 25,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 31,
+        "direction": "U"
+      }
+    },
+    {
       "level": 67,
+      "id": "fracture-35",
+      "referenceMoves": 190,
+      "limit": 194,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 105,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 68,
+      "id": "fracture-65",
+      "referenceMoves": 26,
+      "limit": 30,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 31,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 69,
       "id": "fracture-67",
       "referenceMoves": 36,
       "limit": 40,
@@ -807,7 +831,67 @@
       }
     },
     {
-      "level": 68,
+      "level": 70,
+      "id": "confluence-03",
+      "referenceMoves": 17,
+      "limit": 21,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 23,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 71,
+      "id": "fracture-29",
+      "referenceMoves": 21,
+      "limit": 25,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 13,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 72,
+      "id": "fracture-38",
+      "referenceMoves": 187,
+      "limit": 191,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 99,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 73,
+      "id": "fracture-25",
+      "referenceMoves": 21,
+      "limit": 25,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 32,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 74,
+      "id": "fracture-42",
+      "referenceMoves": 157,
+      "limit": 161,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 98,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 75,
       "id": "fracture-68",
       "referenceMoves": 45,
       "limit": 49,
@@ -819,31 +903,7 @@
       }
     },
     {
-      "level": 69,
-      "id": "fracture-69",
-      "referenceMoves": 47,
-      "limit": 51,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 41,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 70,
-      "id": "fracture-70",
-      "referenceMoves": 57,
-      "limit": 61,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 43,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 71,
+      "level": 76,
       "id": "fracture-71",
       "referenceMoves": 53,
       "limit": 57,
@@ -855,7 +915,55 @@
       }
     },
     {
-      "level": 72,
+      "level": 77,
+      "id": "fracture-39",
+      "referenceMoves": 164,
+      "limit": 168,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 116,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 78,
+      "id": "confluence-04",
+      "referenceMoves": 19,
+      "limit": 23,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 11,
+        "direction": "U"
+      }
+    },
+    {
+      "level": 79,
+      "id": "fracture-69",
+      "referenceMoves": 47,
+      "limit": 51,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 41,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 80,
+      "id": "fracture-43",
+      "referenceMoves": 207,
+      "limit": 211,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 113,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 81,
       "id": "fracture-72",
       "referenceMoves": 26,
       "limit": 30,
@@ -867,7 +975,67 @@
       }
     },
     {
-      "level": 73,
+      "level": 82,
+      "id": "fracture-40",
+      "referenceMoves": 194,
+      "limit": 198,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 93,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 83,
+      "id": "fracture-70",
+      "referenceMoves": 57,
+      "limit": 61,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 43,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 84,
+      "id": "fracture-30",
+      "referenceMoves": 28,
+      "limit": 32,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 39,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 85,
+      "id": "fracture-46",
+      "referenceMoves": 189,
+      "limit": 193,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 153,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 86,
+      "id": "fracture-44",
+      "referenceMoves": 153,
+      "limit": 157,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 114,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 87,
       "id": "fracture-73",
       "referenceMoves": 59,
       "limit": 63,
@@ -879,31 +1047,7 @@
       }
     },
     {
-      "level": 74,
-      "id": "fracture-74",
-      "referenceMoves": 42,
-      "limit": 46,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 52,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 75,
-      "id": "fracture-75",
-      "referenceMoves": 42,
-      "limit": 46,
-      "twoMistakes": "WON",
-      "thirdMistake": "OUT_OF_MOVES",
-      "detour": {
-        "tick": 67,
-        "direction": "D"
-      }
-    },
-    {
-      "level": 76,
+      "level": 88,
       "id": "fracture-76",
       "referenceMoves": 53,
       "limit": 57,
@@ -915,7 +1059,43 @@
       }
     },
     {
-      "level": 77,
+      "level": 89,
+      "id": "fracture-45",
+      "referenceMoves": 161,
+      "limit": 165,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 107,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 90,
+      "id": "fracture-47",
+      "referenceMoves": 213,
+      "limit": 217,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 148,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 91,
+      "id": "fracture-74",
+      "referenceMoves": 42,
+      "limit": 46,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 52,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 92,
       "id": "fracture-77",
       "referenceMoves": 42,
       "limit": 46,
@@ -927,7 +1107,31 @@
       }
     },
     {
-      "level": 78,
+      "level": 93,
+      "id": "fracture-48",
+      "referenceMoves": 232,
+      "limit": 236,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 197,
+        "direction": "L"
+      }
+    },
+    {
+      "level": 94,
+      "id": "fracture-75",
+      "referenceMoves": 42,
+      "limit": 46,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 67,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 95,
       "id": "fracture-78",
       "referenceMoves": 42,
       "limit": 46,
@@ -939,7 +1143,19 @@
       }
     },
     {
-      "level": 79,
+      "level": 96,
+      "id": "fracture-49",
+      "referenceMoves": 240,
+      "limit": 244,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 204,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 97,
       "id": "fracture-79",
       "referenceMoves": 65,
       "limit": 69,
@@ -951,7 +1167,19 @@
       }
     },
     {
-      "level": 80,
+      "level": 98,
+      "id": "fracture-50",
+      "referenceMoves": 273,
+      "limit": 277,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 221,
+        "direction": "D"
+      }
+    },
+    {
+      "level": 99,
       "id": "fracture-80",
       "referenceMoves": 48,
       "limit": 52,
@@ -960,6 +1188,18 @@
       "detour": {
         "tick": 82,
         "direction": "D"
+      }
+    },
+    {
+      "level": 100,
+      "id": "confluence-05",
+      "referenceMoves": 19,
+      "limit": 23,
+      "twoMistakes": "WON",
+      "thirdMistake": "OUT_OF_MOVES",
+      "detour": {
+        "tick": 47,
+        "direction": "U"
       }
     }
   ]

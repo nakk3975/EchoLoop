@@ -119,3 +119,20 @@
  .game-stats[data-bounded=true]{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
  .moves-stat b{white-space:nowrap}
 }
+.jump-controls{display:flex;justify-content:center;gap:10px;margin:14px auto 0;max-width:440px;width:100%}
+.jump-controls select{min-height:44px;flex:0 1 120px;min-width:0;font-size:14px}
+.jump-controls button{min-height:44px;flex:1;white-space:nowrap;font-size:14px;border-color:#8fe4ec;color:#d0f9ff}
+.echo-clock{font-size:12px;color:#a6e7ef;line-height:1.7}
+@media(max-width:760px),(any-pointer:coarse){.jump-controls{grid-column:1/-1;grid-row:1;margin:0;max-width:none;gap:8px}.jump-controls select{flex-basis:100px}.jump-controls button{font-size:13px}}
+@media(max-width:760px),(any-pointer:coarse){
+ .play:has(.jump-controls){padding-bottom:calc(270px + env(safe-area-inset-bottom,0px))}
+ .play:has(.jump-controls) .toast{bottom:calc(275px + env(safe-area-inset-bottom,0px))}
+ .jump-controls kbd{display:none}
+}
+@media(max-width:760px) and (min-height:501px) and (max-height:700px){
+ .play:has(.jump-controls) .time-axis{display:none}
+ .play:has(.jump-controls) .game-stats b{font-size:18px;white-space:nowrap}
+ .play:has(.jump-controls) .game-stats b small{font-size:10px}
+ .play:has(.jump-controls) .game-controls button{padding-inline:2px}
+}
+@media(max-width:360px){.play:has(.jump-controls) .control-icon{display:none}}

@@ -8,4 +8,4 @@ for(const [i,stage] of stages.entries()){
  limits[m.id]=recordedMoves(ghosts)+movementCount(state.trajectory)+4;
 }
 writeFileSync(new URL('../src/campaign-move-limits.json',import.meta.url),JSON.stringify(limits,null,2)+'\n');
-console.log('80 verified movement budgets regenerated; four spare moves each.');
+console.log(stages.length+' verified movement budgets regenerated; four spare moves each.');

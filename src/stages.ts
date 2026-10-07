@@ -1,3 +1,6 @@
+import {newMechanicPuzzles} from './new-mechanic-stages.ts';
+import {newMechanicInputs} from './new-mechanics-solutions.ts';
+import {difficultyRank} from './campaign-difficulty.ts';
 import {advancedPuzzles} from './advanced-stages.ts';
 import {advancedInputs} from './advanced-solutions.ts';
 import {type Stage,type Move,restoreState,hash,replay,buildChain} from './engine.ts';
@@ -34,8 +37,15 @@ export function blankStage(width=13,height=9):Stage{return fromRows('local-'+cry
 
 stages.push(...advancedPuzzles.map(p=>p.stage));
 referenceInputs.push(...advancedInputs);
+stages.push(...newMechanicPuzzles.map(p=>p.stage));
+referenceInputs.push(...newMechanicInputs);
 // Verified solution movement plus four spare steps; waiting and blocked input are free.
 for(const stage of stages)stage.moveLimit=(campaignMoveLimits as Record<string,number>)[stage.id];
+
+// Keep witnesses paired with their IDs when the campaign order changes.
+const ordered=stages.map((stage,i)=>({stage,inputs:referenceInputs[i],index:i})).sort((a,b)=>difficultyRank(a.stage)-difficultyRank(b.stage)||a.index-b.index);
+stages.splice(0,stages.length,...ordered.map(p=>p.stage));
+referenceInputs.splice(0,referenceInputs.length,...ordered.map(p=>p.inputs));
 
 // Validate old saves first, then preserve their exact replay under the new movement rule.
 // A changed puzzle or a save already over budget remains available with its old rules.

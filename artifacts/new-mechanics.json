@@ -1,0 +1,304 @@
+{
+  "levels": 20,
+  "results": [
+    {
+      "level": 8,
+      "id": "crate-01",
+      "idea": "상자를 발판에 두고 현재가 떠나는 입문",
+      "size": "11×7",
+      "ticks": [
+        8
+      ],
+      "pushes": 1,
+      "collapses": 0,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 13,
+      "id": "crate-02",
+      "idea": "밀기 순서와 두 발판의 AND 조건",
+      "size": "12×7",
+      "ticks": [
+        11
+      ],
+      "pushes": 2,
+      "collapses": 0,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 26,
+      "id": "crate-03",
+      "idea": "상자로 대체할 수 없는 과거 전용 발판",
+      "size": "11×7",
+      "ticks": [
+        3,
+        8
+      ],
+      "pushes": 1,
+      "collapses": 0,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 9,
+      "id": "crumble-01",
+      "idea": "조각을 얻은 뒤 같은 다리로 돌아갈 수 없음",
+      "size": "10×7",
+      "ticks": [
+        10
+      ],
+      "pushes": 0,
+      "collapses": 1,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 16,
+      "id": "crumble-02",
+      "idea": "반복마다 바닥 초기화·과거는 구멍을 무시",
+      "size": "11×7",
+      "ticks": [
+        3,
+        7
+      ],
+      "pushes": 0,
+      "collapses": 5,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 30,
+      "id": "crumble-03",
+      "idea": "두 조각과 세 붕괴 지점의 방문 순서",
+      "size": "10×7",
+      "ticks": [
+        14
+      ],
+      "pushes": 0,
+      "collapses": 1,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 11,
+      "id": "reverse-01",
+      "idea": "역재생의 시작 위치와 대기 시간",
+      "size": "11×7",
+      "ticks": [
+        23,
+        6
+      ],
+      "pushes": 0,
+      "collapses": 0,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 37,
+      "id": "reverse-02",
+      "idea": "역재생으로 문 신호의 순서가 뒤집힘",
+      "size": "12×7",
+      "ticks": [
+        41,
+        25
+      ],
+      "pushes": 0,
+      "collapses": 0,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 50,
+      "id": "reverse-03",
+      "idea": "세 명 공명과 역재생의 짧은 합류 창",
+      "size": "11×7",
+      "ticks": [
+        23,
+        23,
+        10
+      ],
+      "pushes": 0,
+      "collapses": 0,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 20,
+      "id": "jump-01",
+      "idea": "붕괴된 막다른 조각 방에서 단 한 번 도약",
+      "size": "12×7",
+      "ticks": [
+        5,
+        10
+      ],
+      "pushes": 0,
+      "collapses": 1,
+      "frozenTicks": 0,
+      "jumps": 1,
+      "remainingMoves": 4
+    },
+    {
+      "level": 45,
+      "id": "jump-02",
+      "idea": "입구를 맡는 기록과 도약 목적지 기록의 분리",
+      "size": "12×7",
+      "ticks": [
+        2,
+        5,
+        10
+      ],
+      "pushes": 0,
+      "collapses": 1,
+      "frozenTicks": 0,
+      "jumps": 1,
+      "remainingMoves": 4
+    },
+    {
+      "level": 43,
+      "id": "jump-03",
+      "idea": "역재생의 유한한 원격 착지 창",
+      "size": "12×7",
+      "ticks": [
+        35,
+        10
+      ],
+      "pushes": 0,
+      "collapses": 1,
+      "frozenTicks": 0,
+      "jumps": 1,
+      "remainingMoves": 4
+    },
+    {
+      "level": 23,
+      "id": "stasis-01",
+      "idea": "짧은 점유를 정지 장치로 박동까지 연장",
+      "size": "11×7",
+      "ticks": [
+        9,
+        22
+      ],
+      "pushes": 0,
+      "collapses": 0,
+      "frozenTicks": 16,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 52,
+      "id": "stasis-02",
+      "idea": "1만 정지시키고 2와 세계 시계는 진행",
+      "size": "11×7",
+      "ticks": [
+        9,
+        23,
+        52
+      ],
+      "pushes": 0,
+      "collapses": 0,
+      "frozenTicks": 45,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 48,
+      "id": "stasis-03",
+      "idea": "역재생 정지와 출발 위치의 차이",
+      "size": "11×7",
+      "ticks": [
+        8,
+        22
+      ],
+      "pushes": 0,
+      "collapses": 0,
+      "frozenTicks": 15,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 34,
+      "id": "confluence-01",
+      "idea": "상자 배치와 조각 회수·붕괴 귀환 순서",
+      "size": "11×7",
+      "ticks": [
+        14
+      ],
+      "pushes": 1,
+      "collapses": 3,
+      "frozenTicks": 0,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 59,
+      "id": "confluence-02",
+      "idea": "상자·역재생·정지·박동의 네 조건",
+      "size": "11×7",
+      "ticks": [
+        18,
+        32
+      ],
+      "pushes": 1,
+      "collapses": 0,
+      "frozenTicks": 20,
+      "jumps": 0,
+      "remainingMoves": 4
+    },
+    {
+      "level": 70,
+      "id": "confluence-03",
+      "idea": "정지로 만든 두 번째 기록에 도약해 붕괴 방 탈출",
+      "size": "12×7",
+      "ticks": [
+        11,
+        21,
+        24
+      ],
+      "pushes": 0,
+      "collapses": 1,
+      "frozenTicks": 11,
+      "jumps": 1,
+      "remainingMoves": 4
+    },
+    {
+      "level": 78,
+      "id": "confluence-04",
+      "idea": "매 반복 상자를 재배치하고 역행 도약 창에 맞춰 조각 회수",
+      "size": "12×7",
+      "ticks": [
+        37,
+        12
+      ],
+      "pushes": 2,
+      "collapses": 1,
+      "frozenTicks": 0,
+      "jumps": 1,
+      "remainingMoves": 4
+    },
+    {
+      "level": 100,
+      "id": "confluence-05",
+      "idea": "다섯 새 기믹을 모두 써서 불가능한 귀환과 두 시계를 연결",
+      "size": "12×7",
+      "ticks": [
+        25,
+        48
+      ],
+      "pushes": 2,
+      "collapses": 1,
+      "frozenTicks": 30,
+      "jumps": 1,
+      "remainingMoves": 4
+    }
+  ]
+}

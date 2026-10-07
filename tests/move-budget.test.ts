@@ -4,7 +4,7 @@ import {writeFileSync} from 'node:fs';
 import {stages,referenceInputs,restoreCampaignProgress,fromRows} from '../src/stages.ts';
 import {initial,step,replay,buildChain,commit,rewind,solution,verifySolution,saveState,restoreState,movementCount,recordedMoves,remainingMoves,validateStage,hash,equal,type Move,type Stage,type State} from '../src/engine.ts';
 
-test('all 80 budgets cover the verified complete solution plus exactly four spare moves',()=>{
+test('all 100 budgets cover the verified complete solution plus exactly four spare moves',()=>{
  for(let i=0;i<stages.length;i++){
   const m=stages[i],loops=referenceInputs[i],ghosts=buildChain(m,loops.slice(0,-1)),s=replay(m,loops.at(-1)!,ghosts);
   assert.equal(s.outcome,'WON',m.id);assert.equal(remainingMoves(m,s),4,m.id);
@@ -16,7 +16,7 @@ test('all 80 budgets cover the verified complete solution plus exactly four spar
 function run(m:Stage,inputs:Move[],ghosts:State['ghosts']){
  let s=initial(m,ghosts);for(const input of inputs){if(s.outcome!=='RUNNING')break;s=step(m,s,input);}return s;
 }
-test('all 80 puzzles still win after two real out-and-back mistakes; a third exceeds the budget',()=>{
+test('all 100 puzzles still win after two real out-and-back mistakes; a third exceeds the budget',()=>{
  const results=[];const opposite:Record<string,Move>={U:'D',D:'U',L:'R',R:'L'};
  for(let n=0;n<stages.length;n++){
   const m=stages[n],loops=referenceInputs[n],ghosts=buildChain(m,loops.slice(0,-1)),final=loops.at(-1)!;
@@ -35,7 +35,7 @@ test('all 80 puzzles still win after two real out-and-back mistakes; a third exc
   }
   assert(found,m.id+' must tolerate two mistakes');
  }
- writeFileSync(new URL('../artifacts/movement-budgets.json',import.meta.url),JSON.stringify({levels:80,spareMoves:4,results},null,2)+'\n');
+ writeFileSync(new URL('../artifacts/movement-budgets.json',import.meta.url),JSON.stringify({levels:stages.length,spareMoves:4,results},null,2)+'\n');
 });
 
 test('waiting and blocked directions are free; the last permitted move can win even at tick 300',()=>{

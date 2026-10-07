@@ -2,18 +2,18 @@ import {useState,useRef,useEffect} from 'react';
 import {stages} from './stages.ts';
 import {Board} from './Board.tsx';
 import type {Stage} from './engine.ts';
-export const chapterNames=['첫 번째 균열','짧은 역설','겹치는 인과','작은 방의 비밀','박동하는 시간','공간의 접힘','역행 금지','인과의 교차','붕괴 직전','첫 번째 종착점','머무름의 법칙','시간의 파편','엇갈린 조건','세 가지 임무','인과의 설계','완성된 시간'];
-export const chapterDescriptions=['다섯 번의 작은 실험으로 시간을 다루는 법을 배웁니다.','공명, 기억 스위치, 반전 문. 짧은 길 안에서 서로 다른 규칙을 만납니다.','두 명이 남거나 세 명이 합류하거나. 같은 자리도 다른 답이 됩니다.','포털과 박동, 합류와 이별. 넓이 대신 행동의 순서로 푸는 작은 방입니다.','엇갈린 박자, 잔상의 이탈, 현재만 누르는 발판. 작은 방에서 열림과 닫힘을 지휘하세요.','다른 길을 택하고, 돌아와 합류하고, 저편으로 신호를 옮깁니다. 포털마다 맡길 역할을 정하세요.','어느 쪽에서 들어오는지가 중요합니다. 돌아올 길까지 생각하세요.','세 개의 기록, 서로 다른 발판, 박동 문이 한 번에 얽힙니다.','포털 너머의 방향과 문이 열리는 순간을 함께 계산하세요.','지금까지 배운 장치가 만납니다. 3명의 과거와 첫 여정을 마무리하세요.','충전과 단독 점유. 머무는 시간과 함께 서는 인원에 새로운 의미가 생깁니다.','과거가 길을 열어도 조각은 현재가 직접 모아야 합니다.','새 발판과 박동, 포털, 수집을 두 조건씩 조합합니다.','충전 담당, 합류 상대, 스위치 조작자. 기록마다 역할을 나누세요.','수집 방은 ON, 출구는 OFF. 돌아오는 경로와 신호를 설계하세요.','세 개의 기록과 현재가 모든 조건을 하나의 순서로 완성합니다.'];
+import {chapterNames,chapterDescriptions,difficultyLabel} from './campaign-difficulty.ts';
+export {chapterNames} from './campaign-difficulty.ts';
 export function Campaign({completed,onPlay,focusStageId,onResume}:{completed:string[];onPlay:(m:Stage)=>void;focusStageId?:string;onResume?:()=>void}){
  const saved=stages.findIndex(s=>s.id===focusStageId),next=stages.findIndex(s=>!completed.includes(s.id)),preferred=Math.floor(Math.max(0,saved>=0?saved:next)/5);
  const [chapter,setChapter]=useState(preferred),chosen=useRef(false),orbit=useRef<HTMLElement>(null);
  const choose=(value:number)=>{chosen.current=true;setChapter(value);};
  useEffect(()=>{if(!chosen.current)setChapter(preferred);},[preferred]);
  useEffect(()=>{const nav=orbit.current,button=nav?.querySelector<HTMLElement>('[aria-pressed=true]');if(nav&&button){const n=nav.getBoundingClientRect(),b=button.getBoundingClientRect();nav.scrollLeft+=b.left+b.width/2-n.left-nav.clientWidth/2;}},[chapter]);
- const difficulty=chapter===0?'튜토리얼':chapter<3?'초급':chapter<6?'중급':chapter<9?'고급':chapter===9?'최상급':chapter<12?'새 규칙':chapter<14?'복합 응용':'최상급';
+ const difficulty=difficultyLabel(stages[chapter*5]);
  return <section className="campaign" aria-labelledby="campaign-title"><div className="campaign-heading"><div><span className="eyebrow">THE SHATTERED TIMELINE</span><h2 id="campaign-title">{stages.length}개의 시간 균열</h2></div><span className="completion">{stages.filter(s=>completed.includes(s.id)).length} / {stages.length} 복원</span></div>
  <nav ref={orbit} className="chapter-orbit" aria-label="챕터 선택">{chapterNames.map((name,i)=><button key={name} aria-pressed={chapter===i} className={chapter===i?'selected':''} onClick={()=>choose(i)}><span>{String(i+1).padStart(2,'0')}</span><small>{name}</small></button>)}</nav>
  <div className="chapter-intro"><span className="chapter-index">{String(chapter+1).padStart(2,'0')}</span><div><span className="eyebrow">CHAPTER / {difficulty}</span><h3>{chapterNames[chapter]}</h3><p>{chapterDescriptions[chapter]}</p></div><div className="chapter-switch"><button aria-label="이전 챕터" disabled={chapter===0} onClick={()=>choose(chapter-1)}>←</button><button aria-label="다음 챕터" disabled={chapter===chapterNames.length-1} onClick={()=>choose(chapter+1)}>→</button></div></div>
- <div className="constellation">{stages.slice(chapter*5,chapter*5+5).map((m,i)=><button key={m.id} className={'level-shard '+(completed.includes(m.id)?'completed ':'')+(m.id===focusStageId?'active-save':'')} onClick={()=>m.id===focusStageId&&onResume?onResume():onPlay(m)}><span className="shard-number">{String(chapter*5+i+1).padStart(2,'0')}<small>{m.id===focusStageId?'이어가기':completed.includes(m.id)?'✓ 복원 완료':difficulty}</small></span><span className="shard-map"><Board stage={m}/></span><strong>{m.title}</strong><span className="shard-detail">{m.maxGhosts?`잔상 ${m.maxGhosts}명`:'혼자 걷기'} <i>↗</i></span></button>)}</div>
- <p className="campaign-note">모든 균열을 자유롭게 선택할 수 있어요. 처음이라면 01부터 시작하세요.</p></section>;
+ <div className="constellation">{stages.slice(chapter*5,chapter*5+5).map((m,i)=><button key={m.id} className={'level-shard '+(completed.includes(m.id)?'completed ':'')+(m.id===focusStageId?'active-save':'')} onClick={()=>m.id===focusStageId&&onResume?onResume():onPlay(m)}><span className="shard-number">{String(chapter*5+i+1).padStart(2,'0')}<small>{m.id===focusStageId?'이어가기':completed.includes(m.id)?'✓ 복원 완료':difficultyLabel(m)}</small></span><span className="shard-map"><Board stage={m}/></span><strong>{m.title}</strong><span className="shard-detail">{m.maxGhosts?`잔상 ${m.maxGhosts}명`:'혼자 걷기'} <i>↗</i></span></button>)}</div>
+ <p className="campaign-note">기본 실험 뒤에는 난이도 순으로 진행합니다. 모든 균열을 자유롭게 선택할 수 있어요.</p></section>;
 }

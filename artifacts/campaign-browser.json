@@ -1,16 +1,16 @@
 {
   "kind": "Chromium production bundle with DOM keyboard input and controlled animation clock",
-  "began": "2026-10-07T01:55:15.147Z",
-  "finished": "2026-10-07T01:55:36.805Z",
-  "levels": 80,
+  "began": "2026-10-07T02:33:50.787Z",
+  "finished": "2026-10-07T02:34:14.969Z",
+  "levels": 100,
   "checks": [
-    "80 sequential victories",
+    "100 sequential victories",
     "four spare moves per complete solution",
     "all record commits",
     "result Enter advance even from Undo focus",
     "held Enter ignored",
     "sampled reload and rewind",
-    "persisted 80 completions"
+    "persisted 100 completions"
   ],
   "results": [
     {
@@ -70,6 +70,16 @@
     },
     {
       "level": 6,
+      "id": "fracture-07",
+      "status": "passed",
+      "moveLimit": 14,
+      "movesRemaining": 4,
+      "loops": [
+        10
+      ]
+    },
+    {
+      "level": 7,
       "id": "fracture-06",
       "status": "passed",
       "moveLimit": 12,
@@ -80,8 +90,18 @@
       ]
     },
     {
-      "level": 7,
-      "id": "fracture-07",
+      "level": 8,
+      "id": "crate-01",
+      "status": "passed",
+      "moveLimit": 12,
+      "movesRemaining": 4,
+      "loops": [
+        8
+      ]
+    },
+    {
+      "level": 9,
+      "id": "crumble-01",
       "status": "passed",
       "moveLimit": 14,
       "movesRemaining": 4,
@@ -90,7 +110,60 @@
       ]
     },
     {
-      "level": 8,
+      "level": 10,
+      "id": "fracture-16",
+      "status": "passed",
+      "moveLimit": 9,
+      "movesRemaining": 4,
+      "loops": [
+        5
+      ]
+    },
+    {
+      "level": 11,
+      "id": "reverse-01",
+      "status": "passed",
+      "moveLimit": 13,
+      "movesRemaining": 4,
+      "loops": [
+        23,
+        6
+      ]
+    },
+    {
+      "level": 12,
+      "id": "fracture-56",
+      "status": "passed",
+      "moveLimit": 27,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        20
+      ]
+    },
+    {
+      "level": 13,
+      "id": "crate-02",
+      "status": "passed",
+      "moveLimit": 15,
+      "movesRemaining": 4,
+      "loops": [
+        11
+      ]
+    },
+    {
+      "level": 14,
+      "id": "fracture-53",
+      "status": "passed",
+      "moveLimit": 14,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        8
+      ]
+    },
+    {
+      "level": 15,
       "id": "fracture-08",
       "status": "passed",
       "moveLimit": 16,
@@ -101,18 +174,18 @@
       ]
     },
     {
-      "level": 9,
-      "id": "fracture-09",
+      "level": 16,
+      "id": "crumble-02",
       "status": "passed",
-      "moveLimit": 20,
+      "moveLimit": 14,
       "movesRemaining": 4,
       "loops": [
-        10,
-        11
+        3,
+        7
       ]
     },
     {
-      "level": 10,
+      "level": 17,
       "id": "fracture-10",
       "status": "passed",
       "moveLimit": 12,
@@ -123,7 +196,128 @@
       ]
     },
     {
-      "level": 11,
+      "level": 18,
+      "id": "fracture-09",
+      "status": "passed",
+      "moveLimit": 20,
+      "movesRemaining": 4,
+      "loops": [
+        10,
+        11
+      ]
+    },
+    {
+      "level": 19,
+      "id": "fracture-57",
+      "status": "passed",
+      "moveLimit": 29,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        24
+      ]
+    },
+    {
+      "level": 20,
+      "id": "jump-01",
+      "status": "passed",
+      "moveLimit": 19,
+      "movesRemaining": 4,
+      "loops": [
+        5,
+        10
+      ]
+    },
+    {
+      "level": 21,
+      "id": "fracture-17",
+      "status": "passed",
+      "moveLimit": 14,
+      "movesRemaining": 4,
+      "loops": [
+        4,
+        8
+      ]
+    },
+    {
+      "level": 22,
+      "id": "fracture-13",
+      "status": "passed",
+      "moveLimit": 23,
+      "movesRemaining": 4,
+      "loops": [
+        9,
+        15
+      ]
+    },
+    {
+      "level": 23,
+      "id": "stasis-01",
+      "status": "passed",
+      "moveLimit": 14,
+      "movesRemaining": 4,
+      "loops": [
+        9,
+        22
+      ]
+    },
+    {
+      "level": 24,
+      "id": "fracture-51",
+      "status": "passed",
+      "moveLimit": 21,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        16
+      ]
+    },
+    {
+      "level": 25,
+      "id": "fracture-15",
+      "status": "passed",
+      "moveLimit": 16,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        11
+      ]
+    },
+    {
+      "level": 26,
+      "id": "crate-03",
+      "status": "passed",
+      "moveLimit": 15,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        8
+      ]
+    },
+    {
+      "level": 27,
+      "id": "fracture-26",
+      "status": "passed",
+      "moveLimit": 14,
+      "movesRemaining": 4,
+      "loops": [
+        4,
+        7
+      ]
+    },
+    {
+      "level": 28,
+      "id": "fracture-58",
+      "status": "passed",
+      "moveLimit": 26,
+      "movesRemaining": 4,
+      "loops": [
+        4,
+        42
+      ]
+    },
+    {
+      "level": 29,
       "id": "fracture-11",
       "status": "passed",
       "moveLimit": 16,
@@ -135,218 +329,13 @@
       ]
     },
     {
-      "level": 12,
-      "id": "fracture-12",
-      "status": "passed",
-      "moveLimit": 14,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        2,
-        6
-      ]
-    },
-    {
-      "level": 13,
-      "id": "fracture-13",
-      "status": "passed",
-      "moveLimit": 23,
-      "movesRemaining": 4,
-      "loops": [
-        9,
-        15
-      ]
-    },
-    {
-      "level": 14,
-      "id": "fracture-14",
-      "status": "passed",
-      "moveLimit": 24,
-      "movesRemaining": 4,
-      "loops": [
-        9,
-        11
-      ]
-    },
-    {
-      "level": 15,
-      "id": "fracture-15",
-      "status": "passed",
-      "moveLimit": 16,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        11
-      ]
-    },
-    {
-      "level": 16,
-      "id": "fracture-16",
-      "status": "passed",
-      "moveLimit": 9,
-      "movesRemaining": 4,
-      "loops": [
-        5
-      ]
-    },
-    {
-      "level": 17,
-      "id": "fracture-17",
-      "status": "passed",
-      "moveLimit": 14,
-      "movesRemaining": 4,
-      "loops": [
-        4,
-        8
-      ]
-    },
-    {
-      "level": 18,
-      "id": "fracture-18",
-      "status": "passed",
-      "moveLimit": 16,
-      "movesRemaining": 4,
-      "loops": [
-        7,
-        9
-      ]
-    },
-    {
-      "level": 19,
-      "id": "fracture-19",
-      "status": "passed",
-      "moveLimit": 19,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        7,
-        9
-      ]
-    },
-    {
-      "level": 20,
-      "id": "fracture-20",
-      "status": "passed",
-      "moveLimit": 27,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        14,
-        15
-      ]
-    },
-    {
-      "level": 21,
-      "id": "fracture-21",
-      "status": "passed",
-      "moveLimit": 17,
-      "movesRemaining": 4,
-      "loops": [
-        4,
-        27
-      ]
-    },
-    {
-      "level": 22,
-      "id": "fracture-22",
-      "status": "passed",
-      "moveLimit": 15,
-      "movesRemaining": 4,
-      "loops": [
-        22,
-        33
-      ]
-    },
-    {
-      "level": 23,
-      "id": "fracture-23",
-      "status": "passed",
-      "moveLimit": 15,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        19
-      ]
-    },
-    {
-      "level": 24,
-      "id": "fracture-24",
-      "status": "passed",
-      "moveLimit": 20,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        27,
-        33
-      ]
-    },
-    {
-      "level": 25,
-      "id": "fracture-25",
-      "status": "passed",
-      "moveLimit": 25,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        31,
-        33
-      ]
-    },
-    {
-      "level": 26,
-      "id": "fracture-26",
-      "status": "passed",
-      "moveLimit": 14,
-      "movesRemaining": 4,
-      "loops": [
-        4,
-        7
-      ]
-    },
-    {
-      "level": 27,
-      "id": "fracture-27",
-      "status": "passed",
-      "moveLimit": 27,
-      "movesRemaining": 4,
-      "loops": [
-        15,
-        24
-      ]
-    },
-    {
-      "level": 28,
-      "id": "fracture-28",
-      "status": "passed",
-      "moveLimit": 25,
-      "movesRemaining": 4,
-      "loops": [
-        29,
-        32
-      ]
-    },
-    {
-      "level": 29,
-      "id": "fracture-29",
-      "status": "passed",
-      "moveLimit": 25,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        8,
-        14
-      ]
-    },
-    {
       "level": 30,
-      "id": "fracture-30",
+      "id": "crumble-03",
       "status": "passed",
-      "moveLimit": 32,
+      "moveLimit": 18,
       "movesRemaining": 4,
       "loops": [
-        6,
-        38,
-        40
+        14
       ]
     },
     {
@@ -362,6 +351,140 @@
     },
     {
       "level": 32,
+      "id": "fracture-54",
+      "status": "passed",
+      "moveLimit": 18,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        13
+      ]
+    },
+    {
+      "level": 33,
+      "id": "fracture-14",
+      "status": "passed",
+      "moveLimit": 24,
+      "movesRemaining": 4,
+      "loops": [
+        9,
+        11
+      ]
+    },
+    {
+      "level": 34,
+      "id": "confluence-01",
+      "status": "passed",
+      "moveLimit": 18,
+      "movesRemaining": 4,
+      "loops": [
+        14
+      ]
+    },
+    {
+      "level": 35,
+      "id": "fracture-52",
+      "status": "passed",
+      "moveLimit": 21,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        31
+      ]
+    },
+    {
+      "level": 36,
+      "id": "fracture-18",
+      "status": "passed",
+      "moveLimit": 16,
+      "movesRemaining": 4,
+      "loops": [
+        7,
+        9
+      ]
+    },
+    {
+      "level": 37,
+      "id": "reverse-02",
+      "status": "passed",
+      "moveLimit": 19,
+      "movesRemaining": 4,
+      "loops": [
+        41,
+        25
+      ]
+    },
+    {
+      "level": 38,
+      "id": "fracture-21",
+      "status": "passed",
+      "moveLimit": 17,
+      "movesRemaining": 4,
+      "loops": [
+        4,
+        27
+      ]
+    },
+    {
+      "level": 39,
+      "id": "fracture-59",
+      "status": "passed",
+      "moveLimit": 26,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        20
+      ]
+    },
+    {
+      "level": 40,
+      "id": "fracture-12",
+      "status": "passed",
+      "moveLimit": 14,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        2,
+        6
+      ]
+    },
+    {
+      "level": 41,
+      "id": "fracture-55",
+      "status": "passed",
+      "moveLimit": 32,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        19,
+        22
+      ]
+    },
+    {
+      "level": 42,
+      "id": "fracture-19",
+      "status": "passed",
+      "moveLimit": 19,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        7,
+        9
+      ]
+    },
+    {
+      "level": 43,
+      "id": "jump-03",
+      "status": "passed",
+      "moveLimit": 19,
+      "movesRemaining": 4,
+      "loops": [
+        35,
+        10
+      ]
+    },
+    {
+      "level": 44,
       "id": "fracture-32",
       "status": "passed",
       "moveLimit": 59,
@@ -372,7 +495,99 @@
       ]
     },
     {
-      "level": 33,
+      "level": 45,
+      "id": "jump-02",
+      "status": "passed",
+      "moveLimit": 21,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        5,
+        10
+      ]
+    },
+    {
+      "level": 46,
+      "id": "fracture-22",
+      "status": "passed",
+      "moveLimit": 15,
+      "movesRemaining": 4,
+      "loops": [
+        22,
+        33
+      ]
+    },
+    {
+      "level": 47,
+      "id": "fracture-60",
+      "status": "passed",
+      "moveLimit": 45,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        24,
+        34
+      ]
+    },
+    {
+      "level": 48,
+      "id": "stasis-03",
+      "status": "passed",
+      "moveLimit": 13,
+      "movesRemaining": 4,
+      "loops": [
+        8,
+        22
+      ]
+    },
+    {
+      "level": 49,
+      "id": "fracture-23",
+      "status": "passed",
+      "moveLimit": 15,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        19
+      ]
+    },
+    {
+      "level": 50,
+      "id": "reverse-03",
+      "status": "passed",
+      "moveLimit": 20,
+      "movesRemaining": 4,
+      "loops": [
+        23,
+        23,
+        10
+      ]
+    },
+    {
+      "level": 51,
+      "id": "fracture-61",
+      "status": "passed",
+      "moveLimit": 18,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        12
+      ]
+    },
+    {
+      "level": 52,
+      "id": "stasis-02",
+      "status": "passed",
+      "moveLimit": 17,
+      "movesRemaining": 4,
+      "loops": [
+        9,
+        23,
+        52
+      ]
+    },
+    {
+      "level": 53,
       "id": "fracture-33",
       "status": "passed",
       "moveLimit": 116,
@@ -384,32 +599,42 @@
       ]
     },
     {
-      "level": 34,
-      "id": "fracture-34",
+      "level": 54,
+      "id": "fracture-20",
       "status": "passed",
-      "moveLimit": 127,
+      "moveLimit": 27,
       "movesRemaining": 4,
       "loops": [
-        25,
-        53,
-        73
+        2,
+        14,
+        15
       ]
     },
     {
-      "level": 35,
-      "id": "fracture-35",
+      "level": 55,
+      "id": "fracture-62",
       "status": "passed",
-      "moveLimit": 194,
+      "moveLimit": 27,
       "movesRemaining": 4,
       "loops": [
-        32,
-        56,
-        78,
-        106
+        3,
+        30
       ]
     },
     {
-      "level": 36,
+      "level": 56,
+      "id": "fracture-24",
+      "status": "passed",
+      "moveLimit": 20,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        27,
+        33
+      ]
+    },
+    {
+      "level": 57,
       "id": "fracture-36",
       "status": "passed",
       "moveLimit": 164,
@@ -422,7 +647,76 @@
       ]
     },
     {
-      "level": 37,
+      "level": 58,
+      "id": "fracture-27",
+      "status": "passed",
+      "moveLimit": 27,
+      "movesRemaining": 4,
+      "loops": [
+        15,
+        24
+      ]
+    },
+    {
+      "level": 59,
+      "id": "confluence-02",
+      "status": "passed",
+      "moveLimit": 15,
+      "movesRemaining": 4,
+      "loops": [
+        18,
+        32
+      ]
+    },
+    {
+      "level": 60,
+      "id": "fracture-63",
+      "status": "passed",
+      "moveLimit": 33,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        32
+      ]
+    },
+    {
+      "level": 61,
+      "id": "fracture-34",
+      "status": "passed",
+      "moveLimit": 127,
+      "movesRemaining": 4,
+      "loops": [
+        25,
+        53,
+        73
+      ]
+    },
+    {
+      "level": 62,
+      "id": "fracture-66",
+      "status": "passed",
+      "moveLimit": 45,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        24,
+        34
+      ]
+    },
+    {
+      "level": 63,
+      "id": "fracture-64",
+      "status": "passed",
+      "moveLimit": 43,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        26,
+        34
+      ]
+    },
+    {
+      "level": 64,
       "id": "fracture-37",
       "status": "passed",
       "moveLimit": 186,
@@ -435,46 +729,7 @@
       ]
     },
     {
-      "level": 38,
-      "id": "fracture-38",
-      "status": "passed",
-      "moveLimit": 191,
-      "movesRemaining": 4,
-      "loops": [
-        30,
-        53,
-        75,
-        100
-      ]
-    },
-    {
-      "level": 39,
-      "id": "fracture-39",
-      "status": "passed",
-      "moveLimit": 168,
-      "movesRemaining": 4,
-      "loops": [
-        28,
-        53,
-        86,
-        117
-      ]
-    },
-    {
-      "level": 40,
-      "id": "fracture-40",
-      "status": "passed",
-      "moveLimit": 198,
-      "movesRemaining": 4,
-      "loops": [
-        30,
-        48,
-        78,
-        94
-      ]
-    },
-    {
-      "level": 41,
+      "level": 65,
       "id": "fracture-41",
       "status": "passed",
       "moveLimit": 193,
@@ -487,7 +742,103 @@
       ]
     },
     {
-      "level": 42,
+      "level": 66,
+      "id": "fracture-28",
+      "status": "passed",
+      "moveLimit": 25,
+      "movesRemaining": 4,
+      "loops": [
+        29,
+        32
+      ]
+    },
+    {
+      "level": 67,
+      "id": "fracture-35",
+      "status": "passed",
+      "moveLimit": 194,
+      "movesRemaining": 4,
+      "loops": [
+        32,
+        56,
+        78,
+        106
+      ]
+    },
+    {
+      "level": 68,
+      "id": "fracture-65",
+      "status": "passed",
+      "moveLimit": 30,
+      "movesRemaining": 4,
+      "loops": [
+        2,
+        32
+      ]
+    },
+    {
+      "level": 69,
+      "id": "fracture-67",
+      "status": "passed",
+      "moveLimit": 40,
+      "movesRemaining": 4,
+      "loops": [
+        4,
+        27,
+        43
+      ]
+    },
+    {
+      "level": 70,
+      "id": "confluence-03",
+      "status": "passed",
+      "moveLimit": 21,
+      "movesRemaining": 4,
+      "loops": [
+        11,
+        21,
+        24
+      ]
+    },
+    {
+      "level": 71,
+      "id": "fracture-29",
+      "status": "passed",
+      "moveLimit": 25,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        8,
+        14
+      ]
+    },
+    {
+      "level": 72,
+      "id": "fracture-38",
+      "status": "passed",
+      "moveLimit": 191,
+      "movesRemaining": 4,
+      "loops": [
+        30,
+        53,
+        75,
+        100
+      ]
+    },
+    {
+      "level": 73,
+      "id": "fracture-25",
+      "status": "passed",
+      "moveLimit": 25,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        31,
+        33
+      ]
+    },
+    {
+      "level": 74,
       "id": "fracture-42",
       "status": "passed",
       "moveLimit": 161,
@@ -500,7 +851,67 @@
       ]
     },
     {
-      "level": 43,
+      "level": 75,
+      "id": "fracture-68",
+      "status": "passed",
+      "moveLimit": 49,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        33,
+        47
+      ]
+    },
+    {
+      "level": 76,
+      "id": "fracture-71",
+      "status": "passed",
+      "moveLimit": 57,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        26,
+        48
+      ]
+    },
+    {
+      "level": 77,
+      "id": "fracture-39",
+      "status": "passed",
+      "moveLimit": 168,
+      "movesRemaining": 4,
+      "loops": [
+        28,
+        53,
+        86,
+        117
+      ]
+    },
+    {
+      "level": 78,
+      "id": "confluence-04",
+      "status": "passed",
+      "moveLimit": 23,
+      "movesRemaining": 4,
+      "loops": [
+        37,
+        12
+      ]
+    },
+    {
+      "level": 79,
+      "id": "fracture-69",
+      "status": "passed",
+      "moveLimit": 51,
+      "movesRemaining": 4,
+      "loops": [
+        3,
+        26,
+        42
+      ]
+    },
+    {
+      "level": 80,
       "id": "fracture-43",
       "status": "passed",
       "moveLimit": 211,
@@ -513,314 +924,31 @@
       ]
     },
     {
-      "level": 44,
-      "id": "fracture-44",
-      "status": "passed",
-      "moveLimit": 157,
-      "movesRemaining": 4,
-      "loops": [
-        26,
-        55,
-        89,
-        115
-      ]
-    },
-    {
-      "level": 45,
-      "id": "fracture-45",
-      "status": "passed",
-      "moveLimit": 165,
-      "movesRemaining": 4,
-      "loops": [
-        20,
-        54,
-        82,
-        108
-      ]
-    },
-    {
-      "level": 46,
-      "id": "fracture-46",
-      "status": "passed",
-      "moveLimit": 193,
-      "movesRemaining": 4,
-      "loops": [
-        33,
-        87,
-        133,
-        154
-      ]
-    },
-    {
-      "level": 47,
-      "id": "fracture-47",
-      "status": "passed",
-      "moveLimit": 217,
-      "movesRemaining": 4,
-      "loops": [
-        39,
-        80,
-        111,
-        149
-      ]
-    },
-    {
-      "level": 48,
-      "id": "fracture-48",
-      "status": "passed",
-      "moveLimit": 236,
-      "movesRemaining": 4,
-      "loops": [
-        31,
-        90,
-        139,
-        198
-      ]
-    },
-    {
-      "level": 49,
-      "id": "fracture-49",
-      "status": "passed",
-      "moveLimit": 244,
-      "movesRemaining": 4,
-      "loops": [
-        38,
-        87,
-        148,
-        205
-      ]
-    },
-    {
-      "level": 50,
-      "id": "fracture-50",
-      "status": "passed",
-      "moveLimit": 277,
-      "movesRemaining": 4,
-      "loops": [
-        67,
-        112,
-        160,
-        222
-      ]
-    },
-    {
-      "level": 51,
-      "id": "fracture-51",
-      "status": "passed",
-      "moveLimit": 21,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        16
-      ]
-    },
-    {
-      "level": 52,
-      "id": "fracture-52",
-      "status": "passed",
-      "moveLimit": 21,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        31
-      ]
-    },
-    {
-      "level": 53,
-      "id": "fracture-53",
-      "status": "passed",
-      "moveLimit": 14,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        8
-      ]
-    },
-    {
-      "level": 54,
-      "id": "fracture-54",
-      "status": "passed",
-      "moveLimit": 18,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        13
-      ]
-    },
-    {
-      "level": 55,
-      "id": "fracture-55",
-      "status": "passed",
-      "moveLimit": 32,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        19,
-        22
-      ]
-    },
-    {
-      "level": 56,
-      "id": "fracture-56",
-      "status": "passed",
-      "moveLimit": 27,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        20
-      ]
-    },
-    {
-      "level": 57,
-      "id": "fracture-57",
-      "status": "passed",
-      "moveLimit": 29,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        24
-      ]
-    },
-    {
-      "level": 58,
-      "id": "fracture-58",
-      "status": "passed",
-      "moveLimit": 26,
-      "movesRemaining": 4,
-      "loops": [
-        4,
-        42
-      ]
-    },
-    {
-      "level": 59,
-      "id": "fracture-59",
-      "status": "passed",
-      "moveLimit": 26,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        20
-      ]
-    },
-    {
-      "level": 60,
-      "id": "fracture-60",
-      "status": "passed",
-      "moveLimit": 45,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        24,
-        34
-      ]
-    },
-    {
-      "level": 61,
-      "id": "fracture-61",
-      "status": "passed",
-      "moveLimit": 18,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        12
-      ]
-    },
-    {
-      "level": 62,
-      "id": "fracture-62",
-      "status": "passed",
-      "moveLimit": 27,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        30
-      ]
-    },
-    {
-      "level": 63,
-      "id": "fracture-63",
-      "status": "passed",
-      "moveLimit": 33,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        32
-      ]
-    },
-    {
-      "level": 64,
-      "id": "fracture-64",
-      "status": "passed",
-      "moveLimit": 43,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        26,
-        34
-      ]
-    },
-    {
-      "level": 65,
-      "id": "fracture-65",
+      "level": 81,
+      "id": "fracture-72",
       "status": "passed",
       "moveLimit": 30,
       "movesRemaining": 4,
       "loops": [
         2,
-        32
+        24
       ]
     },
     {
-      "level": 66,
-      "id": "fracture-66",
+      "level": 82,
+      "id": "fracture-40",
       "status": "passed",
-      "moveLimit": 45,
+      "moveLimit": 198,
       "movesRemaining": 4,
       "loops": [
-        3,
-        24,
-        34
+        30,
+        48,
+        78,
+        94
       ]
     },
     {
-      "level": 67,
-      "id": "fracture-67",
-      "status": "passed",
-      "moveLimit": 40,
-      "movesRemaining": 4,
-      "loops": [
-        4,
-        27,
-        43
-      ]
-    },
-    {
-      "level": 68,
-      "id": "fracture-68",
-      "status": "passed",
-      "moveLimit": 49,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        33,
-        47
-      ]
-    },
-    {
-      "level": 69,
-      "id": "fracture-69",
-      "status": "passed",
-      "moveLimit": 51,
-      "movesRemaining": 4,
-      "loops": [
-        3,
-        26,
-        42
-      ]
-    },
-    {
-      "level": 70,
+      "level": 83,
       "id": "fracture-70",
       "status": "passed",
       "moveLimit": 61,
@@ -833,30 +961,45 @@
       ]
     },
     {
-      "level": 71,
-      "id": "fracture-71",
+      "level": 84,
+      "id": "fracture-30",
       "status": "passed",
-      "moveLimit": 57,
+      "moveLimit": 32,
       "movesRemaining": 4,
       "loops": [
-        3,
+        6,
+        38,
+        40
+      ]
+    },
+    {
+      "level": 85,
+      "id": "fracture-46",
+      "status": "passed",
+      "moveLimit": 193,
+      "movesRemaining": 4,
+      "loops": [
+        33,
+        87,
+        133,
+        154
+      ]
+    },
+    {
+      "level": 86,
+      "id": "fracture-44",
+      "status": "passed",
+      "moveLimit": 157,
+      "movesRemaining": 4,
+      "loops": [
         26,
-        48
+        55,
+        89,
+        115
       ]
     },
     {
-      "level": 72,
-      "id": "fracture-72",
-      "status": "passed",
-      "moveLimit": 30,
-      "movesRemaining": 4,
-      "loops": [
-        2,
-        24
-      ]
-    },
-    {
-      "level": 73,
+      "level": 87,
       "id": "fracture-73",
       "status": "passed",
       "moveLimit": 63,
@@ -869,32 +1012,7 @@
       ]
     },
     {
-      "level": 74,
-      "id": "fracture-74",
-      "status": "passed",
-      "moveLimit": 46,
-      "movesRemaining": 4,
-      "loops": [
-        4,
-        31,
-        53
-      ]
-    },
-    {
-      "level": 75,
-      "id": "fracture-75",
-      "status": "passed",
-      "moveLimit": 46,
-      "movesRemaining": 4,
-      "loops": [
-        4,
-        52,
-        52,
-        68
-      ]
-    },
-    {
-      "level": 76,
+      "level": 88,
       "id": "fracture-76",
       "status": "passed",
       "moveLimit": 57,
@@ -906,7 +1024,45 @@
       ]
     },
     {
-      "level": 77,
+      "level": 89,
+      "id": "fracture-45",
+      "status": "passed",
+      "moveLimit": 165,
+      "movesRemaining": 4,
+      "loops": [
+        20,
+        54,
+        82,
+        108
+      ]
+    },
+    {
+      "level": 90,
+      "id": "fracture-47",
+      "status": "passed",
+      "moveLimit": 217,
+      "movesRemaining": 4,
+      "loops": [
+        39,
+        80,
+        111,
+        149
+      ]
+    },
+    {
+      "level": 91,
+      "id": "fracture-74",
+      "status": "passed",
+      "moveLimit": 46,
+      "movesRemaining": 4,
+      "loops": [
+        4,
+        31,
+        53
+      ]
+    },
+    {
+      "level": 92,
       "id": "fracture-77",
       "status": "passed",
       "moveLimit": 46,
@@ -919,7 +1075,33 @@
       ]
     },
     {
-      "level": 78,
+      "level": 93,
+      "id": "fracture-48",
+      "status": "passed",
+      "moveLimit": 236,
+      "movesRemaining": 4,
+      "loops": [
+        31,
+        90,
+        139,
+        198
+      ]
+    },
+    {
+      "level": 94,
+      "id": "fracture-75",
+      "status": "passed",
+      "moveLimit": 46,
+      "movesRemaining": 4,
+      "loops": [
+        4,
+        52,
+        52,
+        68
+      ]
+    },
+    {
+      "level": 95,
       "id": "fracture-78",
       "status": "passed",
       "moveLimit": 46,
@@ -931,7 +1113,20 @@
       ]
     },
     {
-      "level": 79,
+      "level": 96,
+      "id": "fracture-49",
+      "status": "passed",
+      "moveLimit": 244,
+      "movesRemaining": 4,
+      "loops": [
+        38,
+        87,
+        148,
+        205
+      ]
+    },
+    {
+      "level": 97,
       "id": "fracture-79",
       "status": "passed",
       "moveLimit": 69,
@@ -944,7 +1139,20 @@
       ]
     },
     {
-      "level": 80,
+      "level": 98,
+      "id": "fracture-50",
+      "status": "passed",
+      "moveLimit": 277,
+      "movesRemaining": 4,
+      "loops": [
+        67,
+        112,
+        160,
+        222
+      ]
+    },
+    {
+      "level": 99,
       "id": "fracture-80",
       "status": "passed",
       "moveLimit": 52,
@@ -954,6 +1162,17 @@
         61,
         61,
         83
+      ]
+    },
+    {
+      "level": 100,
+      "id": "confluence-05",
+      "status": "passed",
+      "moveLimit": 23,
+      "movesRemaining": 4,
+      "loops": [
+        25,
+        48
       ]
     }
   ],

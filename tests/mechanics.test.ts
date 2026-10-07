@@ -10,8 +10,25 @@ test('pulse door requires both occupancy and phase; a closed door permits exit',
 test('portal teleports once on entry, waits in place, and records destination',()=>{const m=make();m.portals=[{id:'fold',a:{x:2,y:3},b:{x:5,y:4}}];let s=replay(m,['D','R']);assert.deepEqual(s.current,{x:5,y:4});s=step(m,s,'.');assert.deepEqual(s.current,{x:5,y:4});s=step(m,s,'L');assert.deepEqual(s.current,{x:4,y:4});s=step(m,s,'R');assert.deepEqual(s.current,{x:2,y:3});const chain=buildChain(m,[['D','R']]);assert.deepEqual(chain[0].cells[300],{x:5,y:4});const saved=saveState(m,replay(m,['D'],chain));assert.equal(hash(restoreState(saved).state),hash(replay(m,['D'],chain)));});
 test('one-way tiles restrict entry but allow departure in any direction',()=>{const m=make();m.arrows=[{x:2,y:3,direction:'R'}];assert.deepEqual(replay(m,['R','D']).current,{x:2,y:2});let s=replay(m,['D','R']);assert.deepEqual(s.current,{x:2,y:3});s=step(m,s,'U');assert.deepEqual(s.current,{x:2,y:2});});
 test('optional mechanics validate ranges, overlapping endpoints, directions and nulls',()=>{const m=make();for(const change of [{portals:[null]},{portals:[{id:'x',a:m.spawn,b:{x:4,y:4}}]},{arrows:[{x:2,y:3,direction:'Q'}]},{doors:[{...m.doors[0],pulse:{period:0,openTicks:1,offset:0}}]},{plates:[{...m.plates[0],kind:'invalid'}]}])assert.ok(validateStage({...m,...change}).length);});
-test('80 unique fixed layouts, later chapters use three required echoes and more complex paths',()=>{assert.equal(stages.length,80);assert.equal(new Set(stages.map(s=>s.id)).size,80);assert.equal(new Set(stages.map(s=>hash({tiles:s.tiles,plates:s.plates,doors:s.doors,portals:s.portals,arrows:s.arrows,shards:s.shards}))).size,80);for(let i=5;i<80;i++){const m=stages[i],inputs=referenceInputs[i],chain=buildChain(m,inputs.slice(0,-1));assert.equal(chain.length,m.maxGhosts);if(chain.length)assert.equal(replay(m,inputs.at(-1)!,chain.slice(0,-1)).outcome,'RUNNING',`missing echo must block ${m.id}`);assert.equal(hash(restoreState(saveState(m,replay(m,inputs.at(-1)!,chain))).state),hash(replay(m,inputs.at(-1)!,chain)));}assert.ok(referenceInputs[49].at(-1)!.length>200);});
-test('new mechanics occur in their promised chapters and the finale uses all five',()=>{for(let i=5;i<20;i++){assert.ok(stages[i].width<=11&&stages[i].height<=7);assert.ok(referenceInputs[i].at(-1)!.length<=20);}for(const kind of ['resonance','toggle'])assert.ok(stages.slice(5,20).some(m=>m.plates.some(p=>p.kind===kind)));assert.ok(stages.slice(5,20).some(m=>m.doors.some(d=>d.inverted)));for(let i=20;i<25;i++)assert.ok(stages[i].doors.some(d=>d.pulse));for(let i=25;i<30;i++)assert.ok(stages[i].portals?.length);for(let i=30;i<35;i++)assert.ok(stages[i].arrows?.length);for(const m of stages.slice(45,50)){assert.ok(m.portals?.length);assert.ok(m.arrows?.length);assert.ok(m.doors.some(d=>d.pulse));assert.ok(m.plates.some(p=>p.kind==='echo'));assert.ok(m.plates.some(p=>p.kind==='present'));}});
+const original=(n:number)=>stages.find(m=>m.id===`fracture-${String(n).padStart(2,'0')}`)!;
+const range=(a:number,b:number)=>Array.from({length:b-a+1},(_,i)=>original(a+i));
+test('100 unique puzzles retain verified records, saves and required echoes after difficulty ordering',()=>{
+ assert.equal(stages.length,100);assert.equal(new Set(stages.map(s=>s.id)).size,100);
+ assert.equal(new Set(stages.map(s=>hash({tiles:s.tiles,plates:s.plates,doors:s.doors,portals:s.portals,arrows:s.arrows,shards:s.shards,crates:s.crates,fragile:s.fragile,echoMode:s.echoMode,echoJump:s.echoJump,stasis:s.stasis}))).size,100);
+ for(let i=5;i<stages.length;i++){const m=stages[i],inputs=referenceInputs[i],chain=buildChain(m,inputs.slice(0,-1));assert.equal(chain.length,m.maxGhosts);
+ if(chain.length)assert.notEqual(replay(m,inputs.at(-1)!,chain.slice(0,-1)).outcome,'WON',`missing echo must block ${m.id}`);
+ assert.equal(hash(restoreState(saveState(m,replay(m,inputs.at(-1)!,chain))).state),hash(replay(m,inputs.at(-1)!,chain)));}
+ assert.ok(referenceInputs[stages.indexOf(original(50))].at(-1)!.length>200);
+});
+test('existing compact mechanics and original finales stay attached to their stable IDs',()=>{
+ for(const m of range(6,20)){assert.ok(m.width<=11&&m.height<=7);assert.ok(referenceInputs[stages.indexOf(m)].at(-1)!.length<=20);}
+ for(const kind of ['resonance','toggle'])assert.ok(range(6,20).some(m=>m.plates.some(p=>p.kind===kind)));
+ assert.ok(range(6,20).some(m=>m.doors.some(d=>d.inverted)));
+ for(const m of range(21,25))assert.ok(m.doors.some(d=>d.pulse));
+ for(const m of range(26,30))assert.ok(m.portals?.length);
+ for(const m of range(31,35))assert.ok(m.arrows?.length);
+ for(const m of range(46,50)){assert.ok(m.portals?.length);assert.ok(m.arrows?.length);assert.ok(m.doors.some(d=>d.pulse));assert.ok(m.plates.some(p=>p.kind==='echo'));assert.ok(m.plates.some(p=>p.kind==='present'));}
+});
 
 test('pre-expansion save retains its verified replay checksum and two ghosts',()=>{const v=JSON.parse(readFileSync(new URL('./fixtures/legacy-save.json',import.meta.url),'utf8'));const restored=restoreState(v);assert.equal(hash(restored.state),v.checksum);assert.equal(restored.state.ghosts.length,2);assert.equal(restored.stage.id,'two-doors');});
 
