@@ -4,7 +4,7 @@ const status=document.querySelector('#status')!,report=document.querySelector('#
 const run=document.querySelector<HTMLButtonElement>('#run')!,download=document.querySelector<HTMLButtonElement>('#export')!;
 const touchMode=new URLSearchParams(location.search).has('touch');
 if(touchMode){iframe.style.width='390px';iframe.style.height='680px';document.querySelector('h1')!.textContent='80레벨 모바일 터치 검사';document.querySelector('h1+p')!.textContent='프로덕션 번들 · 390px 화면 · 터치 PointerEvent · 제어된 게임 시계';}
-const viewport=document.querySelector<HTMLSelectElement>('#viewport')!;viewport.onchange=()=>{const [width,height]=viewport.value.split('x');iframe.style.width=width+'px';iframe.style.height=height+'px';};document.querySelector<HTMLButtonElement>('#preview')!.onclick=()=>mount(stages[2].id);
+const viewport=document.querySelector<HTMLSelectElement>('#viewport')!;viewport.onchange=()=>{const [width,height]=viewport.value.split('x');iframe.style.width=width+'px';iframe.style.height=height+'px';};document.querySelector<HTMLButtonElement>('#preview')!.onclick=()=>mount(document.querySelector<HTMLSelectElement>('#preview-stage')!.value);
 const results:unknown[]=[],errors:string[]=[];let w:any;
 const flush=()=>new Promise<void>(resolve=>{const channel=new MessageChannel();channel.port1.onmessage=()=>{channel.port1.close();channel.port2.close();resolve()};channel.port2.postMessage(null)});
 async function settle(){await flush();await flush();await flush()}

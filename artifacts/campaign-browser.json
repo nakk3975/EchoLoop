@@ -1,7 +1,7 @@
 {
   "kind": "Chromium production bundle with DOM keyboard input and controlled animation clock",
-  "began": "2026-10-07T01:18:55.464Z",
-  "finished": "2026-10-07T01:19:16.999Z",
+  "began": "2026-10-07T01:55:15.147Z",
+  "finished": "2026-10-07T01:55:36.805Z",
   "levels": 80,
   "checks": [
     "80 sequential victories",
@@ -239,118 +239,114 @@
       "level": 21,
       "id": "fracture-21",
       "status": "passed",
-      "moveLimit": 44,
+      "moveLimit": 17,
       "movesRemaining": 4,
       "loops": [
-        18,
-        32
+        4,
+        27
       ]
     },
     {
       "level": 22,
       "id": "fracture-22",
       "status": "passed",
-      "moveLimit": 62,
+      "moveLimit": 15,
       "movesRemaining": 4,
       "loops": [
-        24,
-        38
+        22,
+        33
       ]
     },
     {
       "level": 23,
       "id": "fracture-23",
       "status": "passed",
-      "moveLimit": 75,
+      "moveLimit": 15,
       "movesRemaining": 4,
       "loops": [
-        17,
-        29,
-        41
+        3,
+        19
       ]
     },
     {
       "level": 24,
       "id": "fracture-24",
       "status": "passed",
-      "moveLimit": 95,
+      "moveLimit": 20,
       "movesRemaining": 4,
       "loops": [
+        3,
         27,
-        51,
-        65
+        33
       ]
     },
     {
       "level": 25,
       "id": "fracture-25",
       "status": "passed",
-      "moveLimit": 142,
+      "moveLimit": 25,
       "movesRemaining": 4,
       "loops": [
-        13,
-        43,
-        65,
-        90
+        3,
+        31,
+        33
       ]
     },
     {
       "level": 26,
       "id": "fracture-26",
       "status": "passed",
-      "moveLimit": 68,
+      "moveLimit": 14,
       "movesRemaining": 4,
       "loops": [
-        26,
-        50
+        4,
+        7
       ]
     },
     {
       "level": 27,
       "id": "fracture-27",
       "status": "passed",
-      "moveLimit": 62,
+      "moveLimit": 27,
       "movesRemaining": 4,
       "loops": [
-        28,
-        40
+        15,
+        24
       ]
     },
     {
       "level": 28,
       "id": "fracture-28",
       "status": "passed",
-      "moveLimit": 108,
+      "moveLimit": 25,
       "movesRemaining": 4,
       "loops": [
-        19,
-        41,
-        53
+        29,
+        32
       ]
     },
     {
       "level": 29,
       "id": "fracture-29",
       "status": "passed",
-      "moveLimit": 116,
+      "moveLimit": 25,
       "movesRemaining": 4,
       "loops": [
-        25,
-        48,
-        60
+        3,
+        8,
+        14
       ]
     },
     {
       "level": 30,
       "id": "fracture-30",
       "status": "passed",
-      "moveLimit": 141,
+      "moveLimit": 32,
       "movesRemaining": 4,
       "loops": [
-        22,
-        37,
-        53,
-        69
+        6,
+        38,
+        40
       ]
     },
     {

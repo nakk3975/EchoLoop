@@ -1,0 +1,229 @@
+{
+  "levels": 10,
+  "results": [
+    {
+      "level": 21,
+      "id": "fracture-21",
+      "title": "두 박동의 릴레이",
+      "idea": "서로 다른 문 주기 사이의 대피 공간",
+      "before": {
+        "width": 13,
+        "height": 9,
+        "finalTicks": 32
+      },
+      "after": {
+        "width": 11,
+        "height": 7,
+        "loopTicks": [
+          4,
+          27
+        ],
+        "moves": 13,
+        "limit": 17,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 22,
+      "id": "fracture-22",
+      "title": "떠나는 순간의 문",
+      "idea": "대기하는 기록만으로는 두 문을 통과할 수 없음",
+      "before": {
+        "width": 13,
+        "height": 11,
+        "finalTicks": 38
+      },
+      "after": {
+        "width": 9,
+        "height": 7,
+        "loopTicks": [
+          22,
+          33
+        ],
+        "moves": 11,
+        "limit": 15,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 23,
+      "id": "fracture-23",
+      "title": "지금만 잡을 수 있는 박자",
+      "idea": "현재의 점유와 이탈을 박동에 맞춰 사용",
+      "before": {
+        "width": 19,
+        "height": 9,
+        "finalTicks": 41
+      },
+      "after": {
+        "width": 9,
+        "height": 7,
+        "loopTicks": [
+          3,
+          19
+        ],
+        "moves": 11,
+        "limit": 15,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 24,
+      "id": "fracture-24",
+      "title": "둘이 열고 하나가 떠나고",
+      "idea": "두 기록의 역할과 ON/OFF 창을 분리",
+      "before": {
+        "width": 19,
+        "height": 11,
+        "finalTicks": 65
+      },
+      "after": {
+        "width": 11,
+        "height": 7,
+        "loopTicks": [
+          3,
+          27,
+          33
+        ],
+        "moves": 16,
+        "limit": 20,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 25,
+      "id": "fracture-25",
+      "title": "박동의 지휘자",
+      "idea": "과거의 원격 반전과 현재 전용 발판의 합주",
+      "before": {
+        "width": 25,
+        "height": 9,
+        "finalTicks": 90
+      },
+      "after": {
+        "width": 11,
+        "height": 7,
+        "loopTicks": [
+          3,
+          31,
+          33
+        ],
+        "moves": 21,
+        "limit": 25,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 26,
+      "id": "fracture-26",
+      "title": "같은 출발, 다른 도착",
+      "idea": "같은 출발점에서 기록과 현재의 경로 선택",
+      "before": {
+        "width": 13,
+        "height": 13,
+        "finalTicks": 50
+      },
+      "after": {
+        "width": 11,
+        "height": 9,
+        "loopTicks": [
+          4,
+          7
+        ],
+        "moves": 10,
+        "limit": 14,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 27,
+      "id": "fracture-27",
+      "title": "포털은 돌아오는 길",
+      "idea": "왕복한 기록이 원격 스위치와 공명 상대를 겸함",
+      "before": {
+        "width": 13,
+        "height": 13,
+        "finalTicks": 40
+      },
+      "after": {
+        "width": 11,
+        "height": 9,
+        "loopTicks": [
+          15,
+          24
+        ],
+        "moves": 23,
+        "limit": 27,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 28,
+      "id": "fracture-28",
+      "title": "저편으로 옮겨 가는 신호",
+      "idea": "한 기록이 두 고립된 방 사이로 신호를 전달",
+      "before": {
+        "width": 19,
+        "height": 13,
+        "finalTicks": 53
+      },
+      "after": {
+        "width": 13,
+        "height": 9,
+        "loopTicks": [
+          29,
+          32
+        ],
+        "moves": 21,
+        "limit": 25,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 29,
+      "id": "fracture-29",
+      "title": "접힌 곳의 합류",
+      "idea": "세 포털과 두 기록이 서로 다른 의무를 가짐",
+      "before": {
+        "width": 19,
+        "height": 13,
+        "finalTicks": 60
+      },
+      "after": {
+        "width": 13,
+        "height": 9,
+        "loopTicks": [
+          3,
+          8,
+          14
+        ],
+        "moves": 21,
+        "limit": 25,
+        "remainingMoves": 4
+      }
+    },
+    {
+      "level": 30,
+      "id": "fracture-30",
+      "title": "공간의 매듭",
+      "idea": "왕복 스위치·공명·신호 이탈·엇갈린 박동·포털 연쇄",
+      "before": {
+        "width": 25,
+        "height": 13,
+        "finalTicks": 69
+      },
+      "after": {
+        "width": 13,
+        "height": 9,
+        "loopTicks": [
+          6,
+          38,
+          40
+        ],
+        "moves": 28,
+        "limit": 32,
+        "remainingMoves": 4
+      }
+    }
+  ]
+}
